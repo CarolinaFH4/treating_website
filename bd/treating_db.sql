@@ -42,7 +42,7 @@ INSERT INTO `benefits` (`idbenefit`, `name`, `description`, `image`) VALUES
 (1, 'Ossos e articulações', 'Se os ossos fornecem a estrutura, as articulações fornecem a flexibilidade, permitindo o movimento. Comer alimentos ricos em cálcio, vitamina D, vitamina C e selénio vai ajudar a manter os seus ossos e articulações saudáveis.', ''),
 (2, 'Coração', 'Cuidar da saúde do coração é uma das condutas essenciais quando o assunto é manter a qualidade de vida e o bom funcionamento do nosso organismo. É importante evitar fatores de risco como o tabagismo, alimentação muito gorda e açucarada, falta de descanso e de exercício físico.', ''),
 (3, 'Gripe', 'A gripe é uma doença infecciosa do aparelho respiratório, altamente contagiosa, causada pelo vírus influenza. Um estilo de vida saudável pode em muito ajudar na prevenção e recuperação de doenças.', ''),
-(4, 'Atividade cerebral', '', '');
+(4, 'Atividade cerebral', 'Fazer atividade física ajuda a criar conexões dentro do cérebro, estimulando e fazendo com que haja uma reserva maior de células neurais. Além disso, exercícios controlam e reduzem as chances de surgimento de diabetes, hipertensão...', '');
 
 -- --------------------------------------------------------
 
