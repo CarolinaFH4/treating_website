@@ -26,35 +26,35 @@
 
 
     <main>
-      <div>
-        <section id="introcomunity">
-          <div class="blob">
+      <section class="introduction">
+        <div>
+          <div>
             <img src="./media/images/comunity.png" alt="people eating together">
           </div>
           <a href="">Comunidade</a>
           <p>
             Treating vem esclarecer conceitos de nutrição e juntar pessoas através do poder da alimentação
           </p>
-        </section>
-        <section id="introrecipes">
+        </div>
+        <div>
           <div>
-            <img src="" alt="various organic dishes">
+            <img src="./media/images/recipes.png" alt="various organic dishes">
           </div>
           <a href="">Receitas</a>
           <p>
             Selecionamos os melhores alimentos para tranformar nas melhores receitas.
           </p>
-        </section>
-        <section id="introfood">
+        </div>
+        <div>
           <div>
-            <img src="" alt="body parts representation">
+            <img src="./media/images/organs.png" alt="body parts representation">
           </div>
           <a href="">Benefícios de saúde</a>
           <p>
             Olhamos para os alimentos como ferramentas de auto-cuidado e terapia, em vez de tendências e restrições.
           </p>
-        </section>
-      </div>
+        </div>
+      </section>
     </main>
 
 
