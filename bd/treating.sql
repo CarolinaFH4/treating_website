@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Tempo de geração: 28-Maio-2024 às 21:35
--- Versão do servidor: 5.7.24
--- versão do PHP: 8.0.1
+-- Generation Time: Jun 02, 2024 at 12:03 AM
+-- Server version: 5.7.24
+-- PHP Version: 8.0.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `treating`
+-- Database: `treating`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `benefits`
+-- Table structure for table `benefits`
 --
 
 CREATE TABLE `benefits` (
@@ -35,19 +35,20 @@ CREATE TABLE `benefits` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Extraindo dados da tabela `benefits`
+-- Dumping data for table `benefits`
 --
 
 INSERT INTO `benefits` (`idbenefit`, `name`, `description`, `image`) VALUES
-(1, 'Ossos e articulações', 'Se os ossos fornecem a estrutura, as articulações fornecem a flexibilidade, permitindo o movimento. Comer alimentos ricos em cálcio, vitamina D, vitamina C e selénio vai ajudar a manter os seus ossos e articulações saudáveis.', ''),
-(2, 'Coração', 'Cuidar da saúde do coração é uma das condutas essenciais quando o assunto é manter a qualidade de vida e o bom funcionamento do nosso organismo. É importante evitar fatores de risco como o tabagismo, alimentação muito gorda e açucarada, falta de descanso e de exercício físico.', ''),
-(3, 'Gripe', 'A gripe é uma doença infecciosa do aparelho respiratório, altamente contagiosa, causada pelo vírus influenza. Um estilo de vida saudável pode em muito ajudar na prevenção e recuperação de doenças.', ''),
-(4, 'Atividade cerebral', 'Fazer atividade física ajuda a criar conexões dentro do cérebro, estimulando e fazendo com que haja uma reserva maior de células neurais. Além disso, exercícios controlam e reduzem as chances de surgimento de diabetes, hipertensão...', '');
+(1, 'Ossos e articulações', 'Se os ossos fornecem a estrutura, as articulações fornecem a flexibilidade, permitindo o movimento. Comer alimentos ricos em cálcio, vitamina D, vitamina C e selénio vai ajudar a manter os seus ossos e articulações saudáveis.', 'joints.svg'),
+(2, 'Coração', 'Cuidar da saúde do coração é uma das condutas essenciais quando o assunto é manter a qualidade de vida e o bom funcionamento do nosso organismo. É importante evitar fatores de risco como o tabagismo, alimentação muito gorda e açucarada, falta de descanso e de exercício físico.', 'heart.svg'),
+(3, 'Gripe', 'A gripe é uma doença infecciosa do aparelho respiratório, altamente contagiosa, causada pelo vírus influenza. Um estilo de vida saudável pode em muito ajudar na prevenção e recuperação de doenças.', 'virus.svg'),
+(4, 'Atividade cerebral', '', 'brain.svg'),
+(5, 'Flora intestinal', 'Quando falamos de flora intestinal, estamos a falar de um grupo de bactérias vivas que se encontram nos intestinos e que desempenham um papel muito importante no metabolismo de nutrientes e na proteção contra agentes patogénicos.', 'intestine.svg');
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `food`
+-- Table structure for table `food`
 --
 
 CREATE TABLE `food` (
@@ -58,23 +59,24 @@ CREATE TABLE `food` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Extraindo dados da tabela `food`
+-- Dumping data for table `food`
 --
 
 INSERT INTO `food` (`idfood`, `name`, `category`, `image`) VALUES
-(1, 'Espinafre', 'Hortícolas', ''),
-(2, 'Leite magro', 'Lacticínios', ''),
-(3, 'Salmão', 'Carnes, pescado e ovos', ''),
-(4, 'Amêndoas', 'Leguminosas', ''),
-(5, 'Alho', 'Hortícolas', ''),
-(6, 'Laranja', 'Fruta', ''),
-(7, 'Abacate', 'Fruta', ''),
-(8, 'Noz', 'Leguminosas', '');
+(1, 'Espinafre', 'Hortícolas', 'espinafres.jpg'),
+(2, 'Leite magro', 'Lacticínios', 'leite_de_vaca.jpg'),
+(3, 'Salmão', 'Carnes, pescado e ovos', 'salmao.jpg'),
+(4, 'Amêndoas', 'Leguminosas', 'amendoa.jpg'),
+(5, 'Alho', 'Hortícolas', 'alho.jpg'),
+(6, 'Laranja', 'Fruta', 'laranja.jpg'),
+(7, 'Abacate', 'Fruta', 'abacate.jpg'),
+(8, 'Noz', 'Leguminosas', 'noz.jpg'),
+(9, 'Banana', 'Fruta', 'bananas.jpg');
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `food_benefit`
+-- Table structure for table `food_benefit`
 --
 
 CREATE TABLE `food_benefit` (
@@ -86,7 +88,7 @@ CREATE TABLE `food_benefit` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `glossary`
+-- Table structure for table `glossary`
 --
 
 CREATE TABLE `glossary` (
@@ -96,18 +98,37 @@ CREATE TABLE `glossary` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Extraindo dados da tabela `glossary`
+-- Dumping data for table `glossary`
 --
 
 INSERT INTO `glossary` (`idglossary`, `word`, `description`) VALUES
 (1, 'Kcal', 'A sigla kcal significa quilocaloria, que é uma unidade de medida de energia utilizada para quantificar o valor energético dos alimentos. É comumente utilizada para expressar a quantidade de energia que um alimento fornece ao ser metabolizado pelo organismo.'),
 (2, 'Lípidos', 'Mesmo que o termo \"lípidos\" não te diga nada, talvez \"gordura\" te seja mais claro.\r\nEstas moléculas constituídas por ácidos gordos (triglicéridos) fazem parte da família dos macronutrientes, tal como as proteínas e os hidratos de carbono.\r\nOs lípidos encontram-se em todas as nossas células, incluindo no nosso cérebro, que é composto a 70% por estes!\r\nTêm assim um papel central no funcionamento do organismo.'),
-(3, 'Hidratos de carbono', 'Os Hidratos de Carbono (HC) são um dos nutrientes fornecidos pelos alimentos tal como as proteínas, as gorduras, as fibras, vitaminas e minerais. Através da digestão, são transformados em glicose que é então absorvida para o sangue sendo o principal fornecedor de energia do nosso organismo.');
+(3, 'Hidratos de carbono', 'Os Hidratos de Carbono (HC) são um dos nutrientes fornecidos pelos alimentos tal como as proteínas, as gorduras, as fibras, vitaminas e minerais. Através da digestão, são transformados em glicose que é então absorvida para o sangue sendo o principal fornecedor de energia do nosso organismo.'),
+(4, 'Prebiótico', 'Servem de substrato para determinados microrganismos presentes no intestino, favorecendo a multiplicação das bactérias benéficas à digestão e para a saúde.'),
+(5, 'Fibra', 'Importante para manter a saúde do intestino e prevenir situações, como prisão de ventre, diabetes e doenças cardiovasculares. Além das fibras, deve-se aumentar a ingestão de água, para hidratar as fibras e lubrificar o intestino, evitando a prisão de ventre.'),
+(6, 'Vitamina B12', 'A vitamina B12, ou cobalamina, é um nutriente essencial para a formação das células sanguíneas, prevenindo a anemia megaloblástica. É fundamental para o desenvolvimento e manutenção das funções do sistema nervoso central, e para o metabolismo das proteínas e dos carboidratos dos alimentos, ajudando a manter uma boa disposição física e mental.'),
+(7, 'Caroteno', 'Os carotenoides são pigmentos naturalmente encontrados em raízes, folhas, sementes, frutas... Fortalecem o sistema imunológico, ajudam a diminuir o risco do surgimento de alguns tipos de cancro e previnem o envelhecimento precoce, porque têm uma ação antioxidante, anti-inflamatória e fotoprotetora.'),
+(8, 'Vitamina B12', 'A vitamina B12, ou cobalamina, é um nutriente essencial para a formação das células sanguíneas, prevenindo a anemia megaloblástica. É fundamental para o desenvolvimento e manutenção das funções do sistema nervoso central, e para o metabolismo das proteínas e dos carboidratos dos alimentos, ajudando a manter uma boa disposição física e mental.'),
+(9, 'Ácidos gordos trans', 'Os ácidos gordos trans, além de aumentarem o “mau” colesterol no sangue, reduzem o nível do “bom” colesterol. Estas gorduras encontram-se naturalmente presentes em alguns alimentos como o leite e a carne. Mas resultam, sobretudo, da hidrogenação dos óleos vegetais, processo através do qual se solidificam as gorduras líquidas. Estamos perante as gorduras trans quando, na rotulagem, é referido “gordura hidrogenada”.');
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `nutrition`
+-- Table structure for table `library`
+--
+
+CREATE TABLE `library` (
+  `id` int(11) NOT NULL,
+  `title` text NOT NULL,
+  `description` text NOT NULL,
+  `link` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `nutrition`
 --
 
 CREATE TABLE `nutrition` (
@@ -120,7 +141,7 @@ CREATE TABLE `nutrition` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Extraindo dados da tabela `nutrition`
+-- Dumping data for table `nutrition`
 --
 
 INSERT INTO `nutrition` (`idnutri`, `idfood`, `parameter`, `category`, `value`, `unity`) VALUES
@@ -443,12 +464,52 @@ INSERT INTO `nutrition` (`idnutri`, `idfood`, `parameter`, `category`, `value`, 
 (318, 8, 'Ferro', 'Minerais', '2.60', 'g'),
 (319, 8, 'Zinco', 'Minerais', '2.70', 'g'),
 (320, 8, 'Selénio', 'Minerais', '0.00', 'µg'),
-(321, 8, 'Iodo', 'Minerais', '0.00', 'µg');
+(321, 8, 'Iodo', 'Minerais', '0.00', 'µg'),
+(362, 9, 'Energia', 'Nutrientes', '104.00', 'kcal'),
+(363, 9, 'Lípidos', 'Nutrientes', '0.40', 'g'),
+(364, 9, 'Ácidos gordos saturados', 'Nutrientes', '0.10', 'g'),
+(365, 9, 'Ácidos gordos monoinsaturados', 'Nutrientes', '0.00', 'g'),
+(366, 9, 'Ácidos gordos polinsaturados', 'Nutrientes', '0.10', 'g'),
+(367, 9, 'Ácido linoleico', 'Nutrientes', '0.00', 'g'),
+(368, 9, 'Ácidos gordos trans', 'Nutrientes', '0.00', 'g'),
+(369, 9, 'Hidratos de carbono', 'Nutrientes', '21.80', 'g'),
+(370, 9, 'Açúcares', 'Nutrientes', '19.60', 'g'),
+(371, 9, 'Oligossacáridos', 'Nutrientes', '0.00', 'g'),
+(372, 9, 'Amido', 'Nutrientes', '2.20', 'g'),
+(373, 9, 'Fibra', 'Nutrientes', '3.10', 'g'),
+(374, 9, 'Proteínas', 'Nutrientes', '1.60', 'g'),
+(375, 9, 'Sal', 'Nutrientes', '0.00', 'g'),
+(376, 9, 'Água ', 'Nutrientes', '72.10', 'g'),
+(377, 9, 'Ácidos orgânicos ', 'Nutrientes', '0.30', 'g'),
+(378, 9, 'Colesterol ', 'Nutrientes', '0.00', 'mg'),
+(379, 9, 'Vitamina A', 'Vitaminas', '4.00', 'µg'),
+(380, 9, 'Caroteno', 'Vitaminas', '21.00', 'µg'),
+(381, 9, 'Vitamina D', 'Vitaminas', '0.00', 'µg'),
+(382, 9, 'Vitamina E', 'Vitaminas', '0.27', 'mg'),
+(383, 9, 'Vitamina B1', 'Vitaminas', '0.06', 'mg'),
+(384, 9, 'Vitamina B2', 'Vitaminas', '0.07', 'mg'),
+(385, 9, 'Vitamina B3', 'Vitaminas', '0.70', 'mg'),
+(386, 9, 'Equivalente a B3', 'Vitaminas', '1.00', 'mg'),
+(387, 9, 'Triptofano', 'Vitaminas', '0.30', 'mg'),
+(388, 9, 'Vitamina B6', 'Vitaminas', '0.29', 'mg'),
+(389, 9, 'Vitamina B12 ', 'Vitaminas', '0.00', 'µg'),
+(390, 9, 'Vitamina C', 'Vitaminas', '10.00', 'mg'),
+(391, 9, 'Vitamina B9', 'Vitaminas', '14.00', 'µg'),
+(392, 9, 'Cinza', 'Minerais', '0.89', 'g'),
+(393, 9, 'Sódio', 'Minerais', '6.00', 'mg'),
+(394, 9, 'Potássio', 'Minerais', '430.00', 'mg'),
+(395, 9, 'Cálcio', 'Minerais', '8.00', 'mg'),
+(396, 9, 'Fósforo', 'Minerais', '25.00', 'mg'),
+(397, 9, 'Magnésio', 'Minerais', '28.00', 'mg'),
+(398, 9, 'Ferro', 'Minerais', '0.40', 'g'),
+(399, 9, 'Zinco', 'Minerais', '0.20', 'g'),
+(400, 9, 'Selénio', 'Minerais', '0.00', 'µg'),
+(401, 9, 'Iodo', 'Minerais', '3.80', 'µg');
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `recipes`
+-- Table structure for table `recipes`
 --
 
 CREATE TABLE `recipes` (
@@ -462,88 +523,100 @@ CREATE TABLE `recipes` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Extraindo dados da tabela `recipes`
+-- Dumping data for table `recipes`
 --
 
 INSERT INTO `recipes` (`idrecipe`, `idfood`, `title`, `ingredients`, `steps`, `servings`, `time`) VALUES
 (1, 8, 'Muffin de aveia, noz e laranja', '3 nozes de nogueira\r\n2g fermento\r\n1 ovo médio\r\n1 colher de sopa canela\r\n1/2 laranja\r\n25 ml bebida de arroz\r\n25 ml bebida de coco\r\n35 g flocos de aveia integral finos', '1. Adicione o ovo, as bebidas vegetais, o fermento, a casca de laranja, a aveia e triture no liquidificador.\r\n2. Adicione as nozes picadas grosseiramente e a canela e misture bem. 3. Deixe algumas nozes e canela para uso posterior.\r\n4. Despeje a mistura em formas e coloque 1/4 de noz em cima de cada muffin.\r\n5. Asse por 15 minutos a 150 ° C.\r\nRetire do forno e polvilhe com canela.', 6, 20);
 
 --
--- Índices para tabelas despejadas
+-- Indexes for dumped tables
 --
 
 --
--- Índices para tabela `benefits`
+-- Indexes for table `benefits`
 --
 ALTER TABLE `benefits`
   ADD PRIMARY KEY (`idbenefit`);
 
 --
--- Índices para tabela `food`
+-- Indexes for table `food`
 --
 ALTER TABLE `food`
   ADD PRIMARY KEY (`idfood`);
 
 --
--- Índices para tabela `food_benefit`
+-- Indexes for table `food_benefit`
 --
 ALTER TABLE `food_benefit`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices para tabela `glossary`
+-- Indexes for table `glossary`
 --
 ALTER TABLE `glossary`
   ADD PRIMARY KEY (`idglossary`);
 
 --
--- Índices para tabela `nutrition`
+-- Indexes for table `library`
+--
+ALTER TABLE `library`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `nutrition`
 --
 ALTER TABLE `nutrition`
   ADD PRIMARY KEY (`idnutri`);
 
 --
--- Índices para tabela `recipes`
+-- Indexes for table `recipes`
 --
 ALTER TABLE `recipes`
   ADD PRIMARY KEY (`idrecipe`);
 
 --
--- AUTO_INCREMENT de tabelas despejadas
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT de tabela `benefits`
+-- AUTO_INCREMENT for table `benefits`
 --
 ALTER TABLE `benefits`
-  MODIFY `idbenefit` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `idbenefit` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT de tabela `food`
+-- AUTO_INCREMENT for table `food`
 --
 ALTER TABLE `food`
-  MODIFY `idfood` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `idfood` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT de tabela `food_benefit`
+-- AUTO_INCREMENT for table `food_benefit`
 --
 ALTER TABLE `food_benefit`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de tabela `glossary`
+-- AUTO_INCREMENT for table `glossary`
 --
 ALTER TABLE `glossary`
-  MODIFY `idglossary` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `idglossary` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT de tabela `nutrition`
+-- AUTO_INCREMENT for table `library`
+--
+ALTER TABLE `library`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `nutrition`
 --
 ALTER TABLE `nutrition`
-  MODIFY `idnutri` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=322;
+  MODIFY `idnutri` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=402;
 
 --
--- AUTO_INCREMENT de tabela `recipes`
+-- AUTO_INCREMENT for table `recipes`
 --
 ALTER TABLE `recipes`
   MODIFY `idrecipe` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
