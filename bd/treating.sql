@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jun 02, 2024 at 12:03 AM
+-- Generation Time: Jun 02, 2024 at 01:17 PM
 -- Server version: 5.7.24
 -- PHP Version: 8.0.1
 
@@ -41,7 +41,7 @@ CREATE TABLE `benefits` (
 INSERT INTO `benefits` (`idbenefit`, `name`, `description`, `image`) VALUES
 (1, 'Ossos e articulações', 'Se os ossos fornecem a estrutura, as articulações fornecem a flexibilidade, permitindo o movimento. Comer alimentos ricos em cálcio, vitamina D, vitamina C e selénio vai ajudar a manter os seus ossos e articulações saudáveis.', 'joints.svg'),
 (2, 'Coração', 'Cuidar da saúde do coração é uma das condutas essenciais quando o assunto é manter a qualidade de vida e o bom funcionamento do nosso organismo. É importante evitar fatores de risco como o tabagismo, alimentação muito gorda e açucarada, falta de descanso e de exercício físico.', 'heart.svg'),
-(3, 'Gripe', 'A gripe é uma doença infecciosa do aparelho respiratório, altamente contagiosa, causada pelo vírus influenza. Um estilo de vida saudável pode em muito ajudar na prevenção e recuperação de doenças.', 'virus.svg'),
+(3, 'Sistema imunológico', 'A gripe é uma doença infecciosa do aparelho respiratório, altamente contagiosa, causada pelo vírus influenza. Um estilo de vida saudável pode em muito ajudar na prevenção e recuperação de doenças.', 'virus.svg'),
 (4, 'Atividade cerebral', '', 'brain.svg'),
 (5, 'Flora intestinal', 'Quando falamos de flora intestinal, estamos a falar de um grupo de bactérias vivas que se encontram nos intestinos e que desempenham um papel muito importante no metabolismo de nutrientes e na proteção contra agentes patogénicos.', 'intestine.svg');
 
@@ -85,6 +85,41 @@ CREATE TABLE `food_benefit` (
   `idbenefit` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `food_benefit`
+--
+
+INSERT INTO `food_benefit` (`id`, `idfood`, `idbenefit`) VALUES
+(1, 1, 2),
+(2, 1, 3),
+(3, 1, 5),
+(4, 2, 1),
+(5, 2, 3),
+(6, 3, 2),
+(7, 3, 3),
+(8, 3, 4),
+(9, 4, 1),
+(10, 4, 4),
+(11, 4, 5),
+(12, 5, 3),
+(13, 5, 2),
+(14, 5, 5),
+(15, 5, 4),
+(16, 6, 5),
+(17, 6, 3),
+(18, 6, 2),
+(19, 6, 1),
+(20, 7, 2),
+(21, 7, 4),
+(22, 7, 5),
+(23, 8, 2),
+(24, 8, 4),
+(25, 8, 5),
+(26, 8, 3),
+(27, 9, 5),
+(28, 9, 4),
+(29, 9, 4);
+
 -- --------------------------------------------------------
 
 --
@@ -124,6 +159,16 @@ CREATE TABLE `library` (
   `description` text NOT NULL,
   `link` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `library`
+--
+
+INSERT INTO `library` (`id`, `title`, `description`, `link`) VALUES
+(1, 'Porções da roda dos alimentos', '', 'porçoes_roda_dos_alimentos.pdf'),
+(2, 'Guia para alimentação adequada', '', 'alimentaçao_adequada.pdf'),
+(3, 'Vegetarian basics', '', 'vegetarian-starter.pdf'),
+(4, 'Porções de fruta', '', 'fruta_porçoes.jpg');
 
 -- --------------------------------------------------------
 
@@ -595,7 +640,7 @@ ALTER TABLE `food`
 -- AUTO_INCREMENT for table `food_benefit`
 --
 ALTER TABLE `food_benefit`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `glossary`
@@ -607,7 +652,7 @@ ALTER TABLE `glossary`
 -- AUTO_INCREMENT for table `library`
 --
 ALTER TABLE `library`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `nutrition`
