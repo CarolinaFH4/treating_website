@@ -1,0 +1,15 @@
+#introcomunity {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.blob {
+  width: 50%; /* Adjust this value to control the size */
+  max-width: 500px; /* Optional: maximum size */
+  height: auto; /* Ensures the aspect ratio is maintained */
+}
+.blob svg {
+  width: 100%;
+  height: auto; /* Ensures the aspect ratio is maintained */
+}
