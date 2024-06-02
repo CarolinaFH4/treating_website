@@ -29,30 +29,49 @@
       <section class="introduction">
         <div>
           <div>
-            <img src="./media/images/comunity.png" alt="people eating together">
+            <div>
+              <img src="./media/images/comunity.png" alt="people eating together">
+            </div>
+            <a href="">Comunidade</a>
+            <p>
+              Treating vem esclarecer conceitos de nutrição e juntar pessoas através do poder da alimentação
+            </p>
           </div>
-          <a href="">Comunidade</a>
-          <p>
-            Treating vem esclarecer conceitos de nutrição e juntar pessoas através do poder da alimentação
-          </p>
-        </div>
-        <div>
           <div>
-            <img src="./media/images/recipes.png" alt="various organic dishes">
+            <div>
+              <img src="./media/images/recipes.png" alt="various organic dishes">
+            </div>
+            <a href="">Receitas</a>
+            <p>
+              Selecionamos os melhores alimentos para tranformar nas melhores receitas.
+            </p>
           </div>
-          <a href="">Receitas</a>
-          <p>
-            Selecionamos os melhores alimentos para tranformar nas melhores receitas.
-          </p>
-        </div>
-        <div>
           <div>
-            <img src="./media/images/organs.png" alt="body parts representation">
+            <div>
+              <img src="./media/images/organs.png" alt="body parts representation">
+            </div>
+            <a href="">Benefícios de saúde</a>
+            <p>
+              Olhamos para os alimentos como ferramentas de auto-cuidado e terapia, em vez de tendências e restrições.
+            </p>
           </div>
-          <a href="">Benefícios de saúde</a>
-          <p>
-            Olhamos para os alimentos como ferramentas de auto-cuidado e terapia, em vez de tendências e restrições.
-          </p>
+          <section class="introicons">
+            <div>
+              <img src="./media/icons/brain.svg" alt="">
+            </div>
+            <div>
+              <img src="./media/icons/virus.svg" alt="">
+            </div>
+            <div>
+              <img src="./media/icons/joints.svg" alt="">
+            </div><div>
+              <img src="./media/icons/heart.svg" alt="">
+            </div>
+          </section>
+          <div>
+            <p>O teu bem estar e esta plataforma são trabalhos em constante evolução. 
+              <a href="" alt="contact form">Partilha connosco</a> as tuas preocupações e temas que queres ver abordados!</p>
+          </div>
         </div>
       </section>
     </main>
