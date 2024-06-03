@@ -1,6 +1,7 @@
 /* Vars */
 @import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@1,700&family=Heebo&family=Spinnaker&display=swap');
 
+
 .spinnaker-regular {
   font-family: "Spinnaker", sans-serif;
   font-weight: 400;
@@ -26,9 +27,13 @@
 }
 
 /* header */
+@font-face {
+  font-family: "Lumino";
+  src: url(/fontes/Lumino.otf);
+}
 
 .logo{
-
+  font: "Lumino";
 }
 .logoborder{
   display: flex;
