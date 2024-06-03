@@ -20,32 +20,18 @@
   font-weight: 700;
   font-style: italic;
 }
-
-
 :root{
 
 }
 
-/* header */
-@font-face {
-  font-family: "Lumino";
-  src: url(/fontes/Lumino.otf);
-}
 
-.logo{
-  font: "Lumino";
-}
-.logoborder{
-  display: flex;
-  border: solid 2px #1A2704;
-  border-radius: 56px;
-  margin: 12px;
-  padding: 18px;
-  text-decoration: none;
-}
 
 /* fim de header */
+.pitch{
+  font-family: "Spinnaker";
+  text-transform: uppercase;
 
+}
 .introimgdiv{
   overflow: hidden;
 }

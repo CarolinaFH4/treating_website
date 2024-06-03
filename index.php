@@ -20,8 +20,8 @@
     <main>
       <section class="introduction">
         <div class="container">
-          <div>
-            <h2>
+          <div class="text-center">
+            <h2 class= "pitch">
               Onde a nutrição e a comunidade se encontram
             </h2>
           </div>
@@ -38,7 +38,7 @@
             <div class="introimgdiv d-flex justify-content-center">
               <img src="./media/images/recipes.png" alt="various organic dishes">
             </div>
-            <a href="">Receitas</a>
+            <a class= "text-end" href="" >Receitas</a>
             <p>
               Selecionamos os melhores alimentos para tranformar nas melhores receitas.
             </p>
