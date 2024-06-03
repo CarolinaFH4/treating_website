@@ -1,14 +1,53 @@
+/* Vars */
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@1,700&family=Heebo&family=Spinnaker&display=swap');
+
+.spinnaker-regular {
+  font-family: "Spinnaker", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.heebo-regular {
+  font-family: "Heebo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.exo-bold-italic {
+  font-family: "Exo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: italic;
+}
+
+
+:root{
+
+}
+
+/* header */
+
+.logo{
+
+}
 .logoborder{
   display: flex;
-  border: 3px;
-  border-color: #1A2704;
+  border: solid 2px #1A2704;
   border-radius: 56px;
-  margin: 6px;
-  padding: 12px;
+  margin: 12px;
+  padding: 18px;
+  text-decoration: none;
+}
+
+/* fim de header */
+
+.introimgdiv{
+  overflow: hidden;
 }
 .introimg{
-  width: ;
+  min-width: 100vw;
 }
+
 
 .introicons{
   

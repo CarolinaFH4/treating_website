@@ -6,31 +6,28 @@
     <title>Treating Home</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="./CSS/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@1,700&family=Heebo&family=Spinnaker&display=swap" rel="stylesheet">
   </head>
 
 
 
   <body>
 
-    <header>
-      <div>
-        <div class="logoborder">
-          <h1>
-            Treating
-          </h1>
-        </div>
-        <h2>
-         Onde a nutrição e a comunidade se encontram
-        </h2>
-      </div>
-    </header>
+    <?php include "header.php"?> 
 
     <main>
       <section class="introduction">
-        <div>
+        <div class="container">
           <div>
-            <div class="introimg">
-              <img src="./media/images/comunity.png" alt="people eating together">
+            <h2>
+              Onde a nutrição e a comunidade se encontram
+            </h2>
+          </div>
+          <div>
+            <div class="introimgdiv d-flex justify-content-center">
+              <img class="introimg" src="./media/images/comunity.png" alt="people eating together">
             </div>
             <a href="">Comunidade</a>
             <p>
@@ -38,7 +35,7 @@
             </p>
           </div>
           <div>
-            <div class="introimg">
+            <div class="introimgdiv d-flex justify-content-center">
               <img src="./media/images/recipes.png" alt="various organic dishes">
             </div>
             <a href="">Receitas</a>
@@ -47,7 +44,7 @@
             </p>
           </div>
           <div>
-            <div class="introimg">
+            <div class="introimgdiv d-flex justify-content-center">
               <img src="./media/images/organs.png" alt="body parts representation">
             </div>
             <a href="">Benefícios de saúde</a>
@@ -55,7 +52,7 @@
               Olhamos para os alimentos como ferramentas de auto-cuidado e terapia, em vez de tendências e restrições.
             </p>
           </div>
-          <section class="introicons">
+          <section class="introicons d-flex">
             <div>
               <img src="./media/icons/brain.svg" alt="">
             </div>
