@@ -32,20 +32,25 @@
   text-transform: uppercase;
 
 }
+
 .introimgdiv{
-  overflow: hidden;
+
 }
 .introimg{
-  min-width: 100vw;
+  height: 200px;
+  overflow: hidden;
+  
 }
 
-
 .introicons{
-  
+  min-height: 60px;
+  background-color: #E9AE79;
+  border-radius: 50px;
+  margin:6px;
 }
 
 
 
 #wave{
-  fill: #229b1e"
+  fill: #E9AE79"
 }
