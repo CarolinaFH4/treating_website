@@ -21,16 +21,16 @@
       <section class="introduction">
         <div class="container">
           <div class="text-center">
-            <h2 class= "pitch">
-              Onde a nutrição e a comunidade se encontram
+            <h2 class= "pitch spinnaker-regular mb-3">
+              Onde a nutrição e a comunidade se encontram.
             </h2>
           </div>
-          <div>
-            <div class="introimgdiv d-flex justify-content-center">
-              <img class="introimg" src="./media/images/comunity.png" alt="people eating together">
+          <div class="d-flex flex-column align-items-center">
+            <div class="introimgdiv">
+              <img class="introimg justify-content-center" src="./media/images/comunity.png" alt="people eating together">
             </div>
-            <a href="">Comunidade</a>
-            <p>
+            <a class="align-self-end" href="">Comunidade</a>
+            <p class="text-center">
               Treating vem esclarecer conceitos de nutrição e juntar pessoas através do poder da alimentação
             </p>
           </div>
@@ -38,7 +38,7 @@
             <div class="introimgdiv d-flex justify-content-center">
               <img src="./media/images/recipes.png" alt="various organic dishes">
             </div>
-            <a class= "text-end" href="" >Receitas</a>
+            <a href="" >Receitas</a>
             <p>
               Selecionamos os melhores alimentos para tranformar nas melhores receitas.
             </p>
@@ -52,7 +52,7 @@
               Olhamos para os alimentos como ferramentas de auto-cuidado e terapia, em vez de tendências e restrições.
             </p>
           </div>
-          <section class="introicons d-flex">
+          <section class="introicons d-flex justify-content-center">
             <div>
               <img src="./media/icons/brain.svg" alt="">
             </div>
