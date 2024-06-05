@@ -25,8 +25,11 @@
 }
 
 
-
 /* fim de header */
+.container{
+  overflow: hidden;
+}
+
 .pitch{
   font-family: "Spinnaker";
   text-transform: uppercase;
