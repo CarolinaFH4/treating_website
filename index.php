@@ -13,13 +13,13 @@
 
 
 
-  <body>
+  <body class="container">
 
     <?php include "header.php"?> 
 
     <main>
       <section class="introduction">
-        <div class="container">
+        <div>
 
           <div class="text-center">
             <h2 class= "pitch spinnaker-regular mb-3">
