@@ -34,16 +34,16 @@
               </button>
               <ul class="dropdown-menu">
                 <li>
-                  <a class="dropdown-item" href="#">Início</a>
+                  <a class="dropdown-item" href="index.php">Início</a>
                 </li>
                 <li>
                   <a class="dropdown-item" href="alimentos.php">Alimentos</a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="comunidade.php">Comunidade</a>
+                  <a class="dropdown-item" href="#">Comunidade</a>
                 </li>
                 <li>
-                  <a class="receitas.php" href="#">Receitas</a>
+                  <a class="dropdown-item" href="#">Receitas</a>
                 </li>
               </ul>
             </div>
@@ -55,8 +55,9 @@
 
 
     <script type="text/javascript" src="Scripts/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="Scripts/bootstrap.min.js">
+    <script type="text/javascript" src="Scripts/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    </script>
+
+    
   </body>
 </html>
