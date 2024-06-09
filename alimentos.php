@@ -17,8 +17,8 @@
       -webkit-mask-repeat: no-repeat;
       mask-repeat: no-repeat;
       mask-size: 9em;
-      background-image:cover;
-      background-position:center center;
+      mask-size: contain;
+      -webkit-mask-position:center;
 
     }
   </style>
@@ -28,7 +28,7 @@
 
   <?php include "header.php"?> 
 
-  <main class=container>
+  <main>
     <div>
 
     </div>

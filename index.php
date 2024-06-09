@@ -14,7 +14,7 @@
 
 
 
-  <body class="container">
+  <body class=>
 
     <?php include "header.php"?> 
 

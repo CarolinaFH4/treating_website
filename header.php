@@ -11,9 +11,9 @@
   </head>
 
 
-  <body>
+  <body class="container">
     <header>
-      <div>
+      <div >
         <section>
         
           <div class= "row justify-content-center ">
