@@ -10,12 +10,41 @@
     <link rel="stylesheet" href="./CSS/styles.css">
   </head>
 
+  <style>
+    .mask1 {
+      -webkit-mask-image: url(./media/icons/blob1.svg);
+      mask-image: url(./media/icons/blob1.svg);
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+    }
+  </style>
+
 
   <body>
 
   <?php include "header.php"?> 
 
+  <main>
+    <div>
 
+    </div>
+    <div>
+      <h1>
+        Alimentos
+      </h1>
+      <p>
+        At Treating we focus on unprocessed food detailed values for you to decide where to start!
+      </p>
+    </div>
+    <section>
+      <div class="mask1">
+        <img src="/media/images/sofiapaixao.jpg" alt="Sofia Paixão, glutenfree.pt" width="600" height="400">
+      </div>
+      <h3>
+        Sofia Paixão, glutenfree.pt
+      </h3>
+    </section>
+  </main>
 
 
 
