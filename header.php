@@ -14,10 +14,9 @@
         </section>
 
         <section> 
-          <div class="position-fixed bottom-0 end-0">
+          <div class="position-fixed bottom-0 end-0 z-1">
             <div class="btn-group dropup">
               <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropup
               </button>
               <ul class="dropdown-menu">
                 <li>

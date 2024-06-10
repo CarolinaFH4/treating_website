@@ -14,11 +14,11 @@
 
 
 
-  <body class="container overflow-x-hidden">
+  <body>
 
     <?php include "header.php"?> 
 
-    <main>
+    <main class="container overflow-x-hidden m-0">
       <section class="introduction">
         <div>
 
@@ -58,7 +58,7 @@
             </p>
           </div>
           
-          <section class=" d-flex justify-content-center">
+          <section class=" d-flex justify-content-center gap-5">
             <div>
               <img class="introicons" src="./media/icons/brain.svg" alt="">
             </div>
@@ -73,9 +73,9 @@
             </div>
           </section>
 
-          <div class="mt-4">
-            <p>O teu bem estar e esta plataforma são trabalhos em constante evolução. 
-              <a href="" alt="contact form">Partilha connosco</a> as tuas preocupações e temas que queres ver abordados!</p>
+          <div class="mt-4 text-center">
+            <h3>O teu bem estar e esta plataforma são trabalhos em constante evolução. 
+              <a href="" alt="contact form">Partilha connosco</a> as tuas preocupações e temas que queres ver abordados!</h3>
           </div>
         </div>
 

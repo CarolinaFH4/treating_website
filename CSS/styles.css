@@ -1,7 +1,6 @@
 /* Vars */
 @import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@1,700&family=Heebo&family=Spinnaker&display=swap');
 
-
 .spinnaker-regular {
   font-family: "Spinnaker", sans-serif;
   font-weight: 400;
@@ -14,20 +13,40 @@
   font-style: normal;
 }
 
-.exo-bold-italic {
+.exo-title {
   font-family: "Exo", sans-serif;
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: italic;
 }
-:root{
+
+
+:root{  
+  --bs-primary: #B2CF82; /*divs bg*/
+  --bs-secondary: #E9AE79; /*footer*/
+  --bs-tertiary-bg: #E3CED7; /* search bar */
+  --bs-tertiary-color: hsla(335, 26%, 66%, 0.90); /* MENU*/
+  --bs-warning: #ffc107;
+
+  --bs-body-color: #060901;/*done*/
+  --bs-body-bg: #F7FAF3;/*done*/
 
 }
 
+h1{
+  font-family: "Exo" ;
+}
+h2 , h3{
+  font-family: "Spinnaker";
+}
+p{
+  font-family: "Heebo";
+}
 
-/* fim de header */
+/* header */
 
 
+/* index */
 .pitch{
   font-family: "Spinnaker";
   text-transform: uppercase;
@@ -47,14 +66,11 @@
   min-height: 60px;
   background-color: #E9AE79;
   border-radius: 50px;
-  margin:6px;
 }
 
 
+/* footer */
 
-#fwave{
-  fill: #E9AE79"
-}
-.fwave{
-  
+.linksf{
+  list-style: none;
 }
