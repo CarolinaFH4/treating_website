@@ -1,13 +1,14 @@
 <footer>
-  <div class="container-fluid p-0">
+  <div class="w-100 p-0">
       <img class="wavef" src="./media/icons/wave.footer.svg" alt="wave separation">
   </div>
-  <div class="">
-    <a href="">
-      <img src="./media/icons/logo_no_border.svg" alt="">
+  
+  <div class="d-flex flex-column align-items-center">
+    <a href="index.php" class="mb-4">
+      <img src="./media/icons/logo_no_border.svg" alt="Treating logo">
     </a>
-    <div class="d-flex ">
-      <ul class="linksf col">
+    <div class="d-flex justify-content-between">
+      <ul class="linksf">
         <li>
           <a href="">Contacto</a>
         </li>
@@ -19,7 +20,7 @@
         </li>
       </ul>
 
-      <div  class="col">
+      <div  class="">
         <img type="link" href="" src="./media/icons/instagram.svg" alt="Instagram">
         <img type="link" href="" src="./media/icons/pinterest.svg" alt="Pinterest">
         <img type="link" href="" src="./media/icons/linkedin.svg" alt="LinkedIn">

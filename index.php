@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <meta name="description" content="Presenting a positive view on food, including nutritional values, great taste and a comunity.">
+    <title>Treating</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@1,700&family=Heebo&family=Spinnaker&display=swap" rel="stylesheet">
@@ -58,7 +58,7 @@
             </p>
           </div>
           
-          <section class=" d-flex justify-content-center gap-5">
+          <section class=" d-flex justify-content-center gap-3">
             <div>
               <img class="introicons" src="./media/icons/brain.svg" alt="">
             </div>
