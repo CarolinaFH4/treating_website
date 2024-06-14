@@ -61,7 +61,8 @@ p{
 
 }
 .introimg{
-  height: 200px;
+ /* height: 200px;*/
+  width: 200vw;
   overflow: hidden;
   
 }

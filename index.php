@@ -18,10 +18,8 @@
 
     <?php include "header.php"?> 
 
-    <main class="container overflow-x-hidden m-0">
-      <section class="introduction">
+    <main class="container overflow-x-hidden mx-auto p-3">
         <div>
-
           <div class="text-center">
             <h2 class= "pitch spinnaker-regular mb-3">
               Onde a nutrição e a comunidade se encontram.
@@ -30,7 +28,7 @@
 
           <div class="d-flex flex-column align-items-center">
             <div class="introimgdiv">
-              <img class="introimg justify-content-center" src="./media/images/comunity.png" alt="people eating together">
+              <img class="introimg justify-content-center" src="./media/elements/comunity.png" alt="people eating together">
             </div>
             <a class="align-self-end" href="">Comunidade</a>
             <p class="text-center mb-4 mt-4">
@@ -40,7 +38,7 @@
 
           <div class="d-flex flex-column align-items-center">
             <div class="introimgdiv">
-              <img class="introimg justify-content-center" src="./media/images/recipes.png" alt="various organic dishes">
+              <img class="introimg justify-content-center" src="./media/elements/recipes.png" alt="various organic dishes">
             </div>
             <a class="align-self-end" href="" >Receitas</a>
             <p class="text-center mb-4 mt-4">
@@ -50,7 +48,7 @@
 
           <div class="d-flex flex-column align-items-center">
             <div class="introimgdiv">
-              <img class="introimg justify-content-center"  src="./media/images/organs.png" alt="body parts representation">
+              <img class="introimg justify-content-center"  src="./media/elements/organs.png" alt="body parts representation">
             </div>
             <a class="align-self-end" href="">Benefícios de saúde</a>
             <p class="text-center mb-4 mt-4">
@@ -78,8 +76,6 @@
               <a href="" alt="contact form">Partilha connosco</a> as tuas preocupações e temas que queres ver abordados!</h3>
           </div>
         </div>
-
-      </section>
     </main>
 
     <?php include "footer.php"?> 

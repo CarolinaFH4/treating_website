@@ -1,10 +1,10 @@
 
     <header>
-      <div>
+      <div class="container-fluid">
         <section>
         
           <div class= "row justify-content-center ">
-            <div class= "col-auto m-4">
+            <div class= "col-auto m-4 mb-1">
                 <a href="index.php" class="col">
                   <img src="./media/icons/logo.svg" alt="Treating logo" >
                 </a>
@@ -17,6 +17,7 @@
           <div class="position-fixed bottom-0 end-0 z-1">
             <div class="btn-group dropup">
               <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                
               </button>
               <ul class="dropdown-menu">
                 <li>
