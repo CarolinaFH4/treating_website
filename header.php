@@ -15,10 +15,8 @@
 
         <section> 
           <div class="position-fixed bottom-0 end-0 z-1">
-            <div class="btn-group dropup">
-              <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-              <img src="media/icons/menu.svg" alt="">
-              </button>
+            <div class="menubtn btn-group dropup">
+              <img type="button" data-bs-toggle="dropdown" aria-expanded="false" src="./media/icons/menu.svg" alt="Menu">
               <ul class="dropdown-menu">
                 <li>
                   <a class="dropdown-item" href="index.php">Início</a>

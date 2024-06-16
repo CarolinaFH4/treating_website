@@ -26,16 +26,23 @@
             </h2>
           </div>
 
-          <div class="d-flex flex-column align-items-center">
-            <div class="introimgdiv">
-              <img class="introimg justify-content-center" src="./media/elements/comunity.png" alt="people eating together">
-            </div>
-            <a class="align-self-end" href="">Comunidade</a>
-            <p class="text-center mb-4 mt-4">
-              Treating vem esclarecer conceitos de nutrição e juntar pessoas através do poder da alimentação
-            </p>
-          </div>
 
+          <span class="bg-primary-subtle z-n1" style="display:block">
+            <div class="d-flex flex-column align-items-center">
+              
+              <div class="introimgdiv">
+                <img class="introimg justify-content-center" src="./media/elements/comunity.png" alt="people eating together">
+              </div>
+              <a class="align-self-end" href="">Comunidade</a>
+              
+              <p class="text-center mb-4 mt-4 ">
+                Treating vem esclarecer conceitos de nutrição e juntar pessoas através do poder da alimentação
+              </p>
+              
+            </div>
+          </span>
+
+          <span class="bg-primary-subtle z-n1" style="display:block">
           <div class="d-flex flex-column align-items-center">
             <div class="introimgdiv">
               <img class="introimg justify-content-center" src="./media/elements/recipes.png" alt="various organic dishes">
@@ -45,6 +52,7 @@
               Selecionamos os melhores alimentos para tranformar nas melhores receitas.
             </p>
           </div>
+          </span>
 
           <div class="d-flex flex-column align-items-center">
             <div class="introimgdiv">
