@@ -3,7 +3,7 @@
       <img class="wavef" src="./media/icons/wave.footer.svg" alt="wave separation">
   </div>
   
-  <div class="d-flex flex-column align-items-center">
+  <div class="d-flex flex-column align-items-center bg-secondary-subtle">
     <a href="index.php" class="mb-4">
       <img src="./media/icons/logo_no_border.svg" alt="Treating logo">
     </a>

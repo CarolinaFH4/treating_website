@@ -24,7 +24,7 @@
 :root{  
   --bs-primary: #B2CF82; /*divs bg*/
   --bs-secondary: #E9AE79; /*footer*/
-  --bs-secondary-bg-subtle:#E9AE79;
+  --bs-bg-secondary-subtle:#E9AE79;
   --bs-tertiary-bg: #E3CED7; /* search bar */
   --bs-tertiary-color: hsla(335, 26%, 66%, 0.90); /* MENU*/
   --bs-warning: #ffc107;
@@ -47,6 +47,9 @@ p{
 /* Generics end */
 
 /* Header */
+.dropdown-toggle::after {
+  display: none;
+}
 /* Header end */
 
 
