@@ -19,7 +19,15 @@
       mask-size: 9em;
       mask-size: contain;
       -webkit-mask-position:center;
-
+    }
+    .mask2 {
+      -webkit-mask-image: url(./media/icons/blob2.svg);
+      mask-image: url(./media/icons/blob2.svg);
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      mask-size: 9em;
+      mask-size: contain;
+      -webkit-mask-position:center;
     }
   </style>
 
@@ -37,24 +45,24 @@
         Alimentos
       </h1>
       <p>
-        At Treating we focus on unprocessed food detailed values for you to decide where to start!
+      Na treating investimos na informação de alimentos menos processados para que possa escolher o teu ponto de partida 
       </p>
     </div>
 
-    <section class="d-flex justify-content-center gap-3">
+    <section class="d-flex align-items-stretch">
 
-      <div class="d-flex col-6 flex-column justify-content-between">
-        <div class="mask1 overflow-hidden ">
-          <img src="./media/images/abacate.jpg" alt="Sofia Paixão, glutenfree.pt" class="w-100">
+      <div class="d-flex align-items-center col flex-column">
+        <div class="mask1 overflow-hidden">
+          <img src="./media/alimentos/abacate.jpg" alt="Abacate" class="w-100">
         </div>
         <h3 mt-3>
           Abacate
         </h3>
       </div>
 
-      <div class="d-flex col-6 flex-column justify-content-between">
-        <div class="mask1 overflow-hidden ">
-          <img src="./media/images/alho.jpg" alt="Sofia Paixão, glutenfree.pt" class="w-100">
+      <div class="d-flex align-items-center col flex-column">
+        <div class="mask2 overflow-hidden">
+          <img src="./media/alimentos/alho.jpg" alt="Alho" class="w-100">
         </div>
         <h3>
           Alho
