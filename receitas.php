@@ -10,12 +10,85 @@
     <link rel="stylesheet" href="./CSS/styles.css">
   </head>
 
+  <style>
+    .mask1 {
+      -webkit-mask-image: url(./media/icons/blob1.svg);
+      mask-image: url(./media/icons/blob1.svg);
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      mask-size: 9em;
+      mask-size: contain;
+      -webkit-mask-position:center;
+    }
+    .mask2 {
+      -webkit-mask-image: url(./media/icons/blob2.svg);
+      mask-image: url(./media/icons/blob2.svg);
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      mask-size: 9em;
+      mask-size: contain;
+      -webkit-mask-position:center;
+    }
+  </style>
+
 
   <body>
 
+  <?php include "header.php"?> 
 
+  <main>
+    <div class="container">
+      <div>
+        <h1>
+          Alimentos
+        </h1>
+        <p>
+        Na treating investimos na informação de alimentos menos processados para que possa escolher o teu ponto de partida 
+        </p>
+      </div>
 
+      <section class="d-flex row col align-items-stretch ">
 
+        <a href="detalhealimento.php" class="d-flex align-items-center col-6 flex-column">
+          <div class="mask1 overflow-hidden">
+            <img src="./media/alimentos/abacate.jpg" alt="Abacate" class="w-100">
+          </div>
+          <h3 mt-3>
+            Abacate
+          </h3>
+        </a>
+
+        <a href="detalhealimento.php" class="d-flex align-items-center col-6 col-m-4 flex-column">
+          <div class="mask2 overflow-hidden">
+            <img src="./media/alimentos/alho.jpg" alt="Alho" class="w-100">
+          </div>
+          <h3>
+            Alho
+          </h3>
+        </a>
+
+        <a href="detalhealimento.php" class="d-flex align-items-center col-6 col-m-4 flex-column">
+          <div class="mask1 overflow-hidden">
+            <img src="./media/alimentos/abacate.jpg" alt="Abacate" class="w-100">
+          </div>
+          <h3 mt-3>
+            Abacate
+          </h3>
+        </a>
+
+        <a href="detalhealimento.php" class="d-flex align-items-center col-6 col-m-4 flex-column">
+          <div class="mask2 overflow-hidden">
+            <img src="./media/alimentos/alho.jpg" alt="Alho" class="w-100">
+          </div>
+          <h3>
+            Alho
+          </h3>
+        </a>
+      </section>
+    </div>
+  </main>
+
+  <?php include "footer.php"?>
 
   
   

@@ -25,10 +25,10 @@
                   <a class="dropdown-item" href="alimentos.php">Alimentos</a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="#">Comunidade</a>
+                  <a class="dropdown-item" href="comunidade.php">Comunidade</a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="#">Receitas</a>
+                  <a class="dropdown-item" href="receitas.php">Receitas</a>
                 </li>
               </ul>
             </div>

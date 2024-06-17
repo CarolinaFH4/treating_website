@@ -37,7 +37,7 @@
   <?php include "header.php"?> 
 
   <main>
-    <div>
+    <div class="container">
       <div>
         <h1>
           Alimentos
@@ -47,9 +47,9 @@
         </p>
       </div>
 
-      <section class="d-flex col-2 align-items-stretch ">
+      <section class="d-flex row col align-items-stretch ">
 
-        <a href="detalhealimento.php" class="d-flex align-items-center col flex-column">
+        <a href="detalhealimento.php" class="d-flex align-items-center col-6 flex-column">
           <div class="mask1 overflow-hidden">
             <img src="./media/alimentos/abacate.jpg" alt="Abacate" class="w-100">
           </div>
@@ -58,7 +58,7 @@
           </h3>
         </a>
 
-        <a href="detalhealimento.php" class="d-flex align-items-center col flex-column">
+        <a href="detalhealimento.php" class="d-flex align-items-center col-6 col-m-4 flex-column">
           <div class="mask2 overflow-hidden">
             <img src="./media/alimentos/alho.jpg" alt="Alho" class="w-100">
           </div>
@@ -67,7 +67,7 @@
           </h3>
         </a>
 
-        <a href="detalhealimento.php" class="d-flex align-items-center col flex-column">
+        <a href="detalhealimento.php" class="d-flex align-items-center col-6 col-m-4 flex-column">
           <div class="mask1 overflow-hidden">
             <img src="./media/alimentos/abacate.jpg" alt="Abacate" class="w-100">
           </div>
@@ -76,7 +76,7 @@
           </h3>
         </a>
 
-        <a href="detalhealimento.php" class="d-flex align-items-center col flex-column">
+        <a href="detalhealimento.php" class="d-flex align-items-center col-6 col-m-4 flex-column">
           <div class="mask2 overflow-hidden">
             <img src="./media/alimentos/alho.jpg" alt="Alho" class="w-100">
           </div>
@@ -85,10 +85,12 @@
           </h3>
         </a>
       </section>
+    </div>
   </main>
 
+  <?php include "footer.php"?>
 
-
+  
   
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
