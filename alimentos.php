@@ -38,37 +38,53 @@
 
   <main>
     <div>
-
-    </div>
-    <div>
-      <h1>
-        Alimentos
-      </h1>
-      <p>
-      Na treating investimos na informação de alimentos menos processados para que possa escolher o teu ponto de partida 
-      </p>
-    </div>
-
-    <section class="d-flex align-items-stretch">
-
-      <div class="d-flex align-items-center col flex-column">
-        <div class="mask1 overflow-hidden">
-          <img src="./media/alimentos/abacate.jpg" alt="Abacate" class="w-100">
-        </div>
-        <h3 mt-3>
-          Abacate
-        </h3>
+      <div>
+        <h1>
+          Alimentos
+        </h1>
+        <p>
+        Na treating investimos na informação de alimentos menos processados para que possa escolher o teu ponto de partida 
+        </p>
       </div>
 
-      <div class="d-flex align-items-center col flex-column">
-        <div class="mask2 overflow-hidden">
-          <img src="./media/alimentos/alho.jpg" alt="Alho" class="w-100">
-        </div>
-        <h3>
-          Alho
-        </h3>
-      </div>
-    </section>
+      <section class="d-flex col-2 align-items-stretch ">
+
+        <a href="detalhealimento.php" class="d-flex align-items-center col flex-column">
+          <div class="mask1 overflow-hidden">
+            <img src="./media/alimentos/abacate.jpg" alt="Abacate" class="w-100">
+          </div>
+          <h3 mt-3>
+            Abacate
+          </h3>
+        </a>
+
+        <a href="detalhealimento.php" class="d-flex align-items-center col flex-column">
+          <div class="mask2 overflow-hidden">
+            <img src="./media/alimentos/alho.jpg" alt="Alho" class="w-100">
+          </div>
+          <h3>
+            Alho
+          </h3>
+        </a>
+
+        <a href="detalhealimento.php" class="d-flex align-items-center col flex-column">
+          <div class="mask1 overflow-hidden">
+            <img src="./media/alimentos/abacate.jpg" alt="Abacate" class="w-100">
+          </div>
+          <h3 mt-3>
+            Abacate
+          </h3>
+        </a>
+
+        <a href="detalhealimento.php" class="d-flex align-items-center col flex-column">
+          <div class="mask2 overflow-hidden">
+            <img src="./media/alimentos/alho.jpg" alt="Alho" class="w-100">
+          </div>
+          <h3>
+            Alho
+          </h3>
+        </a>
+      </section>
   </main>
 
 

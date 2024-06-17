@@ -21,13 +21,13 @@
     <main class="container overflow-x-hidden mx-auto p-3">
         <div>
           <div class="text-center">
-            <h2 class= "pitch spinnaker-regular mb-3">
+            <h2 class= "pitch text-uppercase spinnaker-regular mb-3">
               Onde a nutrição e a comunidade se encontram.
             </h2>
           </div>
 
 
-          <span class="bg-primary-subtle z-n1" style="display:block">
+          <span class="bg-primary-subtle " style="display:block">
             <div class="d-flex flex-column align-items-center">
               
               <div class="introimgdiv">
@@ -81,7 +81,7 @@
 
           <div class="mt-4 text-center">
             <h3>O teu bem estar e esta plataforma são trabalhos em constante evolução. 
-              <a href="" alt="contact form">Partilha connosco</a> as tuas preocupações e temas que queres ver abordados!</h3>
+              <a href="" alt="contact form" class="text-reset">Partilha connosco</a> as tuas preocupações e temas que queres ver abordados!</h3>
           </div>
         </div>
     </main>
