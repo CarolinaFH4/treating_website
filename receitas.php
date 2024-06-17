@@ -36,61 +36,57 @@
 
   <?php include "header.php"?> 
 
-  <main>
+ <main>
     <div class="container">
       <div>
-        <h1>
-          Alimentos
-        </h1>
-        <p>
-        Na treating investimos na informação de alimentos menos processados para que possa escolher o teu ponto de partida 
-        </p>
+        <h1>Alimentos</h1>
+        <p>Na treating investimos na informação de alimentos menos processados para que possa escolher o teu ponto de partida.</p>
       </div>
 
-      <section class="d-flex row col align-items-stretch ">
+      <div class="row">
+        <div class="col-6 col-md-4">
+          <a href="detalhealimento.php">
+            <div class="mask1 overflow-hidden">
+              <img src="./media/alimentos/abacate.jpg" alt="Abacate" class="img-fluid">
+            </div>
+            <h3 class="mt-3 text-center">Abacate</h3>
+          </a>
+        </div>
 
-        <a href="detalhealimento.php" class="d-flex align-items-center col-6 flex-column">
-          <div class="mask1 overflow-hidden">
-            <img src="./media/alimentos/abacate.jpg" alt="Abacate" class="w-100">
-          </div>
-          <h3 mt-3>
-            Abacate
-          </h3>
-        </a>
+        <div class="col-6 col-md-4">
+          <a href="detalhealimento.php">
+            <div class="mask2 overflow-hidden">
+              <img src="./media/alimentos/alho.jpg" alt="Alho" class="img-fluid">
+            </div>
+            <h3 class="mt-3 text-center">Alho</h3>
+          </a>
+        </div>
 
-        <a href="detalhealimento.php" class="d-flex align-items-center col-6 col-m-4 flex-column">
-          <div class="mask2 overflow-hidden">
-            <img src="./media/alimentos/alho.jpg" alt="Alho" class="w-100">
-          </div>
-          <h3>
-            Alho
-          </h3>
-        </a>
+        <div class="col-6 col-md-4">
+          <a href="detalhealimento.php">
+            <div class="mask1 overflow-hidden">
+              <img src="./media/alimentos/abacate.jpg" alt="Abacate" class="img-fluid">
+            </div>
+            <h3 class="mt-3 text-center">Abacate</h3>
+          </a>
+        </div>
 
-        <a href="detalhealimento.php" class="d-flex align-items-center col-6 col-m-4 flex-column">
-          <div class="mask1 overflow-hidden">
-            <img src="./media/alimentos/abacate.jpg" alt="Abacate" class="w-100">
-          </div>
-          <h3 mt-3>
-            Abacate
-          </h3>
-        </a>
-
-        <a href="detalhealimento.php" class="d-flex align-items-center col-6 col-m-4 flex-column">
-          <div class="mask2 overflow-hidden">
-            <img src="./media/alimentos/alho.jpg" alt="Alho" class="w-100">
-          </div>
-          <h3>
-            Alho
-          </h3>
-        </a>
-      </section>
+        <div class="col-6 col-md-4">
+          <a href="detalhealimento.php">
+            <div class="mask2 overflow-hidden">
+              <img src="./media/alimentos/alho.jpg" alt="Alho" class="img-fluid">
+            </div>
+            <h3 class="mt-3 text-center">Alho</h3>
+          </a>
+        </div>
+      </div>
+      
     </div>
   </main>
 
   <?php include "footer.php"?>
 
-  
+
   
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

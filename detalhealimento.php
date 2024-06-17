@@ -53,28 +53,78 @@
       </section>
 
       <section class="values">
-        <h2 class="text-uppercase"> Nutrientes:</h2>
+        <div>
+          <h2 class="text-uppercase"> Nutrientes:</h2>
 
-        <table class="table table-striped">
-          <tbody>
-            <tr>
-              <td>Energia:</td>
-              <td class="text-end">Otto</td>
-            </tr>
-            <tr>
-              <td>Ácidos gordos saturados:</td>
-              <td class="text-end">Thornton</td>
-            </tr>
-            <tr>
-              <td>Ácidos gordos monoinsaturados:</td>
-              <td class="text-end">Otto</td>
-            </tr>
-            <tr>
-              <td>Ácidos gordos polinsaturados:</td>
-              <td class="text-end">Thornton</td>
-            </tr>
-          </tbody>
-        </table>
+          <table class="table table-striped">
+            <tbody>
+              <tr>
+                <td>Energia:</td>
+                <td class="text-end">Otto</td>
+              </tr>
+              <tr>
+                <td>Ácidos gordos saturados:</td>
+                <td class="text-end">Thornton</td>
+              </tr>
+              <tr>
+                <td>Ácidos gordos monoinsaturados:</td>
+                <td class="text-end">Otto</td>
+              </tr>
+              <tr>
+                <td>Ácidos gordos polinsaturados:</td>
+                <td class="text-end">Thornton</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div>
+          <h2 class="text-uppercase"> Vitaminas:</h2>
+
+          <table class="table table-striped">
+            <tbody>
+              <tr>
+                <td>Energia:</td>
+                <td class="text-end">Otto</td>
+              </tr>
+              <tr>
+                <td>Ácidos gordos saturados:</td>
+                <td class="text-end">Thornton</td>
+              </tr>
+              <tr>
+                <td>Ácidos gordos monoinsaturados:</td>
+                <td class="text-end">Otto</td>
+              </tr>
+              <tr>
+                <td>Ácidos gordos polinsaturados:</td>
+                <td class="text-end">Thornton</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div>
+          <h2 class="text-uppercase"> Minerais:</h2>
+
+          <table class="table table-striped">
+            <tbody>
+              <tr>
+                <td>Energia:</td>
+                <td class="text-end">Otto</td>
+              </tr>
+              <tr>
+                <td>Ácidos gordos saturados:</td>
+                <td class="text-end">Thornton</td>
+              </tr>
+              <tr>
+                <td>Ácidos gordos monoinsaturados:</td>
+                <td class="text-end">Otto</td>
+              </tr>
+              <tr>
+                <td>Ácidos gordos polinsaturados:</td>
+                <td class="text-end">Thornton</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </section>
     <div>
   </main>
