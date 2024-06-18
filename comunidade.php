@@ -39,7 +39,7 @@
  <main>
     <div class="container">
       <div>
-        <h1>Alimentos</h1>
+        <h1>Comunidade</h1>
         <p>Na treating investimos na informação de alimentos menos processados para que possa escolher o teu ponto de partida.</p>
       </div>
 
