@@ -42,16 +42,16 @@
             </div>
           </span>
 
-          <span class="bg-primary-subtle z-n1" style="display:block">
-          <div class="d-flex flex-column align-items-center">
-            <div class="introimgdiv">
-              <img class="introimg justify-content-center" src="./media/elements/recipes.png" alt="various organic dishes">
+          <span class="bg-primary z-n1" style="display:block">
+            <div class="d-flex flex-column align-items-center">
+              <div class="introimgdiv">
+                <img class="introimg justify-content-center" src="./media/elements/recipes.png" alt="various organic dishes">
+              </div>
+              <a class="align-self-end" href="" >Receitas</a>
+              <p class="text-center mb-4 mt-4">
+                Selecionamos os melhores alimentos para tranformar nas melhores receitas.
+              </p>
             </div>
-            <a class="align-self-end" href="" >Receitas</a>
-            <p class="text-center mb-4 mt-4">
-              Selecionamos os melhores alimentos para tranformar nas melhores receitas.
-            </p>
-          </div>
           </span>
 
           <div class="d-flex flex-column align-items-center">

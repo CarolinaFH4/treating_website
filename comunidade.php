@@ -44,39 +44,39 @@
       </div>
 
       <div class="row">
-        <div class="col-6 col-md-4">
+        <div class="p-0 col-6 col-md-4">
           <a href="detalhealimento.php">
             <div class="mask1 overflow-hidden">
               <img src="./media/alimentos/abacate.jpg" alt="Abacate" class="img-fluid">
             </div>
-            <h3 class="mt-3 text-center">Abacate</h3>
+            <p class="mt-2 text-center">Abacate</p>
           </a>
         </div>
 
-        <div class="col-6 col-md-4">
+        <div class="p-0 col-6 col-md-4">
           <a href="detalhealimento.php">
             <div class="mask2 overflow-hidden">
               <img src="./media/alimentos/alho.jpg" alt="Alho" class="img-fluid">
             </div>
-            <h3 class="mt-3 text-center">Alho</h3>
+            <p class="mt-2 text-center">Alho</p>
           </a>
         </div>
 
-        <div class="col-6 col-md-4">
+        <div class="p-0 col-6 col-md-4">
           <a href="detalhealimento.php">
             <div class="mask1 overflow-hidden">
               <img src="./media/alimentos/abacate.jpg" alt="Abacate" class="img-fluid">
             </div>
-            <h3 class="mt-3 text-center">Abacate</h3>
+            <p class="mt-2 text-center">Abacate</p>
           </a>
         </div>
 
-        <div class="col-6 col-md-4">
+        <div class="p-0 col-6 col-md-4">
           <a href="detalhealimento.php">
             <div class="mask2 overflow-hidden">
               <img src="./media/alimentos/alho.jpg" alt="Alho" class="img-fluid">
             </div>
-            <h3 class="mt-3 text-center">Alho</h3>
+            <p class="mt-2 text-center">Alho</p>
           </a>
         </div>
       </div>
