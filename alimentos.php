@@ -5,9 +5,10 @@
             f.idfood, name, f.category, image, idnutri, n.idfood, parameter, n.category, value, unity 
             FROM food f, nutrition n 
             where f.idfood = n.idfood;";
+   
+  $result = mysqli_query($connection, $query);
 
-
-echo $query;
+echo $result;
 ?>
 
 <!doctype html>
