@@ -38,9 +38,18 @@
 
  <main>
     <div class="container">
-      <div>
-        <h1>Alimentos</h1>
-        <p>Na treating investimos na informação de alimentos menos processados para que possa escolher o teu ponto de partida.</p>
+      <div class=" d-flex justify-content-between mb-2">
+        <h1>Receitas</h1>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Ordenar
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">A-Z</a></li>
+              <li><a class="dropdown-item" href="#">Mais rápido</a></li>
+              <li><a class="dropdown-item" href="#">Menos ingredientes</a></li>
+            </ul>
+          </div>
       </div>
 
       <div class="row">
