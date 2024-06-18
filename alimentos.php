@@ -1,3 +1,15 @@
+<?php
+  require "connection.php";
+
+  $query = "SELECT 
+            f.idfood, name, f.category, image, idnutri, n.idfood, parameter, n.category, value, unity 
+            FROM food f, nutrition n 
+            where f.idfood = n.idfood;"
+
+
+echo
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
