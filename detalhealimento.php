@@ -83,13 +83,14 @@
 
       <section class="values">
         <div>
-          <h2 class="text-uppercase"> Nutrientes:</h2>
+          <h2 class="text-uppercase"><?php echo $ncategory?></h2>
 
           <table class="table table-striped">
             <tbody>
               <tr>
-                <td>Energia:</td>
-                <td class="text-end">Otto</td>
+                <td><?php echo $param?></td>
+                <td class="text-end"><?php echo $value?></td>
+                <td class="text-center"><?php echo $unity?></td>
               </tr>
               <tr>
                 <td>Ácidos gordos saturados:</td>
