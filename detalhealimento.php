@@ -1,3 +1,30 @@
+<?php
+  require "connection.php";
+   $id = $_GET["idfood"];
+
+  $query = "SELECT 
+            f.idfood, name, f.category fcat, image, idnutri, n.idfood, parameter, n.category ncat, value, unity
+            FROM food f, nutrition n
+            WHERE f.idfood = n.idfood
+            and f.idfood = $id";
+   
+  $result = mysqli_query($connection, $query);
+  $food = mysqli_fetch_assoc($result);
+
+
+  //variables
+  $name = $food["name"];
+  $fcategory = $food["fcat"];
+  $image = $food["image"];
+  $ncategory = $food["ncat"];
+  $param = $food["parameter"];
+  $value = $food["value"];
+  $unity = $food["unity"];
+
+
+?>
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -31,8 +58,10 @@
     <div class="container">
 
       <div class="d-flex align-items-baseline gap-3">
+
+
         <h1>
-          Abacate
+        <?php echo $name?>
         </h1>
         <p>
           100g, Fruta
@@ -41,7 +70,7 @@
       <section class="">
         <div class="d-flex align-items-center col flex-column h-100 flex-grow-1">
           <div class="mask3 overflow-hidden">
-            <img src="./media/alimentos/abacate.jpg" alt="Abacate" class="w-100">
+            <img src="./media/alimentos/<?php echo $image; ?>" alt="<?php echo $name ?>" class="w-100">
           </div>
           <div>
             <i><img src="media/icons/intestine.svg" alt="intestine"></i>
@@ -126,6 +155,8 @@
           </table>
         </div>
       </section>
+
+
     <div>
   </main>
 

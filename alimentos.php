@@ -70,7 +70,7 @@
 
       
         <div class="p-0 col-6 col-md-4">
-          <a href="detalhealimento.php">
+          <a href="detalhealimento.php?idfood=<?php echo $idfood?>">
             <div class="mask<?php echo $mask ?> overflow-hidden">
               <img src="./media/alimentos/<?php echo $food["image"]; ?>" alt="<?php echo $food["name"] ?>" class="img-fluid">
             </div>
