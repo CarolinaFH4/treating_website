@@ -2,13 +2,13 @@
   require "connection.php";
 
   $query = "SELECT 
-            f.idfood, name, f.category, image, idnutri, n.idfood, parameter, n.category, value, unity 
-            FROM food f, nutrition n 
-            where f.idfood = n.idfood;";
+            idfood, name, category, image
+            FROM food";
    
   $result = mysqli_query($connection, $query);
+  $coisa = mysqli_fetch_assoc($result);
 
-echo $result;
+
 ?>
 
 <!doctype html>
@@ -16,6 +16,7 @@ echo $result;
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -55,44 +56,30 @@ echo $result;
         <h1>Alimentos</h1>
         <p>Na treating investimos na informação de alimentos menos processados para que possa escolher o teu ponto de partida.</p>
       </div>
-
       <div class="row">
+      <?php
+        foreach ($result as $food) {
+          $idfood = $food["idfood"];
+          if($idfood % 2 == 0){
+            $mask = '2';
+          } else{
+            $mask = '1';
+          };
+       
+      ?>
+
+      
         <div class="p-0 col-6 col-md-4">
           <a href="detalhealimento.php">
-            <div class="mask1 overflow-hidden">
-              <img src="./media/alimentos/abacate.jpg" alt="Abacate" class="img-fluid">
+            <div class="mask<?php echo $mask ?> overflow-hidden">
+              <img src="./media/alimentos/<?php echo $food["image"]; ?>" alt="<?php echo $food["name"] ?>" class="img-fluid">
             </div>
-            <p class="mt-2 text-center">Abacate</p>
+            <p class="mt-2 text-center"><?php echo $food["name"]; ?></p>
           </a>
         </div>
 
-        <div class="p-0 col-6 col-md-4">
-          <a href="detalhealimento.php">
-            <div class="mask2 overflow-hidden">
-              <img src="./media/alimentos/alho.jpg" alt="Alho" class="img-fluid">
-            </div>
-            <p class="mt-2 text-center">Alho</p>
-          </a>
-        </div>
+        <?php }?>
 
-        <div class="p-0 col-6 col-md-4">
-          <a href="detalhealimento.php">
-            <div class="mask1 overflow-hidden">
-              <img src="./media/alimentos/abacate.jpg" alt="Abacate" class="img-fluid">
-            </div>
-            <p class="mt-2 text-center">Abacate</p>
-          </a>
-        </div>
-
-        <div class="p-0 col-6 col-md-4">
-          <a href="detalhealimento.php">
-            <div class="mask2 overflow-hidden">
-              <img src="./media/alimentos/alho.jpg" alt="Alho" class="img-fluid">
-            </div>
-            <p class="mt-2 text-center">Alho</p>
-          </a>
-        </div>
-      </div>
       
     </div>
   </main>
