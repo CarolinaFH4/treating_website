@@ -1,6 +1,9 @@
 <?php
   require "connection.php";
    $id = $_GET["idfood"];
+   if(!isset($id)){
+    header("location:alimentos.php");
+   }
 
   $query = "SELECT 
             f.idfood, name, f.category fcat, image, idnutri, n.idfood, parameter, n.category ncat, value, unity
@@ -21,7 +24,10 @@
   $value = $food["value"];
   $unity = $food["unity"];
 
-
+  $querynutri = "SELECT * 
+                  FROM nutrition
+                  WHERE idfood = $id AND category = 'Nutrientes'";
+  $nutriresult = mysqli_query($connection, $querynutri);
 ?>
 
 
@@ -83,27 +89,19 @@
 
       <section class="values">
         <div>
-          <h2 class="text-uppercase"><?php echo $ncategory?></h2>
+          <h2 class="text-uppercase">Nutrientes:</h2>
 
           <table class="table table-striped">
             <tbody>
+              <?php foreach($nutriresult as $row){ 
+                
+                ?>
               <tr>
-                <td><?php echo $param?></td>
-                <td class="text-end"><?php echo $value?></td>
-                <td class="text-center"><?php echo $unity?></td>
+                <td><?php echo $row["parameter"]?></td>
+                <td class="text-end"><?php echo $row["value"]?></td>
+                <td class="text-center"><?php echo $row["unity"]?></td>
               </tr>
-              <tr>
-                <td>Ácidos gordos saturados:</td>
-                <td class="text-end">Thornton</td>
-              </tr>
-              <tr>
-                <td>Ácidos gordos monoinsaturados:</td>
-                <td class="text-end">Otto</td>
-              </tr>
-              <tr>
-                <td>Ácidos gordos polinsaturados:</td>
-                <td class="text-end">Thornton</td>
-              </tr>
+              <?php }?>
             </tbody>
           </table>
         </div>
