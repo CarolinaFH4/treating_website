@@ -40,7 +40,11 @@
                 FROM nutrition
                 WHERE idfood = $id 
                 AND category = 'Minerais'";
-  $minresult = mysqli_query($connection, $queryvit);
+  $minresult = mysqli_query($connection, $querymin);
+
+  $queryfb = "SELECT id, fb.idfood, fb.idbenefit, f.idfood, n.idbenefit, n.image
+              FROM food_benefit fb, food f, benefits n
+              WHERE id = $id"
 ?>
 
 
@@ -83,7 +87,7 @@
         <?php echo $name?>
         </h1>
         <p>
-          100g, Fruta
+          100g, <?php echo $fcategory?>
       </div>
 
       <section class="">
