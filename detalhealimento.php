@@ -26,8 +26,21 @@
 
   $querynutri = "SELECT * 
                   FROM nutrition
-                  WHERE idfood = $id AND category = 'Nutrientes'";
+                  WHERE idfood = $id 
+                  AND category = 'Nutrientes'";
   $nutriresult = mysqli_query($connection, $querynutri);
+
+  $queryvit = "SELECT * 
+                FROM nutrition
+                WHERE idfood = $id 
+                AND category = 'Vitaminas'";
+  $vitresult = mysqli_query($connection, $queryvit);
+
+  $querymin = "SELECT * 
+                FROM nutrition
+                WHERE idfood = $id 
+                AND category = 'Minerais'";
+  $minresult = mysqli_query($connection, $queryvit);
 ?>
 
 
@@ -87,15 +100,13 @@
         <p class="m-3">*clica nos elementos sublinhados para saber mais!</p>
       </section>
 
-      <section class="values">
+      <section class="info">
         <div>
           <h2 class="text-uppercase">Nutrientes:</h2>
 
           <table class="table table-striped">
             <tbody>
-              <?php foreach($nutriresult as $row){ 
-                
-                ?>
+              <?php foreach($nutriresult as $row){?>
               <tr>
                 <td><?php echo $row["parameter"]?></td>
                 <td class="text-end"><?php echo $row["value"]?></td>
@@ -110,22 +121,13 @@
 
           <table class="table table-striped">
             <tbody>
+            <?php foreach($vitresult as $row){ ?>
               <tr>
-                <td>Energia:</td>
-                <td class="text-end">Otto</td>
+                <td><?php echo $row["parameter"]?></td>
+                <td class="text-end"><?php echo $row["value"]?></td>
+                <td class="text-center"><?php echo $row["unity"]?></td>
               </tr>
-              <tr>
-                <td>Ácidos gordos saturados:</td>
-                <td class="text-end">Thornton</td>
-              </tr>
-              <tr>
-                <td>Ácidos gordos monoinsaturados:</td>
-                <td class="text-end">Otto</td>
-              </tr>
-              <tr>
-                <td>Ácidos gordos polinsaturados:</td>
-                <td class="text-end">Thornton</td>
-              </tr>
+              <?php }?>
             </tbody>
           </table>
         </div>
@@ -134,30 +136,22 @@
 
           <table class="table table-striped">
             <tbody>
+            <?php foreach($minresult as $row){ ?>
               <tr>
-                <td>Energia:</td>
-                <td class="text-end">Otto</td>
+                <td><?php echo $row["parameter"]?></td>
+                <td class="text-end"><?php echo $row["value"]?></td>
+                <td class="text-center"><?php echo $row["unity"]?></td>
               </tr>
-              <tr>
-                <td>Ácidos gordos saturados:</td>
-                <td class="text-end">Thornton</td>
-              </tr>
-              <tr>
-                <td>Ácidos gordos monoinsaturados:</td>
-                <td class="text-end">Otto</td>
-              </tr>
-              <tr>
-                <td>Ácidos gordos polinsaturados:</td>
-                <td class="text-end">Thornton</td>
-              </tr>
+              <?php }?>
             </tbody>
           </table>
         </div>
       </section>
 
-
     <div>
   </main>
+
+  <?php include "footer.php"?>
 
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
