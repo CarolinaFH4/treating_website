@@ -1,12 +1,11 @@
 <?php
   require "connection.php";
 
-  $query = "SELECT 
-            idfood, name, category, image
+  $query = "SELECT idfood, name, category, image
             FROM food";
    
   $result = mysqli_query($connection, $query);
-  $coisa = mysqli_fetch_assoc($result);
+  $food = mysqli_fetch_assoc($result);
 
 
 ?>
@@ -65,10 +64,7 @@
           } else{
             $mask = '1';
           };
-       
       ?>
-
-      
         <div class="p-0 col-6 col-md-4">
           <a href="detalhealimento.php?idfood=<?php echo $idfood?>">
             <div class="mask<?php echo $mask ?> overflow-hidden">
@@ -79,8 +75,6 @@
         </div>
 
         <?php }?>
-
-      
     </div>
   </main>
 

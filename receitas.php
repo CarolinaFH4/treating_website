@@ -1,3 +1,16 @@
+<?php
+
+  require "connection.php";
+
+  $query = "SELECT * 
+            FROM recipes";
+            
+  $result = mysqli_query($connection, $query);
+  $recipes = mysqli_fetch_assoc($result);
+
+
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -53,42 +66,25 @@
       </div>
 
       <div class="row">
+      <?php
+        foreach ($result as $rec) {
+          $idrec = $rec["idrecipe"];
+          if($idrec % 2 == 0){
+            $mask = '2';
+          } else{
+            $mask = '1';
+          };
+      ?>
         <div class="p-0 col-6 col-md-4">
-          <a href="detalhealimento.php">
-            <div class="mask1 overflow-hidden">
-              <img src="./media/alimentos/abacate.jpg" alt="Abacate" class="img-fluid">
+          <a href="detalhereceita.php?idrecipe=<?php echo $idrec?>">
+            <div class="mask<?php echo $mask ?> overflow-hidden">
+              <img src="./media/recipes/<?php echo $rec["image"]; ?>" alt="<?php echo $rec["title"] ?>" class="img-fluid">
             </div>
-            <p class="mt-2 text-center">Abacate</p>
+            <p class="mt-2 text-center"><?php echo $rec["title"]; ?></p>
           </a>
         </div>
 
-        <div class="p-0 col-6 col-md-4">
-          <a href="detalhealimento.php">
-            <div class="mask2 overflow-hidden">
-              <img src="./media/alimentos/alho.jpg" alt="Alho" class="img-fluid">
-            </div>
-            <p class="mt-2 text-center">Alho</p>
-          </a>
-        </div>
-
-        <div class="p-0 col-6 col-md-4">
-          <a href="detalhealimento.php">
-            <div class="mask1 overflow-hidden">
-              <img src="./media/alimentos/abacate.jpg" alt="Abacate" class="img-fluid">
-            </div>
-            <p class="mt-2 text-center">Abacate</p>
-          </a>
-        </div>
-
-        <div class="p-0 col-6 col-md-4">
-          <a href="detalhealimento.php">
-            <div class="mask2 overflow-hidden">
-              <img src="./media/alimentos/alho.jpg" alt="Alho" class="img-fluid">
-            </div>
-            <p class="mt-2 text-center">Alho</p>
-          </a>
-        </div>
-      </div>
+        <?php }?>
       
     </div>
   </main>
