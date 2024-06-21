@@ -48,6 +48,12 @@
               AND fb.idbenefit = b.idbenefit 
               AND f.idfood  = $id";
   $fbresult = mysqli_query($connection, $queryfb);
+
+  $queryr = "SELECT * 
+              FROM recipes
+              WHERE idfood = $id";
+  $rresult = mysqli_query($connection, $queryr);
+
 ?>
 
 
@@ -154,35 +160,38 @@
           </table>
         </div>
       </section>
+      
+      <section> 
+        <div id="carouselExampleCaptions" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
 
-      <div id="carouselExampleIndicators" class="carousel slide">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="..." class="d-block w-100" alt="...">
+          <div class="carousel-inner">
+            <?php foreach($rresult as $row) { ?>
+              <div class="carousel-item active">
+                <img src="media/recipes/<?php echo $row["image"]?>" class="d-block w-100" alt="<?php echo $row["title"] ?>">
+                <div class="carousel-caption d-md-block">
+                  <h5><?php echo $row["title"] ?></h5>
+                  <p></p>
+                </div>
+              </div>
+            <?php } ?>
           </div>
-          <div class="carousel-item">
-            <img src="..." class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="..." class="d-block w-100" alt="...">
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
 
-    <div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+    </div>
   </main>
 
   <?php include "footer.php"?>
@@ -190,3 +199,11 @@
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
+  <?php foreach($rresult as $row) { ?>
+            <div class="carousel-item active">
+              <img src="media/recipes/<?php echo $row["image"]?>" class="d-block w-100" alt="<?php echo $row["title"] ?>">
+              <div class="carousel-caption d-none d-md-block">
+                <h5> YAY !<?php echo $row["title"] ?></h5>
+              </div>
+            </div>
+            <?php } ?>
