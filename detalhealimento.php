@@ -42,9 +42,12 @@
                 AND category = 'Minerais'";
   $minresult = mysqli_query($connection, $querymin);
 
-  $queryfb = "SELECT id, fb.idfood, fb.idbenefit, f.idfood, n.idbenefit, n.image
-              FROM food_benefit fb, food f, benefits n
-              WHERE id = $id"
+  $queryfb = "SELECT id, fb.idfood, fb.idbenefit, b.name, b.idbenefit, b.image bimage, f.idfood
+              FROM food_benefit fb, food f, benefits b
+              WHERE fb.idfood = f.idfood 
+              AND fb.idbenefit = b.idbenefit 
+              AND f.idfood  = $id";
+  $fbresult = mysqli_query($connection, $queryfb);
 ?>
 
 
@@ -96,9 +99,9 @@
             <img src="./media/alimentos/<?php echo $image; ?>" alt="<?php echo $name ?>" class="w-100">
           </div>
           <div>
-            <i><img src="media/icons/intestine.svg" alt="intestine"></i>
-            <i><img src="media/icons/heart.svg" alt="heart"></i>
-            <i><img src="media/icons/brain.svg" alt="brain"></i>
+            <?php foreach($fbresult as $row) { ?>
+            <i><img src="media/icons/<?php echo $row["bimage"] ?>" alt="intestine"></i>
+            <?php } ?>
           </div>
         </div>
         <p class="m-3">*clica nos elementos sublinhados para saber mais!</p>
@@ -151,6 +154,33 @@
           </table>
         </div>
       </section>
+
+      <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="..." class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="..." class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="..." class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
 
     <div>
   </main>
