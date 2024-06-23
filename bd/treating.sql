@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jun 11, 2024 at 10:27 PM
+-- Generation Time: Jun 23, 2024 at 09:26 PM
 -- Server version: 5.7.24
 -- PHP Version: 8.0.1
 
@@ -44,6 +44,28 @@ INSERT INTO `benefits` (`idbenefit`, `name`, `description`, `image`) VALUES
 (3, 'Sistema imunológico', 'A gripe é uma doença infecciosa do aparelho respiratório, altamente contagiosa, causada pelo vírus influenza. Um estilo de vida saudável pode em muito ajudar na prevenção e recuperação de doenças.', 'virus.svg'),
 (4, 'Atividade cerebral', '', 'brain.svg'),
 (5, 'Flora intestinal', 'Quando falamos de flora intestinal, estamos a falar de um grupo de bactérias vivas que se encontram nos intestinos e que desempenham um papel muito importante no metabolismo de nutrientes e na proteção contra agentes patogénicos.', 'intestine.svg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `comunity`
+--
+
+CREATE TABLE `comunity` (
+  `id` int(11) NOT NULL,
+  `name` varchar(40) NOT NULL,
+  `link_title` varchar(50) NOT NULL,
+  `link` varchar(50) NOT NULL,
+  `image` varchar(70) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `comunity`
+--
+
+INSERT INTO `comunity` (`id`, `name`, `link_title`, `link`, `image`) VALUES
+(1, 'Maria Melo Falcão', 'https://www.mariamelofalcao.com/', 'https://www.mariamelofalcao.com/', 'mariafalcao.jpg|mariafalcao2.jpg'),
+(2, 'Sofia Paixão', 'https://glutenfree.pt/', 'https://glutenfree.pt/', 'sofiapaixao.jpg|sofiapaixao2.jpg');
 
 -- --------------------------------------------------------
 
@@ -563,6 +585,7 @@ CREATE TABLE `recipes` (
   `title` varchar(80) NOT NULL,
   `ingredients` text NOT NULL,
   `steps` text NOT NULL,
+  `images` varchar(50) NOT NULL,
   `servings` int(11) NOT NULL,
   `time` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -571,14 +594,14 @@ CREATE TABLE `recipes` (
 -- Dumping data for table `recipes`
 --
 
-INSERT INTO `recipes` (`idrecipe`, `idfood`, `title`, `ingredients`, `steps`, `servings`, `time`) VALUES
-(1, 8, 'Muffin de aveia, noz e laranja', '3 nozes de nogueira\r\n2g fermento\r\n1 ovo médio\r\n1 colher de sopa canela\r\n1/2 laranja\r\n25 ml bebida de arroz\r\n25 ml bebida de coco\r\n35 g flocos de aveia integral finos', '1. Adicione o ovo, as bebidas vegetais, o fermento, a casca de laranja, a aveia e triture no liquidificador.\r\n2. Adicione as nozes picadas grosseiramente e a canela e misture bem. 3. Deixe algumas nozes e canela para uso posterior.\r\n4. Despeje a mistura em formas e coloque 1/4 de noz em cima de cada muffin.\r\n5. Asse por 15 minutos a 150 ° C.\r\nRetire do forno e polvilhe com canela.', 6, 20),
-(2, 8, 'Biscoitos de noz', '4 nozes de nogueira | 2 colheres de sopa azeite | 10 g maca em pó biológica | 20 g linhaça castanha | 70 g farinha de amêndoa | 60 g farinha de soja | 2 g agar agar', '1. Misture a linhaça e o ágar com duas colheres de sopa de água morna. Deixe repousar por 10 minutos.\r\n2. Misture os demais ingredientes e acrescente a mistura de linhaça.\r\n3. Coloque em uma assadeira forrada com papel manteiga. Pressione para nivelar.\r\n4. Asse em forno pré-aquecido a 180°C por 45 minutos.\r\n5. Deixe esfriar antes de retirar da forma e cortar em quadrados.', 8, 60),
-(3, 1, 'Lasanha de atum e espinafres', '1 grande cebola\r\n40 ml vinho branco de mesa\r\n1 dose azeite extra-virgem\r\n200 ml molho bechamel\r\n320 g atum ao natural\r\n75 ml polpa de tomate\r\n200 ml leite de coco\r\n200 g espinafres em folhas\r\n100 g queijo mozzarella ralado\r\n200 g folhas de lasanha', '1. Numa frigideira pré-aquecida com azeite, refogue a cebola, junte o vinho e a polpa de tomate. Mexer.\r\n2. Em seguida, adicione o atum e as folhas de espinafre. Misture bem e reserve.\r\n3. Em um copo, misture o molho bechamel com o leite de coco.\r\n4. Monte a camada de lasanha em um pirex. Coloque as primeiras folhas da lasanha, espalhe o recheio seguido do molho. Repita essas etapas até ficar sem folhas de lasanha. Coloque o queijo mozzarella por cima.\r\n5. Asse em forno pré-aquecido por 20 minutos.', 6, 60),
-(4, 1, 'Sopa de espinafres', '6 nozes de nogueira | 1 pitada sal | 1 colher de sopa azeite | 1 chávena, fatiados cogumelos brancos (salteado em wok) | 100 ml leite de amêndoas |200 g espinafre baby leaf | 2 g alga kombu', '1. Torre levemente as nozes em uma frigideira antiaderente por 3 minutos. \r\n2. Deixe esfriar e depois reserve.\r\n3. Refogue os cogumelos no azeite.\r\n4. Adicionar os espinafres e alga kombu.\r\n5. Adicione o leite de amêndoas e tempere com sal.\r\n6. Cozinhe por 5 minutos enquanto mexe.\r\nSirva em uma tigela com nozes tostadas.', 2, 30),
-(5, 1, 'Bolo de cenoura e espinafres', '3 médios ovos |30 g nozes de nogueira |30 g passas | 3 médias cenouras | 50 g farinha de milho | 200 g farelo de aveia | 50 g espinafre bébe | 125 g iogurte natural | 200 g mel de flores', '1. Triturar a cenoura, os espinafres e as nozes.\r\n2. Juntar todos os ingredientes e mexer.\r\n3. Levar ao forno pré aquecido.', 8, 50),
-(6, 3, 'Salmão grelhado com salada de abacate', '100 g salmão | 1 limão | 100 g abacate | 1/2 lua de tomate | 1 colher de sopa salsa | 1 pitada pimenta preta | 1 pitada sal | 1 chávena, cortadas cebolas | 1 colher de sopa azeite extra-virgem | 25 g nozes |1 fatia queijo mozzarella', 'Tempere os dois lados do salmão com sal, suco de limão e pimenta. | Unte a grelha do forno com meia colher de azeite e grelhe o salmão em forno pré-aquecido por 5 minutos de cada lado. | Corte em pedaços o abacate, a cebola, o tomate, a salsa e o queijo mozzarella, esmague as nozes e coloque-as numa tigela, tempere com sal, pimenta e azeite. Misture bem. | Coloque o salmão grelhado com a salada em um prato. Servir.', 2, 20),
-(7, 3, 'Noodles com salmão fumado', '200 g salmão fumado | 1/2 chávena molho de soja  |400 g noodles | 5 folhas hortelã | 1 colher de chá óleo de sésamo torrado | suco de 1 lima|1 colher de chá gengibre ralado | 1 colher de sopa de cebolinho picado | 4 colheres de chá açúcar amarelo | 25 g sementes de sésamo torradas', 'Cozinhe os noodles de acordo com as instruções na embalagem. Escorra e reserve. | Numa tigela grande, misture o molho de soja, açúcar amarelo, óleo de sésamo, gengibre, sumo de lima e as sementes de sésamo. | Adicione os noodles, cebolinho, hortelã e o salmão. Misture bem e sirva frio.', 4, 30);
+INSERT INTO `recipes` (`idrecipe`, `idfood`, `title`, `ingredients`, `steps`, `images`, `servings`, `time`) VALUES
+(1, 8, 'Muffin de aveia, noz e laranja', '3 nozes de nogueira\r\n2g fermento\r\n1 ovo médio\r\n1 colher de sopa canela\r\n1/2 laranja\r\n25 ml bebida de arroz\r\n25 ml bebida de coco\r\n35 g flocos de aveia integral finos', '1. Adicione o ovo, as bebidas vegetais, o fermento, a casca de laranja, a aveia e triture no liquidificador.\r\n2. Adicione as nozes picadas grosseiramente e a canela e misture bem. 3. Deixe algumas nozes e canela para uso posterior.\r\n4. Despeje a mistura em formas e coloque 1/4 de noz em cima de cada muffin.\r\n5. Asse por 15 minutos a 150 ° C.\r\nRetire do forno e polvilhe com canela.', 'muffin.jpg', 6, 20),
+(2, 8, 'Biscoitos de noz', '4 nozes de nogueira | 2 colheres de sopa azeite | 10 g maca em pó biológica | 20 g linhaça castanha | 70 g farinha de amêndoa | 60 g farinha de soja | 2 g agar agar', '1. Misture a linhaça e o ágar com duas colheres de sopa de água morna. Deixe repousar por 10 minutos.\r\n2. Misture os demais ingredientes e acrescente a mistura de linhaça.\r\n3. Coloque em uma assadeira forrada com papel manteiga. Pressione para nivelar.\r\n4. Asse em forno pré-aquecido a 180°C por 45 minutos.\r\n5. Deixe esfriar antes de retirar da forma e cortar em quadrados.', 'biscoitos.jpg', 8, 60),
+(3, 1, 'Lasanha de atum e espinafres', '1 grande cebola\r\n40 ml vinho branco de mesa\r\n1 dose azeite extra-virgem\r\n200 ml molho bechamel\r\n320 g atum ao natural\r\n75 ml polpa de tomate\r\n200 ml leite de coco\r\n200 g espinafres em folhas\r\n100 g queijo mozzarella ralado\r\n200 g folhas de lasanha', '1. Numa frigideira pré-aquecida com azeite, refogue a cebola, junte o vinho e a polpa de tomate. Mexer.\r\n2. Em seguida, adicione o atum e as folhas de espinafre. Misture bem e reserve.\r\n3. Em um copo, misture o molho bechamel com o leite de coco.\r\n4. Monte a camada de lasanha em um pirex. Coloque as primeiras folhas da lasanha, espalhe o recheio seguido do molho. Repita essas etapas até ficar sem folhas de lasanha. Coloque o queijo mozzarella por cima.\r\n5. Asse em forno pré-aquecido por 20 minutos.', 'lasanha_espinafres.jpg', 6, 60),
+(4, 1, 'Sopa de espinafres', '6 nozes de nogueira | 1 pitada sal | 1 colher de sopa azeite | 1 chávena, fatiados cogumelos brancos (salteado em wok) | 100 ml leite de amêndoas |200 g espinafre baby leaf | 2 g alga kombu', '1. Torre levemente as nozes em uma frigideira antiaderente por 3 minutos. \r\n2. Deixe esfriar e depois reserve.\r\n3. Refogue os cogumelos no azeite.\r\n4. Adicionar os espinafres e alga kombu.\r\n5. Adicione o leite de amêndoas e tempere com sal.\r\n6. Cozinhe por 5 minutos enquanto mexe.\r\nSirva em uma tigela com nozes tostadas.', 'sopa.jpg', 2, 30),
+(5, 1, 'Bolo de cenoura e espinafres', '3 médios ovos |30 g nozes de nogueira |30 g passas | 3 médias cenouras | 50 g farinha de milho | 200 g farelo de aveia | 50 g espinafre bébe | 125 g iogurte natural | 200 g mel de flores', '1. Triturar a cenoura, os espinafres e as nozes.\r\n2. Juntar todos os ingredientes e mexer.\r\n3. Levar ao forno pré aquecido.', 'bolo_cenoura_ espinafres.jpg', 8, 50),
+(6, 3, 'Salmão grelhado com salada de abacate', '100 g salmão | 1 limão | 100 g abacate | 1/2 lua de tomate | 1 colher de sopa salsa | 1 pitada pimenta preta | 1 pitada sal | 1 chávena, cortadas cebolas | 1 colher de sopa azeite extra-virgem | 25 g nozes |1 fatia queijo mozzarella', 'Tempere os dois lados do salmão com sal, suco de limão e pimenta. | Unte a grelha do forno com meia colher de azeite e grelhe o salmão em forno pré-aquecido por 5 minutos de cada lado. | Corte em pedaços o abacate, a cebola, o tomate, a salsa e o queijo mozzarella, esmague as nozes e coloque-as numa tigela, tempere com sal, pimenta e azeite. Misture bem. | Coloque o salmão grelhado com a salada em um prato. Servir.', 'salmao_salada_abacate.jpg', 2, 20),
+(7, 3, 'Noodles com salmão fumado', '200 g salmão fumado | 1/2 chávena molho de soja  |400 g noodles | 5 folhas hortelã | 1 colher de chá óleo de sésamo torrado | suco de 1 lima|1 colher de chá gengibre ralado | 1 colher de sopa de cebolinho picado | 4 colheres de chá açúcar amarelo | 25 g sementes de sésamo torradas', 'Cozinhe os noodles de acordo com as instruções na embalagem. Escorra e reserve. | Numa tigela grande, misture o molho de soja, açúcar amarelo, óleo de sésamo, gengibre, sumo de lima e as sementes de sésamo. | Adicione os noodles, cebolinho, hortelã e o salmão. Misture bem e sirva frio.', 'noodles.jpg', 4, 30);
 
 --
 -- Indexes for dumped tables
@@ -589,6 +612,12 @@ INSERT INTO `recipes` (`idrecipe`, `idfood`, `title`, `ingredients`, `steps`, `s
 --
 ALTER TABLE `benefits`
   ADD PRIMARY KEY (`idbenefit`);
+
+--
+-- Indexes for table `comunity`
+--
+ALTER TABLE `comunity`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `food`
@@ -635,6 +664,12 @@ ALTER TABLE `recipes`
 --
 ALTER TABLE `benefits`
   MODIFY `idbenefit` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `comunity`
+--
+ALTER TABLE `comunity`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `food`
