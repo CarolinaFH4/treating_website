@@ -60,7 +60,9 @@ $serving = $rec["servings"];
         <h1>
           <?php echo $title?>
         </h1>
-        <p> <?php echo "$serving doses, $time min."?> </p>
+        <p> 
+          <?php echo "$serving doses, $time min."?>
+        </p>
       </div>
 
       <section class="">
@@ -72,31 +74,24 @@ $serving = $rec["servings"];
       <section class="info">
         <div>
           <h2 class="text-uppercase">Ingredientes:</h2>
-          <div class="card bg-primary-subtle mb-3 p-3">
-              <p class="card-text"><?php //echo nl2br($steps)
+          <div class="card bg-primary-subtle mb-3 p-4">
+            <?php //echo nl2br($steps)
               foreach ($ingredients as $ing)
-              echo "<p>$ing</p>"; ?>
+                echo "<p class='card-text pb-0'>$ing</p>"; 
+            ?>
           </div>
         </div>
         <div>
-          <h2 class="text-uppercase">Ingredientes:</h2>
-          <div class="card bg-secondary-subtle mb-3 p-3">
-            <div class="card-text">
-              <?php //echo nl2br($steps)
+          <h2 class="text-uppercase">Passos:</h2>
+          <div class="card bg-secondary-subtle mb-3 p-4">
+            <?php //echo nl2br($steps)
               foreach ($steps as $step)
-                  echo "<p>$step</p>"; 
+                  echo "<p class='card-text pb-0'>$step</p>"; 
               ?>
-              </div>
           </div>
         </div>  
       </section>
-
-      <section class="info">
-          
-      </section>
       
-
-
       <section> 
         <div id="carouselExampleCaptions" class="carousel slide">
           <div class="carousel-indicators">
