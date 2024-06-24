@@ -15,10 +15,10 @@ $rec = mysqli_fetch_assoc($result);
 $idrecipe = $rec["idrecipe"];
 $idfood = $rec["idfood"];
 $title = $rec["title"];
-$ingredients = $rec["ingredients"];
-$steps = $rec["steps"];
+$ingredients = explode(PHP_EOL, $rec["ingredients"]);
+$steps = explode(PHP_EOL, $rec["steps"]);
 $time = $rec["time"];
-$image = $rec["image"];
+$image = $rec["images"];
 $serving = $rec["servings"];
 
 
@@ -65,18 +65,34 @@ $serving = $rec["servings"];
 
       <section class="">
           <div class="mask3 overflow-hidden">
-            <img src="./media/alimentos/<?php echo $image; ?>" alt="<?php echo $title ?>" class="w-100">
+            <img src="./media/recipes/<?php echo $image; ?>" alt="<?php echo $title ?>" class="w-100">
           </div>
       </section>
 
       <section class="info">
+        <div>
           <h2 class="text-uppercase">Ingredientes:</h2>
-          
           <div class="card bg-primary-subtle mb-3 p-3">
-              <p class="card-text"><?php echo nl2br($steps) ?></p>
-            </div>
+              <p class="card-text"><?php //echo nl2br($steps)
+              foreach ($ingredients as $ing)
+              echo "<p>$ing</p>"; ?>
           </div>
+        </div>
+        <div>
+          <h2 class="text-uppercase">Ingredientes:</h2>
+          <div class="card bg-secondary-subtle mb-3 p-3">
+            <div class="card-text">
+              <?php //echo nl2br($steps)
+              foreach ($steps as $step)
+                  echo "<p>$step</p>"; 
+              ?>
+              </div>
+          </div>
+        </div>  
+      </section>
 
+      <section class="info">
+          
       </section>
       
 
@@ -92,7 +108,7 @@ $serving = $rec["servings"];
           <div class="carousel-inner w-50">
             <?php foreach($result as $row) { ?>
               <div class="carousel-item active">
-                <img src="media/recipes/<?php echo $row["image"]?>" class="d-block w-100" alt="<?php echo $row["title"] ?>">
+                <img src="media/recipes/<?php echo $row["images"]?>" class="d-block w-100" alt="<?php echo $row["title"] ?>">
                 <div class="carousel-caption d-md-block">
                   <h5><?php echo $row["title"] ?></h5>
                 </div>

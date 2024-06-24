@@ -78,7 +78,7 @@
         <div class="p-0 col-6 col-md-4">
           <a href="detalhereceita.php?idrecipe=<?php echo $idrec?>">
             <div class="mask<?php echo $mask ?> overflow-hidden">
-              <img src="./media/recipes/<?php echo $rec["images"]; ?>" alt="<?php echo $rec["title"] ?>" class="img-fluid">
+              <img src="./media/recipes/<?php echo $rec["images"]; ?>" alt="<?php echo $rec["title"]; ?>" class="img-fluid">
             </div>
             <p class="mt-2 text-center"><?php echo $rec["title"]; ?></p>
           </a>
