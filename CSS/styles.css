@@ -63,7 +63,9 @@ p , ul{
 
 
 /* Index */
-
+.indexbg{
+  width: 30em;
+}
 .introimgdiv{
 
 }

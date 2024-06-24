@@ -27,22 +27,19 @@
           </div>
 
 
-          <span class="bg-primary-subtle " style="display:block">
+          <span class="indexbg bg-primary-subtle width-auto" style="display:block">
             <div class="d-flex flex-column align-items-center">
-              
               <div class="introimgdiv">
                 <img class="introimg justify-content-center" src="./media/elements/comunity.png" alt="people eating together">
               </div>
               <a class="align-self-end" href="">Comunidade</a>
-              
               <p class="text-center mb-4 mt-4 ">
                 Treating vem esclarecer conceitos de nutrição e juntar pessoas através do poder da alimentação
               </p>
-              
             </div>
           </span>
 
-          <span class="primary-bg-subtle z-n1" style="display:block">
+          <span class="indexbg bg-primary-subtle z-n1 overflow-visible" style="display:block">
             <div class="d-flex flex-column align-items-center">
               <div class="introimgdiv">
                 <img class="introimg justify-content-center" src="./media/elements/recipes.png" alt="various organic dishes">
@@ -53,7 +50,7 @@
               </p>
             </div>
           </span>
-          <span class="primary-bg-subtle z-n1" style="display:block">
+
             <div class="d-flex flex-column align-items-center">
               <div class="introimgdiv">
                 <img class="introimg justify-content-center"  src="./media/elements/organs.png" alt="body parts representation">
@@ -63,7 +60,6 @@
                 Olhamos para os alimentos como ferramentas de auto-cuidado e terapia, em vez de tendências e restrições.
               </p>
             </div>
-          </span>
 
           <section class=" d-flex justify-content-center gap-3">
             <div>
