@@ -67,7 +67,7 @@ $serving = $rec["servings"];
 
       <section class="">
           <div class="mask3 overflow-hidden">
-            <img src="./media/recipes/<?php echo $image; ?>" alt="<?php echo $title ?>" class="w-100">
+            <img src="./media/recipes/<?php echo $image; ?>" alt="<?php echo $title ?>" class="introimg w-100">
           </div>
       </section>
 

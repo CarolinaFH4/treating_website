@@ -42,7 +42,7 @@
             </div>
           </span>
 
-          <span class="bg-primary z-n1" style="display:block">
+          <span class="primary-bg-subtle z-n1" style="display:block">
             <div class="d-flex flex-column align-items-center">
               <div class="introimgdiv">
                 <img class="introimg justify-content-center" src="./media/elements/recipes.png" alt="various organic dishes">
@@ -53,17 +53,18 @@
               </p>
             </div>
           </span>
-
-          <div class="d-flex flex-column align-items-center">
-            <div class="introimgdiv">
-              <img class="introimg justify-content-center"  src="./media/elements/organs.png" alt="body parts representation">
+          <span class="primary-bg-subtle z-n1" style="display:block">
+            <div class="d-flex flex-column align-items-center">
+              <div class="introimgdiv">
+                <img class="introimg justify-content-center"  src="./media/elements/organs.png" alt="body parts representation">
+              </div>
+              <a class="align-self-end" href="">Benefícios de saúde</a>
+              <p class="text-center mb-4 mt-4">
+                Olhamos para os alimentos como ferramentas de auto-cuidado e terapia, em vez de tendências e restrições.
+              </p>
             </div>
-            <a class="align-self-end" href="">Benefícios de saúde</a>
-            <p class="text-center mb-4 mt-4">
-              Olhamos para os alimentos como ferramentas de auto-cuidado e terapia, em vez de tendências e restrições.
-            </p>
-          </div>
-          
+          </span>
+
           <section class=" d-flex justify-content-center gap-3">
             <div>
               <img class="introicons" src="./media/icons/brain.svg" alt="">
