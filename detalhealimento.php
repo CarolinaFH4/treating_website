@@ -145,18 +145,18 @@
           <table class="table table-striped">
             <tbody>
             <?php foreach($vitresult as $row){
-                  foreach($minresult as $row){ ?>
+                  foreach($meaning as $mean ){ ?>
               <tr>
                 <td>
-                  <a data-bs-toggle="tooltip" data-bs-title="<?php echo $meaning?>" class="muted"><?php echo $row["parameter"]?>
+                  <a data-bs-toggle="tooltip" data-bs-title="<?php echo $mean?>" class="muted"><?php echo $row["parameter"]?>
                   </a>
                 </td>
                 <td class="text-end">
-                  <a data-bs-toggle="tooltip" data-bs-title="<?php echo $meaning?>" class="muted"><?php echo $row["value"]?>
+                  <a data-bs-toggle="tooltip" data-bs-title="<?php echo $mean?>" class="muted"><?php echo $row["value"]?>
                   </a>
                 </td>
                 <td class="text-center">
-                  <a data-bs-toggle="tooltip" data-bs-title="<?php echo $meaning?>" class="muted"><?php echo $row["unity"]?>
+                  <a data-bs-toggle="tooltip" data-bs-title="<?php echo $mean?>" class="muted"><?php echo $row["unity"]?>
                   </a>
                 </td>
               </tr>
@@ -164,9 +164,9 @@
             </tbody>
           </table>
         </div>
+
         <div>
           <h2 class="text-uppercase"> Minerais:</h2>
-
           <table class="table table-striped">
             <tbody>
             <?php foreach($minresult as $row){ ?>
@@ -186,7 +186,7 @@
           <tbody>
             <thead>
               <td>
-                Gossary
+                Glossary
               </td>
             </thead>
             <tr>
