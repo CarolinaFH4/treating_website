@@ -35,6 +35,12 @@
   
 }
 
+/* A SER ALTERADO */
+.custom-tooltip {
+  --bs-tooltip-bg: #E3CED7;
+  --bs-tooltip-color: #060901;
+}
+
 h1{
   font-family: "Exo" ;
   margin-bottom: 0px;

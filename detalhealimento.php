@@ -54,10 +54,15 @@
               WHERE idfood = $id";
   $rresult = mysqli_query($connection, $queryr);
 
-  $queryglo = "SELECT word, description, parameter, category
+  $queryglo = "SELECT word, description
                 FROM glossary
-                WHERE word = "; 
+                WHERE EXISTS (
+                  SELECT parameter, category, unity
+                  FROM nutrition
+                  WHERE parameter = word OR category = word OR unity =word
+              	  );"; 
   $gresult = mysqli_query($connection, $queryglo);
+  $meaning = mysqli_fetch_assoc($gresult);
 
 ?>
 
@@ -169,17 +174,27 @@
       <section class="test">
         <table class="table">
           <tbody>
+            <thead>
+              <td>
+                Gossary
+              </td>
+            </thead>
             <tr>
-              <th scope="row">1</th>
-              <td><a href="#" data-bs-toggle="tooltip" data-bs-title="default tooltip">Mark</a></td>
-              <td>Otto</td>
-              <td>@mdo</td>
+              <?php
+                foreach ($gresult as $row){
+              ?>
+               <td><a data-bs-toggle="tooltip" data-bs-title="<?php echo $meaning?>" class="muted">kcal</a></td>
+
+              <?php
+                }
+              ?>
+              
+              <td>Energia</td>
+              <td>Ferro</td>
             </tr>
           </tbody>
         </table>
       </section>
-      
-      <p class="muted">Placeholder text to demonstrate some <a href="#" data-bs-toggle="tooltip" data-bs-title="Default tooltip">inline links</a> with tooltips. This is now just filler, no killer. Content placed here just to mimic the presence of <a href="#" data-bs-toggle="tooltip" data-bs-title="Another tooltip">real text</a>. And all that just to give you an idea of how tooltips would look when used in real-world situations. So hopefully you've now seen how <a href="#" data-bs-toggle="tooltip" data-bs-title="Another one here too">these tooltips on links</a> can work in practice, once you use them on <a href="#" data-bs-toggle="tooltip" data-bs-title="The last tip!">your own</a> site or project.</p>
 
       <section> 
         <div id="carouselExampleCaptions" class="carousel slide">
@@ -216,6 +231,15 @@
 
   <?php include "footer.php"?>
 
+
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+  <script>
+
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+
+  </script>
+
   </body>
