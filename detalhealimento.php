@@ -144,13 +144,23 @@
 
           <table class="table table-striped">
             <tbody>
-            <?php foreach($vitresult as $row){ ?>
+            <?php foreach($vitresult as $row){
+                  foreach($minresult as $row){ ?>
               <tr>
-                <td><?php echo $row["parameter"]?></td>
-                <td class="text-end"><?php echo $row["value"]?></td>
-                <td class="text-center"><?php echo $row["unity"]?></td>
+                <td>
+                  <a data-bs-toggle="tooltip" data-bs-title="<?php echo $meaning?>" class="muted"><?php echo $row["parameter"]?>
+                  </a>
+                </td>
+                <td class="text-end">
+                  <a data-bs-toggle="tooltip" data-bs-title="<?php echo $meaning?>" class="muted"><?php echo $row["value"]?>
+                  </a>
+                </td>
+                <td class="text-center">
+                  <a data-bs-toggle="tooltip" data-bs-title="<?php echo $meaning?>" class="muted"><?php echo $row["unity"]?>
+                  </a>
+                </td>
               </tr>
-              <?php }?>
+              <?php } }?>
             </tbody>
           </table>
         </div>
@@ -183,7 +193,7 @@
               <?php
                 foreach ($gresult as $row){
               ?>
-               <td><a data-bs-toggle="tooltip" data-bs-title="<?php echo $meaning?>" class="muted">kcal</a></td>
+               <td><a data-bs-toggle="tooltip" data-bs-title="<?php echo $meaning?>" class="muted">kcal</a></td> 
 
               <?php
                 }
