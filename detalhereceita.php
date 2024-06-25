@@ -77,7 +77,7 @@ $serving = $rec["servings"];
           <div class="card bg-primary-subtle mb-3 p-4">
             <?php //echo nl2br($steps)
               foreach ($ingredients as $ing)
-                echo "<p class='card-text pb-0'>$ing</p>"; 
+                echo "<p class='card-text'>$ing</p>"; 
             ?>
           </div>
         </div>
@@ -86,7 +86,7 @@ $serving = $rec["servings"];
           <div class="card bg-secondary-subtle mb-3 p-4">
             <?php //echo nl2br($steps)
               foreach ($steps as $step)
-                  echo "<p class='card-text pb-0'>$step</p>"; 
+                  echo "<p class='card-text'>$step</p>"; 
               ?>
           </div>
         </div>  
@@ -100,12 +100,12 @@ $serving = $rec["servings"];
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
           </div>
 
-          <div class="carousel-inner w-50">
+          <div class="carousel-inner w-100">
             <?php foreach($result as $row) { ?>
               <div class="carousel-item active">
                 <img src="media/recipes/<?php echo $row["images"]?>" class="d-block w-100" alt="<?php echo $row["title"] ?>">
                 <div class="carousel-caption d-md-block">
-                  <h5><?php echo $row["title"] ?></h5>
+                  <h3 ><?php echo $row["title"] ?></h3>
                 </div>
               </div>
             <?php } ?>
