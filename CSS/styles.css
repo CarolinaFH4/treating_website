@@ -69,9 +69,25 @@ p , ul{
 
 
 /* Index */
-.indexbg{
-  width: 30em;
-}
+/*.indexbg1{
+  width: 500%;
+  margin-left: -200%;
+}*/
+.indexbg::before {
+    content: "";
+    position: absolute;
+    top: 90px;
+    left: -20;
+    right: -20;
+    bottom: 0;
+    background-image: url("../media/elements/indexbg.jpg") ;
+    background-repeat: repeat;
+    z-index: -1;
+    width: 500%;
+    
+  }
+
+
 .introimgdiv{
 
 }

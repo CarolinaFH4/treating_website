@@ -18,8 +18,8 @@
 
     <?php include "header.php"?> 
 
-    <main class="container overflow-x-hidden mx-auto p-3">
-        <div>
+    <main class="container overflow-x-hidden mx-auto p-3 ">
+        <div class="index">
           <div class="text-center">
             <h2 class= "pitch text-uppercase spinnaker-regular mb-3">
               Onde a nutrição e a comunidade se encontram.
@@ -27,8 +27,8 @@
           </div>
 
 
-          <span class="indexbg bg-primary-subtle width-auto" style="display:block">
-            <div class="d-flex flex-column align-items-center">
+          <span class="indexbg position-relative">
+            <div class="d-flex flex-column align-items-center z-index-3">
               <div class="introimgdiv">
                 <img class="introimg justify-content-center" src="./media/elements/comunity.png" alt="people eating together">
               </div>
@@ -37,10 +37,8 @@
                 Treating vem esclarecer conceitos de nutrição e juntar pessoas através do poder da alimentação
               </p>
             </div>
-          </span>
 
-          <span class="indexbg bg-primary-subtle z-n1 overflow-visible" style="display:block">
-            <div class="d-flex flex-column align-items-center">
+            <div class="d-flex flex-column align-items-center z-index-3">
               <div class="introimgdiv">
                 <img class="introimg justify-content-center" src="./media/elements/recipes.png" alt="various organic dishes">
               </div>
@@ -49,9 +47,8 @@
                 Selecionamos os melhores alimentos para tranformar nas melhores receitas.
               </p>
             </div>
-          </span>
 
-            <div class="d-flex flex-column align-items-center">
+            <div class="d-flex flex-column align-items-center z-index-3">
               <div class="introimgdiv">
                 <img class="introimg justify-content-center"  src="./media/elements/organs.png" alt="body parts representation">
               </div>
@@ -60,6 +57,7 @@
                 Olhamos para os alimentos como ferramentas de auto-cuidado e terapia, em vez de tendências e restrições.
               </p>
             </div>
+          </span>
 
           <section class=" d-flex justify-content-center gap-3">
             <div>
