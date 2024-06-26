@@ -33,8 +33,8 @@
 
   /* recipes carousel */
   $queryr = "SELECT * 
-              FROM recipes
-             WHERE idfood = $id";
+              FROM recipes r
+             WHERE r.idfood = $id";
   $rresult = mysqli_query($connection, $queryr);
 
 ?>
@@ -212,7 +212,7 @@
           <div class="carousel-inner">
             <?php foreach($rresult as $row) { ?>
               <div class="carousel-item active">
-                <img src="media/recipes/<?php echo $row["image"]?>" class="d-block w-100" alt="<?php echo $row["title"] ?>">
+                <img src="./media/recipes/<?php echo $row["images"]?>" class="d-block w-100" alt="<?php echo $row["title"] ?>">
                 <div class="carousel-caption d-md-block">
                   <h5><?php echo $row["title"] ?></h5>
                   <p></p>
