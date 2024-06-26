@@ -84,7 +84,7 @@ p , ul{
     background-repeat: repeat;
     z-index: -1;
     width: 500%;
-    
+    margin-left: -200%;
   }
 
 
