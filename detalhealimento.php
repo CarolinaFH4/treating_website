@@ -6,42 +6,24 @@
    }
 
   $query = "SELECT 
-            f.idfood, name, f.category fcat, image, idnutri, n.idfood, parameter, n.category ncat, value, unity
-            FROM food f, nutrition n
-            WHERE f.idfood = n.idfood
-            and f.idfood = $id";
+  f.idfood, name, f.category fcat, image, idnutri, n.idfood, parameter, n.category ncat, value, unity, description
+  FROM food f, nutrition n left join glossary g on  n.parameter = g.word
+  WHERE f.idfood = n.idfood 
+  and f.idfood = $id";
    
   $result = mysqli_query($connection, $query);
-  $food = mysqli_fetch_assoc($result);
 
+  $queryFood = "SELECT name, image, category
+                  FROM food
+                  WHERE idfood = $id ";
+  $resultFood = mysqli_query($connection, $queryFood);
+  $currentFood = mysqli_fetch_assoc($resultFood);
 
-  //variables
-  $name = $food["name"];
-  $fcategory = $food["fcat"];
-  $image = $food["image"];
-  $ncategory = $food["ncat"];
-  $param = $food["parameter"];
-  $value = $food["value"];
-  $unity = $food["unity"];
+  $name = $currentFood["name"];
+  $image = $currentFood["image"];
+  $cat = $currentFood["category"];
 
-  $querynutri = "SELECT * 
-                  FROM nutrition
-                  WHERE idfood = $id 
-                  AND category = 'Nutrientes'";
-  $nutriresult = mysqli_query($connection, $querynutri);
-
-  $queryvit = "SELECT * 
-                FROM nutrition
-                WHERE idfood = $id 
-                AND category = 'Vitaminas'";
-  $vitresult = mysqli_query($connection, $queryvit);
-
-  $querymin = "SELECT * 
-                FROM nutrition
-                WHERE idfood = $id 
-                AND category = 'Minerais'";
-  $minresult = mysqli_query($connection, $querymin);
-
+  /* food - benefits */
   $queryfb = "SELECT id, fb.idfood, fb.idbenefit, b.name, b.idbenefit, b.image bimage, f.idfood
               FROM food_benefit fb, food f, benefits b
               WHERE fb.idfood = f.idfood 
@@ -49,23 +31,13 @@
               AND f.idfood  = $id";
   $fbresult = mysqli_query($connection, $queryfb);
 
+  /* recipes carousel */
   $queryr = "SELECT * 
               FROM recipes
-              WHERE idfood = $id";
+             WHERE idfood = $id";
   $rresult = mysqli_query($connection, $queryr);
 
-  $queryglo = "SELECT word, description
-                FROM glossary
-                WHERE EXISTS (
-                  SELECT parameter, category, unity
-                  FROM nutrition
-                  WHERE parameter = word OR category = word OR unity =word
-              	  );"; 
-  $gresult = mysqli_query($connection, $queryglo);
-  $meaning = mysqli_fetch_assoc($gresult);
-
 ?>
-
 
 <!doctype html>
 <html lang="en">
@@ -73,6 +45,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@1,700&family=Heebo&family=Spinnaker&display=swap" rel="stylesheet">
@@ -100,16 +73,14 @@
     <div class="container">
 
       <div class="d-flex align-items-baseline gap-3">
-
-
         <h1>
         <?php echo $name?>
         </h1>
         <p>
-          100g, <?php echo $fcategory?>
+          100g, <?php echo $cat?>
       </div>
 
-      <section class="">
+      <section>
         <div class="d-flex align-items-center col flex-column h-100 flex-grow-1">
           <div class="mask3 overflow-hidden">
             <img src="./media/alimentos/<?php echo $image; ?>" alt="<?php echo $name ?>" class="w-100">
@@ -120,47 +91,76 @@
             <?php } ?>
           </div>
         </div>
-        <p class="m-3">*clica nos elementos sublinhados para saber mais!</p>
+        <p class="mt-4 mb-1">*clica em <i class="bi bi-info-circle"></i> para saber mais!</p>
       </section>
 
       <section class="info">
         <div>
           <h2 class="text-uppercase">Nutrientes:</h2>
-
           <table class="table table-striped">
             <tbody>
-              <?php foreach($nutriresult as $row){?>
+              <?php foreach($result as $food){
+
+                //variables
+                $ncategory =  $food["ncat"];
+                $param =      $food["parameter"];
+                $value =      $food["value"];
+                $unity =      $food["unity"];
+                $description = $food["description"];
+              
+                if ($ncategory == "Nutrientes") {
+                
+                ?>
               <tr>
-                <td><?php echo $row["parameter"]?></td>
-                <td class="text-end"><?php echo $row["value"]?></td>
-                <td class="text-center"><?php echo $row["unity"]?></td>
+                <td>
+                  <span><?php echo $param; ?><span>
+                  <?php if ($description != "") { ?>
+                    <a data-bs-toggle="tooltip" data-bs-title="<?php echo $description; ?>" class="muted"> 
+                    <i class="bi bi-info-circle"></i>
+                    </a>
+                  <?php } ?>
+                  </td>
+                <td class="text-end"><?php echo $value; ?></td>
+                <td class="text-center"><?php echo $unity; ?></td>
               </tr>
-              <?php }?>
+              <?php 
+                }
+            }?>
             </tbody>
           </table>
         </div>
+        
         <div>
           <h2 class="text-uppercase"> Vitaminas:</h2>
-
           <table class="table table-striped">
-            <tbody>
-            <?php foreach($vitresult as $row){
-                  foreach($meaning as $mean ){ ?>
+          <tbody>
+              <?php foreach($result as $food){
+
+                //variables
+                $ncategory =  $food["ncat"];
+                $param =      $food["parameter"];
+                $value =      $food["value"];
+                $unity =      $food["unity"];
+                $description = $food["description"];
+              
+                if ($ncategory == "Vitaminas") {
+                
+                ?>
               <tr>
                 <td>
-                  <a data-bs-toggle="tooltip" data-bs-title="<?php echo $mean?>" class="muted"><?php echo $row["parameter"]?>
-                  </a>
-                </td>
-                <td class="text-end">
-                  <a data-bs-toggle="tooltip" data-bs-title="<?php echo $mean?>" class="muted"><?php echo $row["value"]?>
-                  </a>
-                </td>
-                <td class="text-center">
-                  <a data-bs-toggle="tooltip" data-bs-title="<?php echo $mean?>" class="muted"><?php echo $row["unity"]?>
-                  </a>
-                </td>
+                  <span><?php echo $param; ?><span>
+                  <?php if ($description != "") { ?>
+                    <a data-bs-toggle="tooltip" data-bs-title="<?php echo $description; ?>" class="muted"> 
+                    <i class="bi bi-info-circle"></i>
+                    </a>
+                  <?php } ?>
+                  </td>
+                <td class="text-end"><?php echo $value; ?></td>
+                <td class="text-center"><?php echo $unity; ?></td>
               </tr>
-              <?php } }?>
+              <?php 
+                }
+            }?>
             </tbody>
           </table>
         </div>
@@ -168,42 +168,37 @@
         <div>
           <h2 class="text-uppercase"> Minerais:</h2>
           <table class="table table-striped">
-            <tbody>
-            <?php foreach($minresult as $row){ ?>
+          <tbody>
+              <?php foreach($result as $food){
+
+                //variables
+                $ncategory =  $food["ncat"];
+                $param =      $food["parameter"];
+                $value =      $food["value"];
+                $unity =      $food["unity"];
+                $description = $food["description"];
+              
+                if ($ncategory == "Minerais") {
+                
+                ?>
               <tr>
-                <td><?php echo $row["parameter"]?></td>
-                <td class="text-end"><?php echo $row["value"]?></td>
-                <td class="text-center"><?php echo $row["unity"]?></td>
+                <td>
+                  <span><?php echo $param; ?><span>
+                  <?php if ($description != "") { ?>
+                    <a data-bs-toggle="tooltip" data-bs-title="<?php echo $description; ?>" class="muted"> 
+                    <i class="bi bi-info-circle"></i>
+                    </a>
+                  <?php } ?>
+                  </td>
+                <td class="text-end"><?php echo $value; ?></td>
+                <td class="text-center"><?php echo $unity; ?></td>
               </tr>
-              <?php }?>
+              <?php 
+                }
+            }?>
             </tbody>
           </table>
         </div>
-      </section>
-
-      <section class="test">
-        <table class="table">
-          <tbody>
-            <thead>
-              <td>
-                Glossary
-              </td>
-            </thead>
-            <tr>
-              <?php
-                foreach ($gresult as $row){
-              ?>
-               <td><a data-bs-toggle="tooltip" data-bs-title="<?php echo $meaning?>" class="muted">kcal</a></td> 
-
-              <?php
-                }
-              ?>
-              
-              <td>Energia</td>
-              <td>Ferro</td>
-            </tr>
-          </tbody>
-        </table>
       </section>
 
       <section> 
