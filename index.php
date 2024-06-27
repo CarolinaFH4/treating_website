@@ -21,7 +21,7 @@
     <main class="container overflow-hidden mx-auto">
         <div class="index">
           <div class="text-center">
-            <h2 class= "pitch text-uppercase spinnaker-regular mb-3">
+            <h2 class= "pitch text-uppercase spinnaker-regular mb-4 mt-2">
               Onde a nutrição e a comunidade se encontram.
             </h2>
           </div>
@@ -61,16 +61,16 @@
 
           <section class=" d-flex justify-content-center gap-3">
             <div>
-              <img class="introicons" src="./media/icons/brain.svg" alt="">
+              <img class="introicons" src="./media/icons/brain.svg" alt="brain">
             </div>
             <div>
-              <img class="introicons" src="./media/icons/virus.svg" alt="">
+              <img class="introicons" src="./media/icons/virus.svg" alt="virus">
             </div>
             <div>
-              <img class="introicons" src="./media/icons/joints.svg" alt="">
+              <img class="introicons" src="./media/icons/joints.svg" alt="joints">
             </div>
             <div >
-              <img class="introicons" src="./media/icons/heart.svg" alt="">
+              <img class="introicons" src="./media/icons/heart.svg" alt="heart">
             </div>
           </section>
 

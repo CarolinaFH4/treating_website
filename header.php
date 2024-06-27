@@ -4,7 +4,7 @@
         <section>
         
           <div class= "row justify-content-center ">
-            <div class= "col-auto m-4">
+            <div class= "col-auto mt-4 mb-2">
                 <a href="index.php" class="col">
                   <img src="./media/icons/logo.svg" alt="Treating logo" >
                 </a>

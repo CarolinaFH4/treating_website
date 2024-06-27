@@ -3,7 +3,7 @@
       <img class="wavef" src="./media/icons/wave.footer.svg" alt="wave separation">
   </div>
   
-  <div class="footer container d-flex flex-column bg-secondary-subtle">
+  <div class="container d-flex flex-column bg-secondary-subtle">
 
     <div class="mb-3 align-self-center">
       <a href="index.php">
@@ -28,5 +28,6 @@
         </div>
       </div>
     </div>
+    <div clas="footer bg-secondary-subtle"></div>
   </div>
 </footer>
