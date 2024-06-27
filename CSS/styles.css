@@ -52,6 +52,10 @@ p , ul{
   font-family: "Heebo";
 }
 
+a{
+  font-family: "Heebo";
+  color: #060901;
+}
 
 
 /* Generics end */
@@ -84,6 +88,7 @@ p , ul{
     background-repeat: repeat;
     z-index: -1;
     width: 500%;
+    height: 200vw;
     margin-left: -200%;
   }
 
@@ -93,7 +98,7 @@ p , ul{
 }
 .introimg{
  /* height: 200px;*/
-  width: 200vw;
+  width: 150vw;
   overflow: hidden;
   
 }

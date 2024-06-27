@@ -18,7 +18,7 @@
 
     <?php include "header.php"?> 
 
-    <main class="container overflow-x-hidden mx-auto p-3 ">
+    <main class="container overflow-hidden mx-auto">
         <div class="index">
           <div class="text-center">
             <h2 class= "pitch text-uppercase spinnaker-regular mb-3">
@@ -30,7 +30,7 @@
           <span class="indexbg position-relative">
             <div class="d-flex flex-column align-items-center z-index-3">
               <div class="introimgdiv">
-                <img class="introimg justify-content-center" src="./media/elements/comunity.png" alt="people eating together">
+                <img class="introimg" src="./media/elements/comunity.png" alt="people eating together">
               </div>
               <a class="align-self-end" href="">Comunidade</a>
               <p class="text-center mb-4 mt-4 ">
@@ -40,7 +40,7 @@
 
             <div class="d-flex flex-column align-items-center z-index-3">
               <div class="introimgdiv">
-                <img class="introimg justify-content-center" src="./media/elements/recipes.png" alt="various organic dishes">
+                <img class="introimg" src="./media/elements/recipes.png" alt="various organic dishes">
               </div>
               <a class="align-self-end" href="" >Receitas</a>
               <p class="text-center mb-4 mt-4">
@@ -50,7 +50,7 @@
 
             <div class="d-flex flex-column align-items-center z-index-3">
               <div class="introimgdiv">
-                <img class="introimg justify-content-center"  src="./media/elements/organs.png" alt="body parts representation">
+                <img class="introimg"  src="./media/elements/organs.png" alt="body parts representation">
               </div>
               <a class="align-self-end" href="">Benefícios de saúde</a>
               <p class="text-center mb-4 mt-4">
