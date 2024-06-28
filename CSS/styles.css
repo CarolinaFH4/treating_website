@@ -116,8 +116,12 @@ a{
 
 
 /* Footer */
-.footer{
-    
+.ficon{
+  width: 2.5em;
+  height: auto;
+}
+.flastdiv p{
+    margin-top:4em;
 }
 
 /* Footer end */

@@ -11,23 +11,29 @@
       </a>
     </div>
 
-    <div class="d-flex justify-content-between">
+    <div class="d-flex justify-content-between align-items-center flex-wrap">
       <div class="d-flex flex-column">
             <a href="">Contacto</a>
             <a href="">Biblioteca</a>
             <a href="">Política de privacidade</a>
       </div>
-      <div class="d-flex flex-column gap-2">
+      <div class="d-flex flex-column gap-2 fs-6">
         <div class="d-flex gap-2">
-          <img class="" type="link" href="" src="./media/icons/instagram.svg" alt="Instagram">
-          <img class="" type="link" href="" src="./media/icons/pinterest.svg" alt="Pinterest">
+          <img class="ficon" type="link" href="" src="./media/icons/instagram.svg" alt="Instagram">
+          <img class="ficon" type="link" href="" src="./media/icons/pinterest.svg" alt="Pinterest">
         </div>
         <div class="d-flex gap-2">
-          <img class="" type="link" href="" src="./media/icons/linkedin.svg" alt="LinkedIn">
-          <img class="" type="link" href="" src="./media/icons/youtube.svg" alt="Youtube">
+          <img class="ficon" type="link" href="" src="./media/icons/linkedin.svg" alt="LinkedIn">
+          <img class="ficon" type="link" href="" src="./media/icons/youtube.svg" alt="Youtube">
         </div>
       </div>
     </div>
-    <div clas="footer bg-secondary-subtle"></div>
+
+    <div class="flastdiv d-flex align-items-bottom">
+      <p class="">
+      © Treating 2024
+      </p>
+    </div>
+
   </div>
 </footer>
