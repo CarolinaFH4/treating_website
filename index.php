@@ -32,7 +32,7 @@
               <div class="introimgdiv">
                 <img class="introimg" src="./media/elements/comunity.png" alt="people eating together">
               </div>
-              <a class="align-self-end" href="">Comunidade</a>
+              <a class="align-self-end" href="comunidade.php">Comunidade</a>
               <p class="text-center mb-4 mt-4 ">
                 Treating vem esclarecer conceitos de nutrição e juntar pessoas através do poder da alimentação
               </p>
@@ -42,7 +42,7 @@
               <div class="introimgdiv">
                 <img class="introimg" src="./media/elements/recipes.png" alt="various organic dishes">
               </div>
-              <a class="align-self-end" href="" >Receitas</a>
+              <a class="align-self-end" href="receitas.php" >Receitas</a>
               <p class="text-center mb-4 mt-4">
                 Selecionamos os melhores alimentos para tranformar nas melhores receitas.
               </p>
