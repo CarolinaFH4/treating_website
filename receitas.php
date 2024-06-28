@@ -3,11 +3,12 @@
   require "connection.php";
 
   $query = "SELECT * 
-            FROM recipes";
+            FROM recipes
+            ORDER BY title ASC";
             
   $result = mysqli_query($connection, $query);
   $recipes = mysqli_fetch_assoc($result);
-
+  sort($recipes);
 
 ?>
 
@@ -68,12 +69,15 @@
       <div class="row">
       <?php
         foreach ($result as $rec) {
+          
           $idrec = $rec["idrecipe"];
           if($idrec % 2 == 0){
             $mask = '2';
           } else{
             $mask = '1';
           };
+
+          
       ?>
         <div class="p-0 col-6 col-md-4">
           <a href="detalhereceita.php?idrecipe=<?php echo $idrec?>">

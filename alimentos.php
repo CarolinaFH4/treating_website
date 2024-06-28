@@ -6,7 +6,8 @@
    
   $result = mysqli_query($connection, $query);
   $food = mysqli_fetch_assoc($result);
-
+  // Não funciona??
+  //sort($food);
 
 ?>
 
