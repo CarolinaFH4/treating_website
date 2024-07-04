@@ -87,11 +87,21 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Deixa a tua sugestão!</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        ...
+<form action="">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label" name="email">Email</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <div id="emailHelp" class="form-text">Nunca partilharemos os teus dados.</div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label text-left">Sugestões/Dúvidas</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Vamos evoluir em conjunto!" name="sugestion"></textarea>
+        </div>
+</form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
