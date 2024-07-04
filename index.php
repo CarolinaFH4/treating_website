@@ -1,3 +1,13 @@
+<?php
+  if (isset($_POST["submit"])) {
+
+  require("connection.php");
+
+  // protected againts code injection
+  $name = mysqli_real_escape_string($connection, $_POST["username"]);
+  $email = $_POST["useremail"];
+
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -91,7 +101,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-<form action="">
+
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label" name="email">Email</label>
           <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -101,7 +111,7 @@
           <label for="exampleFormControlTextarea1" class="form-label text-left">Sugestões/Dúvidas</label>
           <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Vamos evoluir em conjunto!" name="sugestion"></textarea>
         </div>
-</form>
+
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

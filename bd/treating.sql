@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Tempo de geração: 25-Jun-2024 às 09:58
--- Versão do servidor: 5.7.24
--- versão do PHP: 8.0.1
+-- Generation Time: Jul 04, 2024 at 08:29 PM
+-- Server version: 5.7.24
+-- PHP Version: 8.0.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `treating`
+-- Database: `treating`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `benefits`
+-- Table structure for table `benefits`
 --
 
 CREATE TABLE `benefits` (
@@ -35,7 +35,7 @@ CREATE TABLE `benefits` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Extraindo dados da tabela `benefits`
+-- Dumping data for table `benefits`
 --
 
 INSERT INTO `benefits` (`idbenefit`, `name`, `description`, `image`) VALUES
@@ -48,7 +48,7 @@ INSERT INTO `benefits` (`idbenefit`, `name`, `description`, `image`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `comunity`
+-- Table structure for table `comunity`
 --
 
 CREATE TABLE `comunity` (
@@ -60,7 +60,7 @@ CREATE TABLE `comunity` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Extraindo dados da tabela `comunity`
+-- Dumping data for table `comunity`
 --
 
 INSERT INTO `comunity` (`id`, `name`, `link_title`, `link`, `image`) VALUES
@@ -70,7 +70,7 @@ INSERT INTO `comunity` (`id`, `name`, `link_title`, `link`, `image`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `food`
+-- Table structure for table `food`
 --
 
 CREATE TABLE `food` (
@@ -81,7 +81,7 @@ CREATE TABLE `food` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Extraindo dados da tabela `food`
+-- Dumping data for table `food`
 --
 
 INSERT INTO `food` (`idfood`, `name`, `category`, `image`) VALUES
@@ -98,7 +98,7 @@ INSERT INTO `food` (`idfood`, `name`, `category`, `image`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `food_benefit`
+-- Table structure for table `food_benefit`
 --
 
 CREATE TABLE `food_benefit` (
@@ -108,7 +108,7 @@ CREATE TABLE `food_benefit` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Extraindo dados da tabela `food_benefit`
+-- Dumping data for table `food_benefit`
 --
 
 INSERT INTO `food_benefit` (`id`, `idfood`, `idbenefit`) VALUES
@@ -145,7 +145,7 @@ INSERT INTO `food_benefit` (`id`, `idfood`, `idbenefit`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `glossary`
+-- Table structure for table `glossary`
 --
 
 CREATE TABLE `glossary` (
@@ -155,11 +155,11 @@ CREATE TABLE `glossary` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Extraindo dados da tabela `glossary`
+-- Dumping data for table `glossary`
 --
 
 INSERT INTO `glossary` (`idglossary`, `word`, `description`) VALUES
-(1, 'Kcal', 'A sigla kcal significa quilocaloria, que é uma unidade de medida de energia utilizada para quantificar o valor energético dos alimentos. É comumente utilizada para expressar a quantidade de energia que um alimento fornece ao ser metabolizado pelo organismo.'),
+(1, 'kcal', 'A sigla kcal significa quilocaloria, que é uma unidade de medida de energia utilizada para quantificar o valor energético dos alimentos. É comumente utilizada para expressar a quantidade de energia que um alimento fornece ao ser metabolizado pelo organismo.'),
 (2, 'Lípidos', 'Mesmo que o termo \"lípidos\" não te diga nada, talvez \"gordura\" te seja mais claro.\r\nEstas moléculas constituídas por ácidos gordos (triglicéridos) fazem parte da família dos macronutrientes, tal como as proteínas e os hidratos de carbono.\r\nOs lípidos encontram-se em todas as nossas células, incluindo no nosso cérebro, que é composto a 70% por estes!\r\nTêm assim um papel central no funcionamento do organismo.'),
 (3, 'Hidratos de carbono', 'Os Hidratos de Carbono (HC) são um dos nutrientes fornecidos pelos alimentos tal como as proteínas, as gorduras, as fibras, vitaminas e minerais. Através da digestão, são transformados em glicose que é então absorvida para o sangue sendo o principal fornecedor de energia do nosso organismo.'),
 (4, 'Prebiótico', 'Servem de substrato para determinados microrganismos presentes no intestino, favorecendo a multiplicação das bactérias benéficas à digestão e para a saúde.'),
@@ -172,7 +172,7 @@ INSERT INTO `glossary` (`idglossary`, `word`, `description`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `library`
+-- Table structure for table `library`
 --
 
 CREATE TABLE `library` (
@@ -183,7 +183,7 @@ CREATE TABLE `library` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Extraindo dados da tabela `library`
+-- Dumping data for table `library`
 --
 
 INSERT INTO `library` (`id`, `title`, `description`, `link`) VALUES
@@ -195,7 +195,7 @@ INSERT INTO `library` (`id`, `title`, `description`, `link`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `nutrition`
+-- Table structure for table `nutrition`
 --
 
 CREATE TABLE `nutrition` (
@@ -208,7 +208,7 @@ CREATE TABLE `nutrition` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Extraindo dados da tabela `nutrition`
+-- Dumping data for table `nutrition`
 --
 
 INSERT INTO `nutrition` (`idnutri`, `idfood`, `parameter`, `category`, `value`, `unity`) VALUES
@@ -576,7 +576,7 @@ INSERT INTO `nutrition` (`idnutri`, `idfood`, `parameter`, `category`, `value`, 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `recipes`
+-- Table structure for table `recipes`
 --
 
 CREATE TABLE `recipes` (
@@ -591,7 +591,7 @@ CREATE TABLE `recipes` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Extraindo dados da tabela `recipes`
+-- Dumping data for table `recipes`
 --
 
 INSERT INTO `recipes` (`idrecipe`, `idfood`, `title`, `ingredients`, `steps`, `images`, `servings`, `time`) VALUES
@@ -603,109 +603,133 @@ INSERT INTO `recipes` (`idrecipe`, `idfood`, `title`, `ingredients`, `steps`, `i
 (6, 3, 'Salmão grelhado com salada de abacate', '100 g salmão\r\n1 limão\r\n100 g abacate\r\n1/2 lua de tomate\r\n1 colher de sopa salsa\r\n1 pitada pimenta preta\r\n1 pitada sal\r\n1 chávena, cortadas cebolas\r\n1 colher de sopa azeite extra virgem\r\n25 g nozes |1 fatia queijo mozarela', 'Tempere os dois lados do salmão com sal, sumo de limão e pimenta.\nUnte a grelha do forno com meia colher de azeite e grelhe o salmão em forno pré-aquecido por 5 minutos de cada lado.\nCorte em pedaços o abacate, a cebola, o tomate, a salsa e o queijo mozarela, esmague as nozes e coloque-as numa tigela, tempere com sal, pimenta e azeite. Misture bem.\nColoque o salmão grelhado com a salada em um prato. Servir.', 'salmao.salada.abacate.jpg', 2, 20),
 (7, 3, 'Noodles com salmão fumado', '200 g salmão fumado\r\n1/2 chávena molho de soja\r\n400 g noodles\r\n5 folhas hortelã\r\n1 colher de chá óleo de sésamo torrado\r\nSumo de 1 lima\r\n1 colher de chá gengibre ralado\r\n1 colher de sopa de cebolinho picado\r\n4 colheres de chá açúcar amarelo\r\n25 g sementes de sésamo torradas', 'Cozinhe os noodles de acordo com as instruções na embalagem. Escorra e reserve.\r\nNuma tigela grande, misture o molho de soja, açúcar amarelo, óleo de sésamo, gengibre, sumo de lima e as sementes de sésamo.\r\nAdicione os noodles, cebolinho, hortelã e o salmão. Misture bem e sirva frio.', 'noodles.jpg', 4, 30);
 
+-- --------------------------------------------------------
+
 --
--- Índices para tabelas despejadas
+-- Table structure for table `sugestions`
+--
+
+CREATE TABLE `sugestions` (
+  `sid` int(11) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `text` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Indexes for dumped tables
 --
 
 --
--- Índices para tabela `benefits`
+-- Indexes for table `benefits`
 --
 ALTER TABLE `benefits`
   ADD PRIMARY KEY (`idbenefit`);
 
 --
--- Índices para tabela `comunity`
+-- Indexes for table `comunity`
 --
 ALTER TABLE `comunity`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices para tabela `food`
+-- Indexes for table `food`
 --
 ALTER TABLE `food`
   ADD PRIMARY KEY (`idfood`);
 
 --
--- Índices para tabela `food_benefit`
+-- Indexes for table `food_benefit`
 --
 ALTER TABLE `food_benefit`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices para tabela `glossary`
+-- Indexes for table `glossary`
 --
 ALTER TABLE `glossary`
   ADD PRIMARY KEY (`idglossary`);
 
 --
--- Índices para tabela `library`
+-- Indexes for table `library`
 --
 ALTER TABLE `library`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices para tabela `nutrition`
+-- Indexes for table `nutrition`
 --
 ALTER TABLE `nutrition`
   ADD PRIMARY KEY (`idnutri`);
 
 --
--- Índices para tabela `recipes`
+-- Indexes for table `recipes`
 --
 ALTER TABLE `recipes`
   ADD PRIMARY KEY (`idrecipe`);
 
 --
--- AUTO_INCREMENT de tabelas despejadas
+-- Indexes for table `sugestions`
+--
+ALTER TABLE `sugestions`
+  ADD PRIMARY KEY (`sid`);
+
+--
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT de tabela `benefits`
+-- AUTO_INCREMENT for table `benefits`
 --
 ALTER TABLE `benefits`
   MODIFY `idbenefit` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT de tabela `comunity`
+-- AUTO_INCREMENT for table `comunity`
 --
 ALTER TABLE `comunity`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT de tabela `food`
+-- AUTO_INCREMENT for table `food`
 --
 ALTER TABLE `food`
   MODIFY `idfood` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT de tabela `food_benefit`
+-- AUTO_INCREMENT for table `food_benefit`
 --
 ALTER TABLE `food_benefit`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
--- AUTO_INCREMENT de tabela `glossary`
+-- AUTO_INCREMENT for table `glossary`
 --
 ALTER TABLE `glossary`
   MODIFY `idglossary` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT de tabela `library`
+-- AUTO_INCREMENT for table `library`
 --
 ALTER TABLE `library`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT de tabela `nutrition`
+-- AUTO_INCREMENT for table `nutrition`
 --
 ALTER TABLE `nutrition`
   MODIFY `idnutri` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=402;
 
 --
--- AUTO_INCREMENT de tabela `recipes`
+-- AUTO_INCREMENT for table `recipes`
 --
 ALTER TABLE `recipes`
   MODIFY `idrecipe` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `sugestions`
+--
+ALTER TABLE `sugestions`
+  MODIFY `sid` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
