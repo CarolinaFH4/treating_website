@@ -1,3 +1,6 @@
+<?php
+
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -75,8 +78,41 @@
           </section>
 
           <div class="mt-4 text-center">
-            <h3>O teu bem estar e esta plataforma são trabalhos em constante evolução. 
-              <a href="" alt="contact form" class="text-reset">Partilha connosco</a> as tuas preocupações e temas que queres ver abordados!</h3>
+            <h3>
+              O teu bem estar e esta plataforma são trabalhos em constante evolução. 
+              <a type="" class="" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Partilha connosco
+              </a> 
+              as tuas preocupações e temas que queres ver abordados!
+            </h3>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Deixa a tua sugestão!</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label" name="email">Email</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <div id="emailHelp" class="form-text">Nunca partilharemos os teus dados.</div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label text-left">Sugestões/Dúvidas</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Vamos evoluir em conjunto!" name="sugestion"></textarea>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
           </div>
         </div>
     </main>
