@@ -9,6 +9,7 @@
   $result = mysqli_query($connection, $query);
   $recipes = mysqli_fetch_assoc($result);
 
+  
 ?>
 
 <!doctype html>
@@ -54,13 +55,13 @@
       <div class=" d-flex justify-content-between mb-2">
         <h1>Receitas</h1>
           <div class="dropdown">
-            <button class="badge rounded-pill dropdown-toggle p-2 " type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <button class="badge rounded-pill dropdown-toggle p-2 " type="button" data-bs-toggle="dropdown" aria-expanded="false" >
               Ordenar
             </button>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">A-Z</a></li>
-              <li><a class="dropdown-item" href="#">Mais rápido</a></li>
-              <li><a class="dropdown-item" href="#">Menos ingredientes</a></li>
+              <li><a class="dropdown-item" name="az" href="#">A-Z</a></li>
+              <li><a class="dropdown-item"  name="fast" href="#">Mais rápido</a></li>
+              <li><a class="dropdown-item" name="ing" href="#">Menos ingredientes</a></li>
             </ul>
           </div>
       </div>

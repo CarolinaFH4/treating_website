@@ -1,4 +1,32 @@
 <?php
+  
+
+$email = "";
+$text = "";
+$msgType = "";
+$msg = "";
+
+  if (isset($_POST["submit"])) {
+
+  require("connection.php");
+
+  $email = $_POST["email"];
+  $sugestion = mysqli_real_escape_string($connection, $_POST["sugestion"]);
+
+
+  $query = "insert into sugestions
+                values ('$email' , '$sugestion')";
+    mysqli_query($connection, $query);
+  
+    if (mysqli_affected_rows($connection) == 1) {
+      $msgType = "success";
+      $msg = "Enviado!";
+    } else {
+      $msgType = "danger";
+      $msg = "E-mail ou texto inválidos.";
+    }
+
+  }
 
 ?>
 <!doctype html>
@@ -90,26 +118,33 @@
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
+
               <div class="modal-header">
                 <h1 class="modal-title fs-5" id="exampleModalLabel">Deixa a tua sugestão!</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
-              <div class="modal-body">
+              
+              <div class="modal-body pb-0">
+                <form method = "post" enctype = "multipart/form-data" class="needs-validation">
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label" >Email</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" >
+                    <div id="emailHelp" class="form-text">Nunca partilharemos os teus dados.</div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label text-left">Sugestões / Dúvidas</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Vamos evoluir em conjunto!" name="sugestion"></textarea>
+                  </div>
 
-                <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label" name="email">Email</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                  <div id="emailHelp" class="form-text">Nunca partilharemos os teus dados.</div>
-                </div>
-                <div class="mb-3">
-                  <label for="exampleFormControlTextarea1" class="form-label text-left">Sugestões/Dúvidas</label>
-                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Vamos evoluir em conjunto!" name="sugestion"></textarea>
-                </div>
+                  <div class="d-flex justify-content-end align-items-baseline">
+                      <p class="me-2 text-decoration-underline text-<?php echo $msgType?>"><?php echo $msg?></p>
+                      <button type="submit" class="btn btn-primary m-3" name ="submit">Send</button>
+                  </div>
 
+                </form>
               </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-primary">Send</button>
-              </div>
+
+              
 
             </div>
           </div>
