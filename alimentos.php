@@ -2,12 +2,11 @@
   require "connection.php";
 
   $query = "SELECT idfood, name, category, image
-            FROM food";
+            FROM food
+            ORDER BY name ASC";
    
   $result = mysqli_query($connection, $query);
   $food = mysqli_fetch_assoc($result);
-  // Não funciona??
-  //sort($food);
 
 ?>
 

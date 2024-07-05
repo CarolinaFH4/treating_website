@@ -8,7 +8,6 @@
             
   $result = mysqli_query($connection, $query);
   $recipes = mysqli_fetch_assoc($result);
-  sort($recipes);
 
 ?>
 
