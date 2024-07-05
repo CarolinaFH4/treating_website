@@ -1,11 +1,4 @@
 <?php
-  if (isset($_POST["submit"])) {
-
-  require("connection.php");
-
-  // protected againts code injection
-  $name = mysqli_real_escape_string($connection, $_POST["username"]);
-  $email = $_POST["useremail"];
 
 ?>
 <!doctype html>
