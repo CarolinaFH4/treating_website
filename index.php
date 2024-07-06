@@ -52,7 +52,7 @@ $msg = "";
     <main class="container overflow-hidden mx-auto">
         <div class="index">
           <div class="text-center">
-            <h2 class= "pitch text-uppercase spinnaker-regular mb-4 mt-2">
+            <h2 class= "pitch text-uppercase spinnaker-regular mb-5 mt-5 fs-4">
               Onde a nutrição e a comunidade se encontram.
             </h2>
           </div>
@@ -63,8 +63,8 @@ $msg = "";
               <div class="introimgdiv">
                 <img class="introimg" src="./media/elements/comunity.png" alt="people eating together">
               </div>
-              <a class="align-self-end" href="comunidade.php">Comunidade</a>
-              <p class="text-center mb-4 mt-4 ">
+              <a class="align-self-end mt-2" href="comunidade.php">Comunidade</a>
+              <p class="text-center mb-4 mt-4 fs-5">
                 Treating vem esclarecer conceitos de nutrição e juntar pessoas através do poder da alimentação
               </p>
             </div>
@@ -73,8 +73,8 @@ $msg = "";
               <div class="introimgdiv">
                 <img class="introimg" src="./media/elements/recipes.png" alt="various organic dishes">
               </div>
-              <a class="align-self-end" href="receitas.php" >Receitas</a>
-              <p class="text-center mb-4 mt-4">
+              <a class="align-self-end mt-2" href="receitas.php" >Receitas</a>
+              <p class="text-center mb-4 mt-4 fs-5">
                 Selecionamos os melhores alimentos para tranformar nas melhores receitas.
               </p>
             </div>
@@ -83,36 +83,48 @@ $msg = "";
               <div class="introimgdiv">
                 <img class="introimg"  src="./media/elements/organs.png" alt="body parts representation">
               </div>
-              <a class="align-self-end" href="">Benefícios de saúde</a>
-              <p class="text-center mb-4 mt-4">
+              <a class="align-self-end mt-2" href="">Benefícios de saúde</a>
+              <p class="text-center mb-4 mt-4 fs-5">
                 Olhamos para os alimentos como ferramentas de auto-cuidado e terapia, em vez de tendências e restrições.
               </p>
             </div>
           </span>
 
-          <section class=" d-flex justify-content-center gap-3">
-            <div>
+          <section class=" d-flex justify-content-center gap-3 m-4">
+            <div class="d-flex row">
               <img class="introicons" src="./media/icons/brain.svg" alt="brain">
+              <p class="text-center">
+                Atividade cerebral
+              </p>
             </div>
-            <div>
+            <div class="d-flex row">
               <img class="introicons" src="./media/icons/virus.svg" alt="virus">
+              <p class="text-center">
+                Antiviral
+              </p>
             </div>
-            <div>
+            <div class="d-flex row">
               <img class="introicons" src="./media/icons/joints.svg" alt="joints">
+              <p class="text-center">
+                Ossos e articulações
+              </p>
             </div>
-            <div >
+            <div class="d-flex row">
               <img class="introicons" src="./media/icons/heart.svg" alt="heart">
+              <p class="text-center">
+                Sistema cardiovascular
+              </p>
             </div>
           </section>
 
           <div class="mt-4 text-center">
-            <h3>
+            <p class=" fs-5  mb-4 mt-5">
               O teu bem estar e esta plataforma são trabalhos em constante evolução. 
-              <a type="" class="" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <a type="" class="" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Partilha connosco
-              </a> 
+                </a> 
               as tuas preocupações e temas que queres ver abordados!
-            </h3>
+            </p>
 
 <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
