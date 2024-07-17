@@ -103,8 +103,8 @@ a{
 .introicons{
   background-color: #F7FAF3;
   border-radius: 60px;
-  height: 7em;
-  width: 7em;
+  height: 6em;
+  width: 6em;
 }
 
 /* Index end */
@@ -112,6 +112,9 @@ a{
 
 
 /* Footer */
+.footerbg{
+  background-color: #E9AE79
+}
 .ficon{
   width: 2.5em;
   height: auto;

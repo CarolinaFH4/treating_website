@@ -53,7 +53,7 @@ $msg = "";
         <div class="index">
 
           <div class="text-center">
-            <h2 class= "pitch text-uppercase spinnaker-regular m-4 fs-4">
+            <h2 class= "pitch text-uppercase spinnaker-regular mx-2 my-5 fs-4">
               Onde a nutrição e a comunidade se encontram.
             </h2>
           </div>
@@ -67,14 +67,14 @@ $msg = "";
           <div class="indexbg">
             
             
-            <div class="d-flex flex-column align-items-center ">
-              <p class="text-center mb-4 mt-4 fs-5">
+            <div class="d-flex flex-column align-items-center mx-4">
+              <p class="text-center my-4 fs-5">
                 Conecta-te com a tua alimentação para te conectares contigo e com ótima companhia. Rodeia-te das melhores influências.
               </p>
-              <a href="comunidade.php"  class="text-decoration-none badge rounded-pill bg-secondary-subtle fs-5 p-3">
+              <a href="comunidade.php"  class="indexcta text-decoration-none rounded-pill bg-secondary-subtle fs-5 p-3 m-2">
                 Explora- as aqui
               </a>
-              <div class="introimgdiv m-5">
+              <div class="introimgdiv m-4">
                 <img class="introimg" src="./media/elements/comunity.png" alt="people eating together">
               </div>
               <p class="text-center mb-4 mt-4 fs-5">
@@ -82,7 +82,7 @@ $msg = "";
               </p>
             </div>
 
-            <div class=" d-flex justify-content-center gap-3 m-4">
+            <div class=" d-flex justify-content-center m-4">
               <div class="d-flex row justify-content-center">
                 <img class="introicons" src="./media/icons/virus.svg" alt="virus">
                 <p class="text-center">
@@ -103,14 +103,14 @@ $msg = "";
               </div>
             </div>
 
-            <div class="d-flex flex-column align-items-center z-index-3">
-              <p class="text-center mb-4 mt-4 fs-5">
+            <div class="d-flex flex-column align-items-center mx-4">
+              <p class="text-center my-4 fs-5">
                   Selecionamos os melhores alimentos para tranformar nas melhores receitas.
               </p>
-              <a href="receitas.php" class="text-decoration-none badge rounded-pill  bg-secondary-subtle text-body-color fs-5 p-3">
+              <a href="receitas.php" class="indexcta text-decoration-none rounded-pill bg-secondary-subtle fs-5 p-3 m-2">
                 Explora aqui as receitas
               </a>
-              <div class="introimgdiv m-5">
+              <div class="introimgdiv m-4">
                 <img class="introimg" src="./media/elements/recipes.png" alt="various organic dishes">
               </div>
             </div>
