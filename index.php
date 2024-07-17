@@ -58,65 +58,68 @@ $msg = "";
             </h2>
           </div>
 
+          <span class="">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#B2CF82" fill-opacity="1" d="M0,160L40,160C80,160,160,160,240,181.3C320,203,400,245,480,224C560,203,640,117,720,117.3C800,117,880,203,960,234.7C1040,267,1120,245,1200,224C1280,203,1360,181,1400,170.7L1440,160L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path>
+              </svg>
+            </span>
+
           <span class="indexbg position-relative">
-          <span>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#B2CF82" fill-opacity="1" d="M0,160L40,160C80,160,160,160,240,181.3C320,203,400,245,480,224C560,203,640,117,720,117.3C800,117,880,203,960,234.7C1040,267,1120,245,1200,224C1280,203,1360,181,1400,170.7L1440,160L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
-          </span>
             
-          <div class="d-flex flex-column align-items-center ">
-            <div class="introimgdiv">
-              <img class="introimg" src="./media/elements/comunity.png" alt="people eating together">
+            
+            <div class="d-flex flex-column align-items-center ">
+              <p class="text-center mb-4 mt-4 fs-5">
+                Conecta-te com a tua alimentação para te conectares contigo e com ótima companhia. Rodeia-te das melhores influências.
+              </p>
+              <a href="comunidade.php"  class="text-decoration-none badge rounded-pill bg-secondary-subtle fs-5 p-3">
+                Explora- as aqui
+              </a>
+              <div class="introimgdiv m-5">
+                <img class="introimg" src="./media/elements/comunity.png" alt="people eating together">
+              </div>
+              <p>
+                Escolhe os ingredientes da tua vida baseados nas tuas necessidades de saúde para que te sintas o teu melhor!
+              </p>
             </div>
-            <p class="text-center mb-4 mt-4 fs-5">
-              Treating vem esclarecer conceitos de nutrição e juntar pessoas através do poder da alimentação
-            </p>
-          </div>
 
-          <div class="d-flex flex-column align-items-center z-index-3">
-            <div class="introimgdiv">
-              <img class="introimg" src="./media/elements/recipes.png" alt="various organic dishes">
+            <div class=" d-flex justify-content-center gap-3 m-4">
+              <div class="d-flex row justify-content-center">
+                <img class="introicons" src="./media/icons/virus.svg" alt="virus">
+                <p class="text-center">
+                Sistema imunológico
+                </p>
+              </div>
+              <div class="d-flex row justify-content-center">
+                <img class="introicons" src="./media/icons/joints.svg" alt="joints">
+                <p class="text-center">
+                  Ossos e articulações
+                </p>
+              </div>
+              <div class="d-flex row justify-content-center">
+                <img class="introicons" src="./media/icons/heart.svg" alt="heart">
+                <p class="text-center">
+                  Sistema cardiovascular
+                </p>
+              </div>
             </div>
-            <p class="text-center mb-4 mt-4 fs-5">
-                Selecionamos os melhores alimentos para tranformar nas melhores receitas.
-            </p>
-          </div>
 
-          <div class="d-flex flex-column align-items-center z-index-3">
-            <div class="introimgdiv">
-              <img class="introimg"  src="./media/elements/organs.png" alt="body parts representation">
+            <div class="d-flex flex-column align-items-center z-index-3">
+              <p class="text-center mb-4 mt-4 fs-5">
+                  Selecionamos os melhores alimentos para tranformar nas melhores receitas.
+              </p>
+              <a href="receitas.php" class="text-decoration-none badge rounded-pill  bg-secondary-subtle text-body-color fs-5 p-3">
+                Explora aqui as receitas
+              </a>
+              <div class="introimgdiv m-5">
+                <img class="introimg" src="./media/elements/recipes.png" alt="various organic dishes">
+              </div>
             </div>
-            <p class="text-center mb-4 mt-4 fs-5">
-                Olhamos para os alimentos como ferramentas de auto-cuidado e terapia, em vez de tendências e restrições.
-            </p>
-          </div>
-        </span>
-
-        <div class=" d-flex justify-content-center gap-3 m-4">
-          <div class="d-flex row">
-            <img class="introicons" src="./media/icons/brain.svg" alt="brain">
-            <p class="text-center">
-              Atividade cerebral
-            </p>
-          </div>
-          <div class="d-flex row">
-            <img class="introicons" src="./media/icons/virus.svg" alt="virus">
-            <p class="text-center">
-              Sistema imunológico
-            </p>
-          </div>
-          <div class="d-flex row">
-            <img class="introicons" src="./media/icons/joints.svg" alt="joints">
-            <p class="text-center">
-              Ossos e articulações
-            </p>
-          </div>
-          <div class="d-flex row">
-            <img class="introicons" src="./media/icons/heart.svg" alt="heart">
-            <p class="text-center">
-              Sistema cardiovascular
-            </p>
-          </div>
-        </div>
+          </span>
+          <span class="">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+              <path fill="#B2CF82" fill-opacity="1" d="M0,160L40,160C80,160,160,160,240,181.3C320,203,400,245,480,224C560,203,640,117,720,117.3C800,117,880,203,960,234.7C1040,267,1120,245,1200,224C1280,203,1360,181,1400,170.7L1440,160L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path>
+            </svg>
+          </span>
 
         <div class="mt-4 text-center">
           <p class=" fs-5  mb-4 mt-5">
