@@ -49,11 +49,11 @@ $msg = "";
 
     <?php include "header.php"?> 
 
-    <main class=" overflow-hidden mx-auto">
+    <main class="overflow-hidden mx-auto">
         <div class="index">
 
           <div class="text-center">
-            <h2 class= "pitch text-uppercase spinnaker-regular mb-5 mt-5 fs-4">
+            <h2 class= "pitch text-uppercase spinnaker-regular m-4 fs-4">
               Onde a nutrição e a comunidade se encontram.
             </h2>
           </div>
@@ -64,7 +64,7 @@ $msg = "";
               </svg>
             </span>
 
-          <span class="indexbg position-relative">
+          <div class="indexbg">
             
             
             <div class="d-flex flex-column align-items-center ">
@@ -77,7 +77,7 @@ $msg = "";
               <div class="introimgdiv m-5">
                 <img class="introimg" src="./media/elements/comunity.png" alt="people eating together">
               </div>
-              <p>
+              <p class="text-center mb-4 mt-4 fs-5">
                 Escolhe os ingredientes da tua vida baseados nas tuas necessidades de saúde para que te sintas o teu melhor!
               </p>
             </div>
@@ -114,7 +114,8 @@ $msg = "";
                 <img class="introimg" src="./media/elements/recipes.png" alt="various organic dishes">
               </div>
             </div>
-          </span>
+          </div>
+
           <span class="">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
               <path fill="#B2CF82" fill-opacity="1" d="M0,160L40,160C80,160,160,160,240,181.3C320,203,400,245,480,224C560,203,640,117,720,117.3C800,117,880,203,960,234.7C1040,267,1120,245,1200,224C1280,203,1360,181,1400,170.7L1440,160L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path>

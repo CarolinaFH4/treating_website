@@ -76,7 +76,7 @@ a{
   background-color: #B2CF82;
 }
 
-.indexbg::before {
+/*.indexbg::before {
     content: "";
     position: absolute;
     top: 90px;
@@ -89,12 +89,10 @@ a{
     width: 500%;
     height: 200vw;
     margin-left: -200%;
-  }
+  }*/
 
 
-.introimgdiv{
 
-}
 .introimg{
  /* height: 200px;*/
   width: 140vw;

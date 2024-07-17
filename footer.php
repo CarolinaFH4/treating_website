@@ -1,9 +1,15 @@
+<style>
+.footerbg{
+  background-color: #E9AE79
+}
+</style>
+
 <footer>
   <div class="w-100 p-0">
       <img class="wavef" src="./media/icons/wave.footer.svg" alt="wave separation">
   </div>
   
-  <div class="d-flex flex-column bg-secondary-subtle">
+  <div class="d-flex flex-column footerbg">
 
     <div class="p-2 mb-3 align-self-center">
       <a href="index.php">
