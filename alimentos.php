@@ -55,16 +55,30 @@
         <h1>Alimentos</h1>
         <p>Na treating investimos na informação de alimentos menos processados para que possa escolher o teu ponto de partida.</p>
       </div>
+
+      <div>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Pesquisa um alimento" aria-label="Pesquisa um alimento" aria-describedby="button-addon2">
+
+          <button class="btn" type="button" id="button-addon2">
+            <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12.375" cy="12.375" r="6.75" stroke="#060901" stroke-width="0.931035"/>
+              <path d="M24.3 24.3L18.225 18.225" stroke="#060901" stroke-width="0.931035" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+
+      </div>
       <div class="row">
-      <?php
-        foreach ($result as $food) {
-          $idfood = $food["idfood"];
-          if($idfood % 2 == 0){
-            $mask = '2';
-          } else{
-            $mask = '1';
-          };
-      ?>
+        <?php
+          foreach ($result as $food) {
+            $idfood = $food["idfood"];
+            if($idfood % 2 == 0){
+              $mask = '2';
+            } else{
+              $mask = '1';
+            };
+        ?>
         <div class="p-0 col-6 col-md-4">
           <a href="detalhealimento.php?idfood=<?php echo $idfood?>">
             <div class="mask<?php echo $mask ?> overflow-hidden">
