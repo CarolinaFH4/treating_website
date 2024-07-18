@@ -104,7 +104,7 @@
       ?>
     </div>
 
-      <div class="row">
+      <div class="row filter_data">
         <?php
           foreach ($result as $food) {
             $idfood = $food["idfood"];

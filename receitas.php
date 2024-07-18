@@ -55,24 +55,27 @@
       <div class=" d-flex justify-content-between mb-2">
         <h1>Receitas</h1>
 
-
           <div class="dropdown">
             <button class="badge rounded-pill dropdown-toggle p-2 " type="button" data-bs-toggle="dropdown" aria-expanded="false" >
               Ordenar
             </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" name="az" href="#">A-Z</a></li>
 
-              <li><a class="dropdown-item"  name="fast" href="#">Mais rápido</a></li>
-              
-              <li><a class="dropdown-item" name="ing" href="#">Menos ingredientes</a></li>
+            <ul class="dropdown-menu">
+              <li>
+                <input type="radio" class="az common_selector" name="filter"> A-Z 
+              </li>
+              <li>
+                <input type="radio" class="fastest common_selector" name="filter"> Mais rápido
+              </li>
+              <li>
+                <input type="radio" class="ingredients common_selector" name="filter">Menos ingredientes
+              </li>
             </ul>
           </div>
 
-
       </div>
 
-      <div class="row">
+      <div class="row filter_data">
       <?php
         foreach ($result as $rec) {
           
@@ -105,6 +108,53 @@
   
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+  <script> 
+    $(document).ready(function(){
+      filter_data();
+
+      function filter_data(){
+        $('filte_data').html('<div id="loading"> <h4>A carregar...<h4/></div>');
+        let action = 'fetch_data';
+        let az = get_filter('az');
+        let fastest = get_filter('fastest');
+        let ingredients = get_filter('ingredients');
+
+
+        $.ajax({
+          url: "fetch.php",
+          method: "POST",
+          data: {
+            action: action,
+            az: az,
+            fastest: fastest,
+            ingredients: ingredients,
+          },
+
+          success: function(data){
+            $('.filter_data').html(data);
+          }
+
+        })
+      }
+
+      function get_filter(class_name) {
+
+        let filter = [];
+        $('.' +class_name+ ':checked').each(function(){
+          filter.push($(this).val());
+        });
+        return filter;
+
+        }
+
+        $(".common_selector").click(function(){
+          filter_data();
+        });
+
+      }
+    );
+  </script>
 
   </body>
 </html>
