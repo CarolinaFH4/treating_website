@@ -1,6 +1,7 @@
 <?php
-  
+  require("connection.php");  
 
+$display= "none";
 $email = "";
 $text = "";
 $msgType = "";
@@ -8,22 +9,25 @@ $msg = "";
 
   if (isset($_POST["submit"])) {
 
-  require("connection.php");
-
-  $email = $_POST["email"];
-  $sugestion = mysqli_real_escape_string($connection, $_POST["sugestion"]);
 
 
-  $query = "insert into sugestions
-                values ('$email' , '$sugestion')";
+  $email = mysqli_real_escape_string($connection,$_POST["formemail"]);
+  $sugestion = mysqli_real_escape_string($connection, $_POST["formsugestion"]);
+
+
+  $query = "insert into sugestions (semail, stext)
+                  values ('$email' , '$sugestion')";
+
     mysqli_query($connection, $query);
   
     if (mysqli_affected_rows($connection) == 1) {
       $msgType = "success";
       $msg = "Enviado!";
+      $display= "block";
     } else {
       $msgType = "danger";
       $msg = "E-mail ou texto inválidos.";
+      $display= "block";
     }
 
   }
@@ -51,6 +55,10 @@ $msg = "";
 
     <main class="overflow-hidden mx-auto">
         <div class="index">
+
+        <div id="alertmsg" class="alert alert-<?php echo $msgType; ?>" role="alert" style="display:<?php echo $display ?>">
+          <?php echo $msg; ?>
+        </div>
 
           <div class="text-center">
             <h2 class= "pitch text-uppercase spinnaker-regular mx-2 my-5 fs-4">
@@ -144,20 +152,19 @@ $msg = "";
               </div>
               
               <div class="modal-body pb-0">
-                <form method = "post" enctype = "multipart/form-data" class="needs-validation">
+                <form method="post" enctype="multipart/form-data" class="needs-validation">
                   <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label" >Email</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" >
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="formemail" >
                     <div id="emailHelp" class="form-text">Nunca partilharemos os teus dados.</div>
                   </div>
                   <div class="mb-3">
                     <label for="exampleFormControlTextarea1" class="form-label text-left">Sugestões / Dúvidas</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Vamos evoluir em conjunto!" name="sugestion"></textarea>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Vamos evoluir em conjunto!" name="formsugestion"></textarea>
                   </div>
 
                   <div class="d-flex justify-content-end align-items-baseline">
-                      <p class="me-2 text-decoration-underline text-<?php echo $msgType?>"><?php echo $msg?></p>
-                      <button type="submit" class="btn btn-primary m-3" name ="submit">Send</button>
+                      <button type="submit" class="btn btn-primary m-3" name="submit">Enviar</button>
                   </div>
 
                 </form>
@@ -178,6 +185,9 @@ $msg = "";
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
+    <script>
+      $("#alertmsg").delay(3000).hide(1);
+    </script>
 
   </body>
 </html>

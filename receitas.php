@@ -54,16 +54,22 @@
     <div class="container">
       <div class=" d-flex justify-content-between mb-2">
         <h1>Receitas</h1>
+
+
           <div class="dropdown">
             <button class="badge rounded-pill dropdown-toggle p-2 " type="button" data-bs-toggle="dropdown" aria-expanded="false" >
               Ordenar
             </button>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" name="az" href="#">A-Z</a></li>
+
               <li><a class="dropdown-item"  name="fast" href="#">Mais rápido</a></li>
+              
               <li><a class="dropdown-item" name="ing" href="#">Menos ingredientes</a></li>
             </ul>
           </div>
+
+
       </div>
 
       <div class="row">
