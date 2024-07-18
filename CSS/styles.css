@@ -25,9 +25,9 @@
 :root{  
   --bs-primary: #B2CF82; /*divs bg*/
   --bs-primary-bg-subtle: #B2CF82;
-  --bs-secondary: #E9AE79; /*footer*/
-  --bs-secondary-bg-subtle:#E9AE79;
-  --bs-tertiary-bg: #E3CED7; /* search bar */
+  --bs-secondary: #F7FAF3; /*footer*/
+  --bs-secondary-bg-subtle:#F7FAF3;
+  --bs-tertiary-bg: #e3ced7; /* search bar */
   --bs-tertiary-color: hsla(335, 26%, 66%, 0.90); /* MENU*/
   --bs-warning: #ffc107;
 
@@ -50,15 +50,15 @@ h2 , h3{
   font-family: "Spinnaker";
   font-size: 20px;
 }
-p , ul{
+p , ul, a{
   font-family: "Heebo";
 }
-
 a{
-  font-family: "Heebo";
   color: #060901;
 }
-
+.input-group:focus , .input:focus{
+  box-shadow: none;
+}
 
 /* Generics end */
 
@@ -75,11 +75,11 @@ a{
 
 
 /* Index */
-/*.indexbg1{
-  width: 500%;
-  margin-left: -200%;
-}*/
-.indexbg::before {
+.indexbg{
+  background-color: #B2CF82;
+}
+
+/*.indexbg::before {
     content: "";
     position: absolute;
     top: 90px;
@@ -92,30 +92,36 @@ a{
     width: 500%;
     height: 200vw;
     margin-left: -200%;
-  }
+  }*/
 
 
-.introimgdiv{
 
-}
 .introimg{
  /* height: 200px;*/
-  width: 150vw;
+  width: 140vw;
   overflow: hidden;
   
 }
 
 .introicons{
-  min-height: 60px;
-  background-color: #E9AE79;
-  border-radius: 50px;
+  background-color: #F7FAF3;
+  border-radius: 60px;
+  height: 6em;
+  width: 6em;
 }
 
 /* Index end */
-
+/* Alimentos */
+.searchal{
+  background-color: #E3CED7;
+  border-radius: 30px;
+}
 
 
 /* Footer */
+.footerbg{
+  background-color: #E9AE79
+}
 .ficon{
   width: 2.5em;
   height: auto;

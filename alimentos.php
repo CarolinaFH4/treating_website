@@ -1,12 +1,37 @@
 <?php
   require "connection.php";
 
-  $query = "SELECT idfood, name, category, image
+  $noresults = false;
+  $msgType = "";
+  
+  if (isset($_GET["submit"])) {
+
+    $searchString = $_GET["searchString"];
+
+    $query = "SELECT idfood, name, category, image
+    FROM food
+    WHERE name like '%$searchString%'
+    ORDER BY name ASC";
+
+    $result = mysqli_query($connection, $query);
+    $food = mysqli_fetch_assoc($result);
+
+    if (mysqli_num_rows($result) == 0) {
+      // no results
+      $noresults = true;
+      $msgType = "info";
+    }
+
+  } else {
+      $query = "SELECT idfood, name, category, image
             FROM food
             ORDER BY name ASC";
-   
-  $result = mysqli_query($connection, $query);
-  $food = mysqli_fetch_assoc($result);
+
+      $result = mysqli_query($connection, $query);
+      $food = mysqli_fetch_assoc($result); 
+
+
+  }
 
 ?>
 
@@ -51,26 +76,50 @@
 
  <main>
     <div class="container">
-      <div>
-        <h1>Alimentos</h1>
-        <p>Na treating investimos na informação de alimentos menos processados para que possa escolher o teu ponto de partida.</p>
+      <div class="mt-4">
+        <h1 class="mb-3">Alimentos</h1>
+        <p class="mb-5 fs-5">Na treating investimos na informação de alimentos menos processados para que possas escolher o teu ponto de partida.</p>
       </div>
-      <div class="row">
+
+      <div class="my-4">
+        <div class="searchal input-group mb-4">
+          <input type="text" class="form-control bg-transparent border-0" placeholder="Procura um alimento" aria-label="Procura um alimento" aria-describedby="button-addon2" name="searchString"
+          value="<?php
+          if (isset($searchString))
+            echo $searchString;
+          ?>">
+
+          <button class="btn" type="submit" id="button-addon2">
+            <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12.375" cy="12.375" r="6.75" stroke="#060901" stroke-width="0.931035"/>
+              <path d="M24.3 24.3L18.225 18.225" stroke="#060901" stroke-width="0.931035" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+
+      <div class="m-0 alert alert-<?php echo $msgType; ?>">
       <?php
-        foreach ($result as $food) {
-          $idfood = $food["idfood"];
-          if($idfood % 2 == 0){
-            $mask = '2';
-          } else{
-            $mask = '1';
-          };
+      if ($noresults)
+        echo "Sem resultados";
       ?>
-        <div class="p-0 col-6 col-md-4">
+    </div>
+
+      <div class="row">
+        <?php
+          foreach ($result as $food) {
+            $idfood = $food["idfood"];
+            if($idfood % 2 == 0){
+              $mask = '2';
+            } else{
+              $mask = '1';
+            };
+        ?>
+        <div class="p-0 mb-4 col-6 col-md-4">
           <a href="detalhealimento.php?idfood=<?php echo $idfood?>">
             <div class="mask<?php echo $mask ?> overflow-hidden">
               <img src="./media/alimentos/<?php echo $food["image"]; ?>" alt="<?php echo $food["name"] ?>" class="img-fluid">
             </div>
-            <p class="mt-2 text-center"><?php echo $food["name"]; ?></p>
+            <p class="my-3 fs-5 text-center"><?php echo $food["name"]; ?></p>
           </a>
         </div>
 

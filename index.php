@@ -49,72 +49,91 @@ $msg = "";
 
     <?php include "header.php"?> 
 
-    <main class="container overflow-hidden mx-auto">
+    <main class="overflow-hidden mx-auto">
         <div class="index">
+
           <div class="text-center">
-            <h2 class= "pitch text-uppercase spinnaker-regular mb-4 mt-2">
+            <h2 class= "pitch text-uppercase spinnaker-regular mx-2 my-5 fs-4">
               Onde a nutrição e a comunidade se encontram.
             </h2>
           </div>
 
+          <span class="">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#B2CF82" fill-opacity="1" d="M0,160L40,160C80,160,160,160,240,181.3C320,203,400,245,480,224C560,203,640,117,720,117.3C800,117,880,203,960,234.7C1040,267,1120,245,1200,224C1280,203,1360,181,1400,170.7L1440,160L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path>
+              </svg>
+            </span>
 
-          <span class="indexbg position-relative">
-            <div class="d-flex flex-column align-items-center z-index-3">
-              <div class="introimgdiv">
+          <div class="indexbg">
+            
+            
+            <div class="d-flex flex-column align-items-center mx-4">
+              <p class="text-center my-4 fs-5">
+                Conecta-te com a tua alimentação para te conectares contigo e com ótima companhia. Rodeia-te das melhores influências.
+              </p>
+              <a href="comunidade.php"  class="indexcta text-decoration-none rounded-pill bg-secondary-subtle fs-5 p-3 m-2">
+                Explora- as aqui
+              </a>
+              <div class="introimgdiv m-4">
                 <img class="introimg" src="./media/elements/comunity.png" alt="people eating together">
               </div>
-              <a class="align-self-end" href="comunidade.php">Comunidade</a>
-              <p class="text-center mb-4 mt-4 ">
-                Treating vem esclarecer conceitos de nutrição e juntar pessoas através do poder da alimentação
+              <p class="text-center mb-4 mt-4 fs-5">
+                Escolhe os ingredientes da tua vida baseados nas tuas necessidades de saúde para que te sintas o teu melhor!
               </p>
             </div>
 
-            <div class="d-flex flex-column align-items-center z-index-3">
-              <div class="introimgdiv">
+            <div class=" d-flex justify-content-center m-4">
+              <div class="d-flex row justify-content-center">
+                <img class="introicons" src="./media/icons/virus.svg" alt="virus">
+                <p class="text-center">
+                Sistema imunológico
+                </p>
+              </div>
+              <div class="d-flex row justify-content-center">
+                <img class="introicons" src="./media/icons/joints.svg" alt="joints">
+                <p class="text-center">
+                  Ossos e articulações
+                </p>
+              </div>
+              <div class="d-flex row justify-content-center">
+                <img class="introicons" src="./media/icons/heart.svg" alt="heart">
+                <p class="text-center">
+                  Sistema cardiovascular
+                </p>
+              </div>
+            </div>
+
+            <div class="d-flex flex-column align-items-center mx-4">
+              <p class="text-center my-4 fs-5">
+                  Selecionamos os melhores alimentos para tranformar nas melhores receitas.
+              </p>
+              <a href="receitas.php" class="indexcta text-decoration-none rounded-pill bg-secondary-subtle fs-5 p-3 m-2">
+                Explora aqui as receitas
+              </a>
+              <div class="introimgdiv m-4">
                 <img class="introimg" src="./media/elements/recipes.png" alt="various organic dishes">
               </div>
-              <a class="align-self-end" href="receitas.php" >Receitas</a>
-              <p class="text-center mb-4 mt-4">
-                Selecionamos os melhores alimentos para tranformar nas melhores receitas.
-              </p>
             </div>
+          </div>
 
-            <div class="d-flex flex-column align-items-center z-index-3">
-              <div class="introimgdiv">
-                <img class="introimg"  src="./media/elements/organs.png" alt="body parts representation">
-              </div>
-              <a class="align-self-end" href="">Benefícios de saúde</a>
-              <p class="text-center mb-4 mt-4">
-                Olhamos para os alimentos como ferramentas de auto-cuidado e terapia, em vez de tendências e restrições.
-              </p>
-            </div>
+          <span class="">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+              <path fill="#B2CF82" fill-opacity="1" d="M0,160L40,160C80,160,160,160,240,181.3C320,203,400,245,480,224C560,203,640,117,720,117.3C800,117,880,203,960,234.7C1040,267,1120,245,1200,224C1280,203,1360,181,1400,170.7L1440,160L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path>
+            </svg>
           </span>
 
-          <section class=" d-flex justify-content-center gap-3">
-            <div>
-              <img class="introicons" src="./media/icons/brain.svg" alt="brain">
-            </div>
-            <div>
-              <img class="introicons" src="./media/icons/virus.svg" alt="virus">
-            </div>
-            <div>
-              <img class="introicons" src="./media/icons/joints.svg" alt="joints">
-            </div>
-            <div >
-              <img class="introicons" src="./media/icons/heart.svg" alt="heart">
-            </div>
-          </section>
+        <div class="mt-4 text-center">
+          <p class=" fs-5  mb-4 mt-5">
+            Estamos em constante evolução contigo.
+            Partilha connosco as tuas preocupações e temas que queres ver abordados sem deixar a página.
+          </p>
+          <a class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <svg class="mt-4 mb-5" width="60" viewBox="0 0 65 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M0.671761 15.4108C0.625 17.3195 0.625 19.4865 0.625 21.9584V29.0417C0.625 39.0591 0.625 44.0677 3.73699 47.1797C6.84898 50.2917 11.8577 50.2917 21.875 50.2917H43.125C53.1423 50.2917 58.151 50.2917 61.263 47.1797C64.375 44.0677 64.375 39.0591 64.375 29.0417V21.9584C64.375 19.4865 64.375 17.3195 64.3282 15.4108L35.94 31.1821C33.8006 32.3706 31.1994 32.3706 29.06 31.1821L0.671761 15.4108ZM1.48552 7.89689C1.77904 7.97059 2.06787 8.08341 2.34499 8.23736L32.5 24.9901L62.655 8.23736C62.9321 8.08341 63.221 7.97059 63.5145 7.89689C63.0541 6.21986 62.3476 4.90493 61.263 3.82036C58.151 0.708374 53.1423 0.708374 43.125 0.708374H21.875C11.8577 0.708374 6.84898 0.708374 3.73699 3.82036C2.65243 4.90493 1.94585 6.21986 1.48552 7.89689Z" fill="#060901"/>
+              </svg>
+            </a>
 
-          <div class="mt-4 text-center">
-            <h3>
-              O teu bem estar e esta plataforma são trabalhos em constante evolução. 
-              <a type="" class="" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                Partilha connosco
-              </a> 
-              as tuas preocupações e temas que queres ver abordados!
-            </h3>
-
-<!-- Modal -->
+          <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
