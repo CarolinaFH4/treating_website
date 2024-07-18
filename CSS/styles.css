@@ -27,7 +27,7 @@
   --bs-primary-bg-subtle: #B2CF82;
   --bs-secondary: #F7FAF3; /*footer*/
   --bs-secondary-bg-subtle:#F7FAF3;
-  --bs-tertiary-bg: #E3CED7; /* search bar */
+  --bs-tertiary-bg: #e3ced7; /* search bar */
   --bs-tertiary-color: hsla(335, 26%, 66%, 0.90); /* MENU*/
   --bs-warning: #ffc107;
 
@@ -55,6 +55,9 @@ p , ul, a{
 }
 a{
   color: #060901;
+}
+.input-group:focus , .input:focus{
+  box-shadow: none;
 }
 
 /* Generics end */
@@ -108,7 +111,11 @@ a{
 }
 
 /* Index end */
-
+/* Alimentos */
+.searchal{
+  background-color: #E3CED7;
+  border-radius: 30px;
+}
 
 
 /* Footer */
