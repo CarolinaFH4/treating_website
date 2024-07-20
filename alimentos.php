@@ -76,13 +76,13 @@
 
  <main>
     <div class="container">
-      <div class="mt-4">
-        <h1 class="mb-3">Alimentos</h1>
+      <div class="mt-5">
+        <h1 class="mb-4">Alimentos</h1>
         <p class="mb-5 fs-5">Na treating investimos na informação de alimentos menos processados para que possas escolher o teu ponto de partida.</p>
       </div>
 
-      <div class="my-4">
-        <div class="searchal input-group mb-4">
+      <div class="my-4s">
+        <div class="searchal input-group mb-5">
           <input type="text" class="form-control bg-transparent border-0" placeholder="Procura um alimento" aria-label="Procura um alimento" aria-describedby="button-addon2" name="searchString"
           value="<?php
           if (isset($searchString))
