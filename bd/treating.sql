@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Tempo de geração: 21-Jul-2024 às 10:48
+-- Tempo de geração: 21-Jul-2024 às 19:22
 -- Versão do servidor: 5.7.24
 -- versão do PHP: 8.0.1
 
@@ -56,6 +56,7 @@ CREATE TABLE `comunity` (
   `name` varchar(40) NOT NULL,
   `link_title` varchar(50) NOT NULL,
   `link` varchar(50) NOT NULL,
+  `quote` text NOT NULL,
   `image` varchar(70) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -63,9 +64,9 @@ CREATE TABLE `comunity` (
 -- Extraindo dados da tabela `comunity`
 --
 
-INSERT INTO `comunity` (`id`, `name`, `link_title`, `link`, `image`) VALUES
-(1, 'Maria Melo Falcão', 'https://www.mariamelofalcao.com/', 'https://www.mariamelofalcao.com/', 'mariafalcao.jpg|mariafalcao2.jpg'),
-(2, 'Sofia Paixão', 'https://glutenfree.pt/', 'https://glutenfree.pt/', 'sofiapaixao.jpg|sofiapaixao2.jpg');
+INSERT INTO `comunity` (`id`, `name`, `link_title`, `link`, `quote`, `image`) VALUES
+(1, 'Maria Melo Falcão', 'https://www.mariamelofalcao.com/', 'https://www.mariamelofalcao.com/', '“Todos os dias são uma nova oportunidade para me mexer mais e melhor, alimentar-me do que me nutre...”', 'mariafalcao.jpg|mariafalcao2.jpg'),
+(2, 'Sofia Paixão', 'https://glutenfree.pt/', 'https://glutenfree.pt/', '“O maior desafio é passar da teoria à prática mas acredito que a melhor forma de o fazer é ir introduzindo novos hábitos, novas texturas e novos sabores.”', 'sofiapaixao.jpg|sofiapaixao2.jpg');
 
 -- --------------------------------------------------------
 
