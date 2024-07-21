@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.1.2
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:8889
--- Generation Time: Jul 05, 2024 at 01:07 PM
--- Server version: 5.7.39
--- PHP Version: 7.4.33
+-- Host: localhost:3306
+-- Tempo de geração: 21-Jul-2024 às 10:48
+-- Versão do servidor: 5.7.24
+-- versão do PHP: 8.0.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `treating`
+-- Banco de dados: `treating`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `benefits`
+-- Estrutura da tabela `benefits`
 --
 
 CREATE TABLE `benefits` (
@@ -35,7 +35,7 @@ CREATE TABLE `benefits` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `benefits`
+-- Extraindo dados da tabela `benefits`
 --
 
 INSERT INTO `benefits` (`idbenefit`, `name`, `description`, `image`) VALUES
@@ -48,7 +48,7 @@ INSERT INTO `benefits` (`idbenefit`, `name`, `description`, `image`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `comunity`
+-- Estrutura da tabela `comunity`
 --
 
 CREATE TABLE `comunity` (
@@ -60,7 +60,7 @@ CREATE TABLE `comunity` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `comunity`
+-- Extraindo dados da tabela `comunity`
 --
 
 INSERT INTO `comunity` (`id`, `name`, `link_title`, `link`, `image`) VALUES
@@ -70,7 +70,7 @@ INSERT INTO `comunity` (`id`, `name`, `link_title`, `link`, `image`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `food`
+-- Estrutura da tabela `food`
 --
 
 CREATE TABLE `food` (
@@ -81,7 +81,7 @@ CREATE TABLE `food` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `food`
+-- Extraindo dados da tabela `food`
 --
 
 INSERT INTO `food` (`idfood`, `name`, `category`, `image`) VALUES
@@ -98,7 +98,7 @@ INSERT INTO `food` (`idfood`, `name`, `category`, `image`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `food_benefit`
+-- Estrutura da tabela `food_benefit`
 --
 
 CREATE TABLE `food_benefit` (
@@ -108,7 +108,7 @@ CREATE TABLE `food_benefit` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `food_benefit`
+-- Extraindo dados da tabela `food_benefit`
 --
 
 INSERT INTO `food_benefit` (`id`, `idfood`, `idbenefit`) VALUES
@@ -145,7 +145,7 @@ INSERT INTO `food_benefit` (`id`, `idfood`, `idbenefit`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `glossary`
+-- Estrutura da tabela `glossary`
 --
 
 CREATE TABLE `glossary` (
@@ -155,11 +155,11 @@ CREATE TABLE `glossary` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `glossary`
+-- Extraindo dados da tabela `glossary`
 --
 
 INSERT INTO `glossary` (`idglossary`, `word`, `description`) VALUES
-(1, 'Kcal', 'A sigla kcal significa quilocaloria, que é uma unidade de medida de energia utilizada para quantificar o valor energético dos alimentos. É comumente utilizada para expressar a quantidade de energia que um alimento fornece ao ser metabolizado pelo organismo.'),
+(1, 'kcal', 'A sigla kcal significa quilocaloria, que é uma unidade de medida de energia utilizada para quantificar o valor energético dos alimentos. É comumente utilizada para expressar a quantidade de energia que um alimento fornece ao ser metabolizado pelo organismo.'),
 (2, 'Lípidos', 'Mesmo que o termo \"lípidos\" não te diga nada, talvez \"gordura\" te seja mais claro.\r\nEstas moléculas constituídas por ácidos gordos (triglicéridos) fazem parte da família dos macronutrientes, tal como as proteínas e os hidratos de carbono.\r\nOs lípidos encontram-se em todas as nossas células, incluindo no nosso cérebro, que é composto a 70% por estes!\r\nTêm assim um papel central no funcionamento do organismo.'),
 (3, 'Hidratos de carbono', 'Os Hidratos de Carbono (HC) são um dos nutrientes fornecidos pelos alimentos tal como as proteínas, as gorduras, as fibras, vitaminas e minerais. Através da digestão, são transformados em glicose que é então absorvida para o sangue sendo o principal fornecedor de energia do nosso organismo.'),
 (4, 'Prebiótico', 'Servem de substrato para determinados microrganismos presentes no intestino, favorecendo a multiplicação das bactérias benéficas à digestão e para a saúde.'),
@@ -172,30 +172,33 @@ INSERT INTO `glossary` (`idglossary`, `word`, `description`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `library`
+-- Estrutura da tabela `library`
 --
 
 CREATE TABLE `library` (
   `id` int(11) NOT NULL,
   `title` text NOT NULL,
   `description` text NOT NULL,
-  `link` text NOT NULL
+  `link` text NOT NULL,
+  `thumbnail` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `library`
+-- Extraindo dados da tabela `library`
 --
 
-INSERT INTO `library` (`id`, `title`, `description`, `link`) VALUES
-(1, 'Porções da roda dos alimentos', '', 'porçoes_roda_dos_alimentos.pdf'),
-(2, 'Guia para alimentação adequada', '', 'alimentaçao_adequada.pdf'),
-(3, 'Vegetarian basics', '', 'vegetarian-starter.pdf'),
-(4, 'Porções de fruta', '', 'fruta_porçoes.jpg');
+INSERT INTO `library` (`id`, `title`, `description`, `link`, `thumbnail`) VALUES
+(1, 'Porções da roda dos alimentos', 'Plano demonstrativo e intuitivo de quanto deverá ser consumido de cada parte na Roda dos Alimentos..', 'porçoes_roda_dos_alimentos.pdf', 'porçoes_roda_dos_alimentos_img_jpg'),
+(2, 'Guia para alimentação adequada', 'Guia concebido pela Associação Portuguesa dos Nutricionistas para uma alimentação equilibrada. Inclui doses recomendadas e hábitos que potencializam a alimentação num todo.', 'alimentaçao_adequada.pdf', 'alimentaçao_adequada_img.jpg'),
+(3, 'Vegetarian basics', 'Pequeno livro com as bases essenciais para uma alimentação vegetariana equilibrada (em inglês).', 'vegetarian_starter.pdf', 'vegetarian_starter_img.jpg'),
+(4, 'Porções de fruta', 'Porção de fruta diária recomendada especificando o alimento.', 'fruta_porçoes.jpg', 'fruta_porçoes_img.jpg'),
+(5, 'Alimentação Inteligente. Coma melhor, poupe mais.', 'Livro para guiar o planeamento de uma alimentação saudável e dos seus custos. Tem em conta a sustentabilidade do meio ambiente e da carteira.', 'coma_melhor_poupe_mais.pdf', 'coma_melhor_poupe_mais_img.jpg'),
+(6, 'Meal planner', 'Modelo para planeamento de refeições para uma semana (em inglês).', 'weekly_meal_planner.pdf', 'weekly_meal_planner_img.jpg');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `nutrition`
+-- Estrutura da tabela `nutrition`
 --
 
 CREATE TABLE `nutrition` (
@@ -208,7 +211,7 @@ CREATE TABLE `nutrition` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `nutrition`
+-- Extraindo dados da tabela `nutrition`
 --
 
 INSERT INTO `nutrition` (`idnutri`, `idfood`, `parameter`, `category`, `value`, `unity`) VALUES
@@ -576,7 +579,7 @@ INSERT INTO `nutrition` (`idnutri`, `idfood`, `parameter`, `category`, `value`, 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `recipes`
+-- Estrutura da tabela `recipes`
 --
 
 CREATE TABLE `recipes` (
@@ -591,7 +594,7 @@ CREATE TABLE `recipes` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `recipes`
+-- Extraindo dados da tabela `recipes`
 --
 
 INSERT INTO `recipes` (`idrecipe`, `idfood`, `title`, `ingredients`, `steps`, `images`, `servings`, `time`) VALUES
@@ -599,134 +602,134 @@ INSERT INTO `recipes` (`idrecipe`, `idfood`, `title`, `ingredients`, `steps`, `i
 (2, 8, 'Biscoitos de noz', '4 nozes de nogueira\r\n2 colheres de sopa azeite\r\n10 g maca em pó biológica\r\n20 g linhaça castanha\r\n70 g farinha de amêndoa\r\n60 g farinha de soja\r\n2 g agar agar', '1. Misture a linhaça e o ágar com duas colheres de sopa de água morna. Deixe repousar por 10 minutos.\r\n2. Misture os demais ingredientes e acrescente a mistura de linhaça.\r\n3. Coloque em uma assadeira forrada com papel manteiga. Pressione para nivelar.\r\n4. Asse em forno pré-aquecido a 180°C por 45 minutos.\r\n5. Deixe arrefecer antes de retirar da forma e cortar em quadrados.', 'biscoitos.jpg', 8, 60),
 (3, 1, 'Lasanha de atum e espinafres', '1 grande cebola\r\n40 ml vinho branco de mesa\r\n1 dose azeite extra-virgem\r\n200 ml molho bechamel\r\n320 g atum ao natural\r\n75 ml polpa de tomate\r\n200 ml leite de coco\r\n200 g espinafres em folhas\r\n100 g queijo mozzarella ralado\r\n200 g folhas de lasanha', '1. Numa frigideira pré-aquecida com azeite, refogue a cebola, junte o vinho e a polpa de tomate. Mexer.\n2. Em seguida, adicione o atum e as folhas de espinafre. Misture bem e reserve.\n3. Em um copo, misture o molho bechamel com o leite de coco.\n4. Monte a camada de lasanha em um pirex. Coloque as primeiras folhas da lasanha, espalhe o recheio seguido do molho. Repita essas etapas até ficar sem folhas de lasanha. Coloque o queijo mozzarella por cima.\n5. Asse em forno pré-aquecido por 20 minutos.', 'lasanha.espinafres.jpg', 6, 60),
 (4, 1, 'Sopa de espinafres', '6 nozes de nogueira\r\n1 pitada sal\r\n1 colher de sopa azeite\r\n1 chávena de fatiados cogumelos brancos (salteado em wok)\r\n100 ml leite de amêndoas\r\n200 g espinafre baby leaf\r\n2 g alga kombu', '1. Torre levemente as nozes em uma frigideira antiaderente por 3 minutos. \n2. Deixe esfriar e depois reserve.\n3. Refogue os cogumelos no azeite.\n4. Adicionar os espinafres e alga kombu.\n5. Adicione o leite de amêndoas e tempere com sal.\n6. Cozinhe por 5 minutos enquanto mexe.\nSirva em uma tigela com nozes tostadas.', 'sopa.jpg', 2, 30),
-(5, 1, 'Bolo de cenoura e espinafres', '3 médios ovos\r\n30 g nozes de nogueira\r\n30 g passas\r\n3 médias cenouras\r\n50 g farinha de milho\r\n200 g farelo de aveia\r\n50 g espinafre bébe\r\n125 g iogurte natural\r\n200 g mel de flores', '1. Triturar a cenoura, os espinafres e as nozes.\n2. Juntar todos os ingredientes e mexer.\n3. Levar ao forno pré aquecido.', 'bolo.cenoura.espinafres.jpg', 8, 50),
-(6, 3, 'Salmão grelhado com salada de abacate', '100 g salmão\r\n1 limão\r\n100 g abacate\r\n1/2 lua de tomate\r\n1 colher de sopa salsa\r\n1 pitada pimenta preta\r\n1 pitada sal\r\n1 chávena, cortadas cebolas\r\n1 colher de sopa azeite extra virgem\r\n25 g nozes |1 fatia queijo mozarela', 'Tempere os dois lados do salmão com sal, sumo de limão e pimenta.\nUnte a grelha do forno com meia colher de azeite e grelhe o salmão em forno pré-aquecido por 5 minutos de cada lado.\nCorte em pedaços o abacate, a cebola, o tomate, a salsa e o queijo mozarela, esmague as nozes e coloque-as numa tigela, tempere com sal, pimenta e azeite. Misture bem.\nColoque o salmão grelhado com a salada em um prato. Servir.', 'salmao.salada.abacate.jpg', 2, 20),
-(7, 3, 'Noodles com salmão fumado', '200 g salmão fumado\r\n1/2 chávena molho de soja\r\n400 g noodles\r\n5 folhas hortelã\r\n1 colher de chá óleo de sésamo torrado\r\nSumo de 1 lima\r\n1 colher de chá gengibre ralado\r\n1 colher de sopa de cebolinho picado\r\n4 colheres de chá açúcar amarelo\r\n25 g sementes de sésamo torradas', 'Cozinhe os noodles de acordo com as instruções na embalagem. Escorra e reserve.\r\nNuma tigela grande, misture o molho de soja, açúcar amarelo, óleo de sésamo, gengibre, sumo de lima e as sementes de sésamo.\r\nAdicione os noodles, cebolinho, hortelã e o salmão. Misture bem e sirva frio.', 'noodles.jpg', 4, 30);
+(5, 1, 'Bolo de cenoura e espinafres', '3 médios ovos\n30 g nozes de nogueira\n30 g passas\n3 médias cenouras\n50 g farinha de milho\n200 g farelo de aveia\n50 g espinafre bébe\n125 g iogurte natural\n200 g mel de flores', '1. Triturar a cenoura, os espinafres e as nozes.\n2. Juntar todos os ingredientes e mexer.\n3. Levar ao forno pré aquecido.', 'bolo.cenoura.espinafres.jpg', 8, 50),
+(6, 3, 'Salmão grelhado com salada de abacate', '100 g salmão\n1 limão\n100 g abacate\n1/2 lua de tomate\n1 colher de sopa salsa\n1 pitada pimenta preta\n1 pitada sal\n1 chávena, cortadas cebolas\n1 colher de sopa azeite extra virgem\n25 g nozes |1 fatia queijo mozarela', '1. Tempere os dois lados do salmão com sal, sumo de limão e pimenta.\n2. Unte a grelha do forno com meia colher de azeite e grelhe o salmão em forno pré-aquecido por 5 minutos de cada lado.\n3. Corte em pedaços o abacate, a cebola, o tomate, a salsa e o queijo mozarela, esmague as nozes e coloque-as numa tigela, tempere com sal, pimenta e azeite. Misture bem.\n4. Coloque o salmão grelhado com a salada em um prato. Servir.', 'salmao.salada.abacate.jpg', 2, 20),
+(7, 3, 'Noodles com salmão fumado', '200 g salmão fumado\r\n1/2 chávena molho de soja\r\n400 g noodles\r\n5 folhas hortelã\r\n1 colher de chá óleo de sésamo torrado\r\nSumo de 1 lima\r\n1 colher de chá gengibre ralado\r\n1 colher de sopa de cebolinho picado\r\n4 colheres de chá açúcar amarelo\r\n25 g sementes de sésamo torradas', '1. Cozinhe os noodles de acordo com as instruções na embalagem. Escorra e reserve.\n2. Numa tigela grande, misture o molho de soja, açúcar amarelo, óleo de sésamo, gengibre, sumo de lima e as sementes de sésamo.\n3. Adicione os noodles, cebolinho, hortelã e o salmão. Misture bem e sirva frio.', 'noodles.jpg', 4, 30);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `sugestions`
+-- Estrutura da tabela `sugestions`
 --
 
 CREATE TABLE `sugestions` (
   `sid` int(11) NOT NULL,
-  `semail` varchar(50) NOT NULL,
-  `stext` text NOT NULL
+  `email` varchar(50) NOT NULL,
+  `text` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Indexes for dumped tables
+-- Índices para tabelas despejadas
 --
 
 --
--- Indexes for table `benefits`
+-- Índices para tabela `benefits`
 --
 ALTER TABLE `benefits`
   ADD PRIMARY KEY (`idbenefit`);
 
 --
--- Indexes for table `comunity`
+-- Índices para tabela `comunity`
 --
 ALTER TABLE `comunity`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `food`
+-- Índices para tabela `food`
 --
 ALTER TABLE `food`
   ADD PRIMARY KEY (`idfood`);
 
 --
--- Indexes for table `food_benefit`
+-- Índices para tabela `food_benefit`
 --
 ALTER TABLE `food_benefit`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `glossary`
+-- Índices para tabela `glossary`
 --
 ALTER TABLE `glossary`
   ADD PRIMARY KEY (`idglossary`);
 
 --
--- Indexes for table `library`
+-- Índices para tabela `library`
 --
 ALTER TABLE `library`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `nutrition`
+-- Índices para tabela `nutrition`
 --
 ALTER TABLE `nutrition`
   ADD PRIMARY KEY (`idnutri`);
 
 --
--- Indexes for table `recipes`
+-- Índices para tabela `recipes`
 --
 ALTER TABLE `recipes`
   ADD PRIMARY KEY (`idrecipe`);
 
 --
--- Indexes for table `sugestions`
+-- Índices para tabela `sugestions`
 --
 ALTER TABLE `sugestions`
   ADD PRIMARY KEY (`sid`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT de tabelas despejadas
 --
 
 --
--- AUTO_INCREMENT for table `benefits`
+-- AUTO_INCREMENT de tabela `benefits`
 --
 ALTER TABLE `benefits`
   MODIFY `idbenefit` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `comunity`
+-- AUTO_INCREMENT de tabela `comunity`
 --
 ALTER TABLE `comunity`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `food`
+-- AUTO_INCREMENT de tabela `food`
 --
 ALTER TABLE `food`
   MODIFY `idfood` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT for table `food_benefit`
+-- AUTO_INCREMENT de tabela `food_benefit`
 --
 ALTER TABLE `food_benefit`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
--- AUTO_INCREMENT for table `glossary`
+-- AUTO_INCREMENT de tabela `glossary`
 --
 ALTER TABLE `glossary`
   MODIFY `idglossary` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT for table `library`
+-- AUTO_INCREMENT de tabela `library`
 --
 ALTER TABLE `library`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT for table `nutrition`
+-- AUTO_INCREMENT de tabela `nutrition`
 --
 ALTER TABLE `nutrition`
   MODIFY `idnutri` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=402;
 
 --
--- AUTO_INCREMENT for table `recipes`
+-- AUTO_INCREMENT de tabela `recipes`
 --
 ALTER TABLE `recipes`
   MODIFY `idrecipe` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT for table `sugestions`
+-- AUTO_INCREMENT de tabela `sugestions`
 --
 ALTER TABLE `sugestions`
   MODIFY `sid` int(11) NOT NULL AUTO_INCREMENT;
