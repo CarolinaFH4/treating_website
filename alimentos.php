@@ -83,7 +83,7 @@
 
       <div class="my-4s">
         <div class="searchal input-group mb-5">
-          <input type="text" class="form-control bg-transparent border-0" placeholder="Procura um alimento" aria-label="Procura um alimento" aria-describedby="button-addon2" name="searchString"
+          <input type="text" class="searchbar form-control bg-transparent border-0" placeholder="Procura um alimento" aria-label="Procura um alimento.." aria-describedby="button-addon2" name="searchString"
           value="<?php
           if (isset($searchString))
             echo $searchString;
