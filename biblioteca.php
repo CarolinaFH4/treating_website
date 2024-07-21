@@ -29,38 +29,35 @@
 
     <main class="">
       <div class="container">
+
         <div class="mt-5">
           <h1 class="mb-4">Biblioteca</h1>
           <p class="mb-5 fs-5">Organiza o teu tempo e alimentação com templates e artigos que selecionámos para ti.</p>
         </div>
         
-        <div>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 mx-4">
           <?php
             foreach($result as $doc){
               $title = $doc["title"];
               $desc = $doc["description"];
               $image = $doc["thumbnail"];
               $file = $doc["link"];
-          ?>
-          <div class="row">
-            <div class="col-sm-6 col-sm-3 mb-3">
-              <div class="card" style="width: 18rem;">
+            ?>
+              <div class="card" style="">
+                  <img src="<?php echo './media/docs/'.$image ;?>" class="card-img-top" alt="<?php echo ' pré-visualização de '.$title?>">
                   <div class="card-body">
                     <h2 class="card-title text-center"><?php echo $title ?></h2>
                     <p class="card-text"><?php echo $desc ?></p>
-                  </div>
-                  <img src="<?php echo '/media/docs/'.$image ;?>" class="card-img-top" alt="<?php echo ' pré-visualização de '.$title?>">
-                  <div class="card-body">
                     <a type="submit" class="btn btn-primary">
-                      <img src="/media/icons/download.svg"></img>
+                      <img src="./media/icons/download.svg"></img>
                       Descarregar
                     </a>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        <?php } ?>
+
+          <?php } ?>
+        </div>
 
       </div>
     </main>
