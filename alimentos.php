@@ -89,20 +89,21 @@
             echo $searchString;
           ?>">
 
-          <button class="btn" type="submit" id="button-addon2">
+          <i class="p-2 me-2">
             <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="12.375" cy="12.375" r="6.75" stroke="#060901" stroke-width="0.931035"/>
               <path d="M24.3 24.3L18.225 18.225" stroke="#060901" stroke-width="0.931035" stroke-linecap="round"/>
             </svg>
-          </button>
+          </i>
         </div>
+      </div>
 
       <div class="m-0 alert alert-<?php echo $msgType; ?>">
-      <?php
-      if ($noresults)
-        echo "Sem resultados";
-      ?>
-    </div>
+        <?php
+        if ($noresults)
+          echo "Sem resultados";
+        ?>
+      </div>
 
       <div class="row filter_data">
         <?php
@@ -124,6 +125,7 @@
         </div>
 
         <?php }?>
+      </div>
     </div>
   </main>
 
