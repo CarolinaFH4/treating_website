@@ -49,10 +49,10 @@
                     <h2 class="card-title text-center"><?php echo $title ?></h2>
                     <p class="card-text"><?php echo $desc ?></p>
                   </div>
-                  <img src="<?php echo 'media/docs/'.$image ;?>" class="card-img-top" alt="<?php echo ' pré-visualização de '.$title?>">
+                  <img src="<?php echo '/media/docs/'.$image ;?>" class="card-img-top" alt="<?php echo ' pré-visualização de '.$title?>">
                   <div class="card-body">
                     <a type="submit" class="btn btn-primary">
-                      <img src="media\icons\download.svg"></img>
+                      <img src="/media/icons/download.svg"></img>
                       Descarregar
                     </a>
                   </div>
