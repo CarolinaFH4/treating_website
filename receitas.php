@@ -52,27 +52,33 @@
 
  <main>
     <div class="container">
-      <div class=" d-flex justify-content-between mb-2">
-        <h1>Receitas</h1>
+      <div class="mt-5 mb-5">
+        <div class=" d-flex justify-content-between align-items-center flex-wrap ">
+          <h1 class="mb-4 ">Receitas</h1>
 
-          <div class="dropdown">
-            <button class="badge rounded-pill dropdown-toggle p-2 " type="button" data-bs-toggle="dropdown" aria-expanded="false" >
-              Ordenar
-            </button>
+            <div class="dropdown">
+              <button class="badge rounded-pill dropdown-toggle p-3 fs-6" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Ordenar
+              </button>
 
-            <ul class="dropdown-menu">
-              <li>
-                <input type="radio" class="az common_selector" name="filter"> A-Z 
-              </li>
-              <li>
-                <input type="radio" class="fastest common_selector" name="filter"> Mais rápido
-              </li>
-              <li>
-                <input type="radio" class="ingredients common_selector" name="filter">Menos ingredientes
-              </li>
-            </ul>
-          </div>
-
+              <ul class="dropdown-menu">
+                <li>
+                  <input type="radio" class="az common_selector" name="filter"> A-Z 
+                </li>
+                <li>
+                  <input type="radio" class="fastest common_selector" name="filter"> Mais rápido
+                </li>
+                <li>
+                  <input type="radio" class="ingredients common_selector" name="filter">Menos ingredientes
+                </li>
+              </ul>
+            </div>
+        </div>
+        <div>
+          <p class="mb-5 pb-2 fs-5 mt-4">
+            Nutre o corpo e a mente com receitas baseadas em alimentos que te fazem bem, sem culpa e com satisfação .
+          </p>
+        </div>
       </div>
 
       <div class="row filter_data">

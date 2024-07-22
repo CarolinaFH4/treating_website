@@ -72,15 +72,24 @@
   <main>
     <div class="container">
 
-      <div class="d-flex align-items-baseline gap-3">
-        <h1>
+      <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="#">Receitas</a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page"><?php echo $name?></li>
+        </ol>
+      </nav>
+
+      <div class="d-flex align-items-baseline gap-3 mt-5">
+        <h1 class="mb-4">
         <?php echo $name?>
         </h1>
-        <p>
+        <p class="fs-5">
           100g, <?php echo $cat?>
       </div>
 
-      <section>
+      <section class="mb-5">
         <div class="d-flex align-items-center col flex-column h-100 flex-grow-1">
           <div class="mask3 overflow-hidden">
             <img src="./media/alimentos/<?php echo $image; ?>" alt="<?php echo $name ?>" class="w-100">
@@ -91,13 +100,18 @@
             <?php } ?>
           </div>
         </div>
-        <p class="mt-4 mb-1">*clica em <i class="bi bi-info-circle"></i> para saber mais!</p>
+        
       </section>
 
       <section class="info">
         <div>
-          <h2 class="text-uppercase">Nutrientes:</h2>
-          <table class="table table-striped">
+          <p class="my-4 pt-3 fs-5">
+            *clica em <i class="bi bi-info-circle"></i> para saber mais!
+          </p>
+          <h2 class="text-uppercase ">
+            Nutrientes:
+          </h2>
+          <table class="table table-striped fs-5">
             <tbody>
               <?php foreach($result as $food){
 
