@@ -65,7 +65,7 @@ a{
 /* Header */
 
 .menubtn{
-  height: 6em;
+  
 }
 .dropdown-menu.show{
 }
@@ -74,6 +74,7 @@ a{
   min-width: 90vw;
   min-height: 120vw;
 }
+
 
 /* Header end */
 

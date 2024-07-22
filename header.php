@@ -1,6 +1,47 @@
+<style>
+        .overlay { 
+            height: 100%; 
+            width: 100%; 
+            display: none; 
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            background-color: #BF91A4;
+            overflow-x: hidden 
+        } 
+  
+        .overlay-content { 
+            position: relative; 
+            top: 25%; 
+            width: 100%; 
+            text-align: center;
+            
+        } 
+  
+        .overlay a { 
+            padding: 10px; 
+            text-decoration: none;
+            display: block; 
+            transition: 0.3s;
+        } 
+        .overlay a h1{
+          font-size: 2.5em;
+        }
+  
+        .overlay a:hover, 
+        .overlay a:focus { 
+            color: black; 
+        } 
+  
+        .overlay .closebtn { 
+            position: absolute; 
+            bottom: 0px; 
+            right: 0px; 
+        } 
+    </style>
 
-    <header>
-      <div class="container-fluid">
+<header>
+      <div class="container-fluid position-relative">
         <section>
         
           <div class= "row justify-content-center ">
@@ -14,25 +55,45 @@
         </section>
 
         <section> 
-          <div class="position-fixed bottom-0 end-0 z-1">
-            <div class="menubtn btn-group dropup">
-              <img type="button" data-bs-toggle="dropdown" aria-expanded="false" src="./media/icons/menu.svg" alt="Menu">
-              <ul class="mobilemenu dropdown-menu d-flexrow align-items-center justify-content-center">
-                <li>
-                  <a class="dropdown-item" href="index.php">Início</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="alimentos.php">Alimentos</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="comunidade.php">Comunidade</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="receitas.php">Receitas</a>
-                </li>
-              </ul>
+          <div id="myNav" class="overlay vh-100 z-3 ">
+
+            <a href="javascript:void(0)" class="closebtn p-0 position-absolute bottom-0 end-0" onclick="closeNav()">
+              <img class="" src="./media/icons/menuopen.svg" alt="Close menu">
+            </a>
+              
+            <div class="overlay-content min-width-100 ">
+              <a class="dropdown-item" href="index.php">
+                <h1>Início</h1>
+              </a>
+              <a class="dropdown-item" href="alimentos.php">
+                <h1>Alimentos</h1>
+              </a>
+              <a class="dropdown-item" href="comunidade.php">
+                <h1>Comunidade</h1>
+              </a>
+              <a class="dropdown-item" href="receitas.php">
+                <h1>Receitas</h1>
+              </a>
             </div>
+
           </div>
+
+          <span onclick="openNav()">
+            <img src="./media/icons/menu.svg" alt="Open menu" class="position-fixed bottom-0 end-0 z-2">
+          </span>
+
         </section>
       </div>
     </header>
+
+    <script>
+      /* Open */
+      function openNav() {
+        document.getElementById("myNav").style.display = "block";
+      }
+
+      /* Close */
+      function closeNav() {
+        document.getElementById("myNav").style.display = "none";
+      }
+    </script>
