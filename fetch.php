@@ -53,7 +53,7 @@ foreach ($statement as $rec) {
 
   
 } else {
-    $output .= '<div id="loading"> <h4>Não encontrámos um resultado para a tua pesquisa, tenta de novo!</h4></div>';
+    $output .= '<div id="loading"> <h4>Não encontrámos resultados para a tua pesquisa, tenta de novo!</h4></div>';
 }
 
 
