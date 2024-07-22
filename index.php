@@ -61,7 +61,7 @@ $msg = "";
         </div>
 
           <div class="text-center">
-            <h2 class= "pitch text-uppercase spinnaker-regular mx-2 my-5 fs-4">
+            <h2 class= "pitch text-uppercase spinnaker-regular mx-2 my-5 fs-4 pt-2">
               Onde a nutrição e a comunidade se encontram.
             </h2>
           </div>
@@ -82,7 +82,7 @@ $msg = "";
               <a href="comunidade.php"  class="indexcta text-decoration-none rounded-pill bg-secondary-subtle fs-5 p-3 m-2">
                 Explora- as aqui
               </a>
-              <div class="introimgdiv m-4">
+              <div class="introimgdiv m-5">
                 <img class="introimg" src="./media/elements/comunity.png" alt="people eating together">
               </div>
               <p class="text-center mb-4 mt-4 fs-5">
@@ -90,7 +90,7 @@ $msg = "";
               </p>
             </div>
 
-            <div class=" d-flex justify-content-center m-4">
+            <div class=" d-flex justify-content-center m-4 my-5">
               <div class="d-flex row justify-content-center">
                 <img class="introicons" src="./media/icons/virus.svg" alt="virus">
                 <p class="text-center">
@@ -118,7 +118,7 @@ $msg = "";
               <a href="receitas.php" class="indexcta text-decoration-none rounded-pill bg-secondary-subtle fs-5 p-3 m-2">
                 Explora aqui as receitas
               </a>
-              <div class="introimgdiv m-4">
+              <div class="introimgdiv m-5">
                 <img class="introimg" src="./media/elements/recipes.png" alt="various organic dishes">
               </div>
             </div>

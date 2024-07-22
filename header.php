@@ -17,7 +17,7 @@
           <div class="position-fixed bottom-0 end-0 z-1">
             <div class="menubtn btn-group dropup">
               <img type="button" data-bs-toggle="dropdown" aria-expanded="false" src="./media/icons/menu.svg" alt="Menu">
-              <ul class="dropdown-menu">
+              <ul class="mobilemenu dropdown-menu d-flexrow align-items-center justify-content-center">
                 <li>
                   <a class="dropdown-item" href="index.php">Início</a>
                 </li>

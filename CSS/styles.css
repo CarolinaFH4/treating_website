@@ -68,7 +68,11 @@ a{
   height: 6em;
 }
 .dropdown-menu.show{
+}
 
+.mobilemenu{
+  min-width: 90vw;
+  min-height: 120vw;
 }
 
 /* Header end */
