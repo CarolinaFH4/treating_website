@@ -30,14 +30,14 @@
     <?php include "header.php"?> 
 
     <main class="">
-      <div class="container">
+      <div class="container py-2">
 
         <div class="mt-5">
           <h1 class="mb-4">Biblioteca</h1>
           <p class="mb-5 pb-2 fs-5 mt-4">Organiza o teu tempo e alimentação com templates e artigos que selecionámos para ti.</p>
         </div>
         
-        <div class="row justify-content-center gap-4">
+        <div class="row justify-content-center gap-4 mb-5">
           <?php
             foreach($result as $doc){
               $title = $doc["title"];
@@ -45,15 +45,16 @@
               $image = $doc["thumbnail"];
               $file = $doc["link"];
             ?>
-              <div class="card col-11 col-sm-5 col-md-5 col-lg-3 gap-2 rounded-4" style="">
+              <div class="cardbiblio card col-11 col-sm-5 col-md-5 col-lg-3 gap-2 rounded-4" style="">
                   <img src="<?php echo './media/docs/'.$image ;?>" class="card-img mt-3 rounded-4" alt="<?php echo ' pré-visualização de '.$title?>">
                   <div class="card-body row justify-content-center align-content-between py-3">
                     <h2 class="card-title text-center mb-3"><?php echo $title ?></h2>
                     <p class="card-text"><?php echo $desc ?></p>
                     
-                    <a type="submit" class=" text-decoration-none rounded-pill bg-primary-subtle p-3 m-2 w-75 text-center" download="<?php echo './media/docs/'.$file?>">
+                    <a class=" d-flex justify-content-center align-items-center text-decoration-none rounded-pill bg-primary-subtle p-3 gap-2" href="" download="<?php echo './media/docs/'.$file?>">
                       <img src="./media/icons/download.svg"></img>
-                      Descarregar
+                      <p class="m-0"> Descarregar</p>
+                     
                     </a>
                   </div>
                 
