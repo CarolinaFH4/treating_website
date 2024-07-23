@@ -1,5 +1,5 @@
 <?php
-include("connection.php");
+  include("connection.php");
 
   $searchString = $_POST["search"];
   $query = "SELECT * 
@@ -15,32 +15,16 @@ include("connection.php");
 
   if($total_row > 0){
     foreach($statement as $row) {
-
-?>
-
-<div class="row filter_data">
-  <?php
-    foreach ($result as $food) {
+    
       $idfood = $food["idfood"];
-        
-      if($idfood % 2 == 0){
-        $mask = '2';
-      } else{
-        $mask = '1';
-      };
-  ?>
-
-<div class="row filter_data">
-    <?php
-        foreach ($result as $food) {
-          $idfood = $food["idfood"];
-        
+            
           if($idfood % 2 == 0){
             $mask = '2';
           } else{
             $mask = '1';
-          };
-    ?>
+          };     
+?>
+
 
         <div class="p-0 mb-4 col-6 col-md-4">
           <a href="detalhealimento.php?idfood=<?php echo $idfood?>">
@@ -51,15 +35,12 @@ include("connection.php");
           </a>
         </div>
 
-    <?php }?>
-</div>
+<?php }
 
-<?php } 
+        } else {
 
-    } else {
-         $output .= '<div id="loading"><h4>Não encontrámos um resultado para a tua pesquisa, tenta de novo!</h4></div>';
-         echo $output;
-    }
-  
+          $output .= '<div id="loading"><h4>Não encontrámos um resultado para a tua pesquisa, tenta de novo!</h4></div>';
+          echo $output;
 
+        }
 ?>

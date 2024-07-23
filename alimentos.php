@@ -86,7 +86,7 @@
 
       <div class="my-4s">
         <div class="searchal input-group mb-5">
-          <input type="text" class="searchbar form-control bg-transparent border-0" placeholder="Procura um alimento" aria-label="Procura um alimento.." aria-describedby="button-addon2" name="searchString"
+          <input type="text" class="searchbar form-control bg-transparent border-0" placeholder="Procura um alimento" aria-label="Procura um alimento.." aria-describedby="button-addon2" id="searchString" name="searchString"
           value="<?php
           if (isset($searchString))
             echo $searchString;
@@ -101,12 +101,12 @@
         </div>
       </div>
 
-      <div class="m-0 alert alert-<?php echo $msgType; ?>">
-        <?php
+      <!-- <div class="m-0 alert alert-<?php echo $msgType; ?>">
+        < ?php
         if ($noresults)
           echo "Sem resultados";
         ?>
-      </div>
+      </div>-->
 
       <div class="row filter_data">
         <?php
@@ -141,11 +141,47 @@
 
   <script>
     $(document).ready(function(){
+      filter_data();
+
+      function filter_data(){
+        $('.filter_data').html('<div id="loading"><h4>A carregar...</h4></div>');
+
+        let action = 'fetch_data';
+
+        if(txt = ''){
+          $('.filter_data').html('');
+          $.ajax({
+
+            url: "fetch2.php",
+            method: "POST",
+            data {search:txt},
+            dataType: "text",
+            success: function(data) {
+              $('.filter_data').html(data);
+            }
+          });
+          
+        } else {
+          $('.filter_data').html('');
+          $.ajax({
+
+            url: "fetch2.php",
+            method: "POST",
+            data {search:txt},
+            dataType: "text",
+            success: function(data) {
+              $('.filter_data').html(data);
+            }
+          });
+        }
+      }
+
+
 
       $("#searchString").keyup(function(){
         let txt = $(this).val();
 
-        if(txt != ''){
+        if(txt = ''){
           $('.filter_data').html('');
           $.ajax({
 
