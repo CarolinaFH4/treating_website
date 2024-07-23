@@ -78,7 +78,7 @@
 
           </div>
 
-          <span onclick="openNav()">
+          <span class="" onclick="openNav()">
             <img src="./media/icons/menu.svg" alt="Open menu" class="position-fixed bottom-0 end-0 z-2">
           </span>
 
@@ -89,11 +89,28 @@
     <script>
       /* Open */
       function openNav() {
+
         document.getElementById("myNav").style.display = "block";
+        const element = document.querySelector('.my-element');
       }
 
       /* Close */
       function closeNav() {
+
         document.getElementById("myNav").style.display = "none";
+
       }
+
+      function openAnimation() {
+
+        element.classList.add('animate__animated', 'animate__fadeIn','animate__fast');
+      }
+
+      function closeAnimation() {
+
+
+
+        element.classList.add('animate__animated','animate__fadeIn','animate__fast');
+      }
+
     </script>
