@@ -38,6 +38,14 @@
             bottom: 0px; 
             right: 0px; 
         } 
+
+        .menulinks a:hover{
+          text-decoration: underline;
+        }
+        .menulinks a:active{
+          text-decoration: underline;
+        }
+
     </style>
 
 <header>
@@ -61,7 +69,7 @@
               <img class="" src="./media/icons/menuopen.svg" alt="Close menu">
             </a>
               
-            <div class="overlay-content min-width-100 ">
+            <div class="overlay-content menulinks min-width-100 ">
               <a class="dropdown-item" href="index.php">
                 <h1>Início</h1>
               </a>

@@ -84,7 +84,7 @@
           </div>
           <div class="row justify-content-center py-4">
             <p class=" text-center fs-5 mb-1">
-              <?php echo '-'.$influencer;?>
+              <?php echo $influencer;?>
             </p>
             <a class="w-100 text-center mb-2" href="<?php echo $link; ?>">
               <?php echo $linktitle; ?>
