@@ -1,43 +1,14 @@
 <?php
   require "connection.php";
 
-  $noresults = false;
-  $msgType = "";
-  
-  if (isset($_GET["submit"])) {
-
-    $searchString = $_GET["searchString"];
-
-    $query = "SELECT idfood, name, category, image
-    FROM food
-    WHERE name like '%$searchString%'
-    ORDER BY name ASC";
-
-    $result = mysqli_query($connection, $query);
-    $food = mysqli_fetch_assoc($result);
-
-    if (mysqli_num_rows($result) == 0) {
-      // no results
-      $noresults = true;
-      $msgType = "info";
-    }
-
-  } else {
-      $query = "SELECT idfood, name, category, image
-            FROM food
-            ORDER BY name ASC";
-
-      $result = mysqli_query($connection, $query);
       $food = mysqli_fetch_assoc($result); 
-
-
-  }
+ 
 
 ?>
 
 <!doctype html>
 <html lang="en">
-<head>
+  <head>
   <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Presenting a positive view on food, including nutritional values, great taste and a comunity.">
@@ -47,7 +18,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@1,700&family=Heebo&family=Spinnaker&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="./CSS/styles.css">
   </head>
 
@@ -86,11 +56,13 @@
 
       <div class="my-4s">
         <div class="searchal input-group mb-5">
+          
           <input type="text" class="searchbar form-control bg-transparent border-0" placeholder="Procura um alimento" aria-label="Procura um alimento.." aria-describedby="button-addon2" id="searchString" name="searchString"
           value="<?php
           if (isset($searchString))
             echo $searchString;
           ?>">
+          
 
           <i class="p-2 me-2">
             <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -101,12 +73,7 @@
         </div>
       </div>
 
-      <!-- <div class="m-0 alert alert-<?php echo $msgType; ?>">
-        < ?php
-        if ($noresults)
-          echo "Sem resultados";
-        ?>
-      </div>-->
+
 
       <div class="row filter_data">
         <?php
@@ -140,78 +107,75 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
   <script>
-    $(document).ready(function(){
-      filter_data();
+        $(document).ready(function(){
+            filter_data();
 
-      function filter_data(){
-        $('.filter_data').html('<div id="loading"><h4>A carregar...</h4></div>');
-
-        let action = 'fetch_data';
-
-        if(txt = ''){
-          $('.filter_data').html('');
-          $.ajax({
-
-            url: "fetch2.php",
-            method: "POST",
-            data {search:txt},
-            dataType: "text",
-            success: function(data) {
-              $('.filter_data').html(data);
+            function filter_data(){
+                $('.filter_data').html('<div id="loading"><h2>Loading...</h2></div>');
+                let action = 'fetch_data';
+              
+                if(txt = ''){
+                    $('.filter_data').html('');
+                    $.ajax({
+                       
+                        url: "fetch2.php",
+                        method: "POST", 
+                        data: {search: txt},
+                        dataType: "text",
+                        success: function(data) {
+                            $('.filter_data').html(data);
+                        }
+                    });
+                } else {
+                    $('.filter_data').html('');
+                    $.ajax({
+                        
+                        url: "fetch2.php",
+                        method: "POST", 
+                        data: {search: txt},
+                        dataType: "text",
+                        success: function(data) {
+                            $('.filter_data').html(data);
+                        }
+                    });
+                }
             }
-          });
+
+
+
           
-        } else {
-          $('.filter_data').html('');
-          $.ajax({
 
-            url: "fetch2.php",
-            method: "POST",
-            data {search:txt},
-            dataType: "text",
-            success: function(data) {
-              $('.filter_data').html(data);
-            }
-          });
-        }
-      }
+            $("#searchString").keyup(function(){
+                let txt = $(this).val();
 
-
-
-      $("#searchString").keyup(function(){
-        let txt = $(this).val();
-
-        if(txt = ''){
-          $('.filter_data').html('');
-          $.ajax({
-
-            url: "fetch2.php",
-            method: "POST",
-            data {search:txt},
-            dataType: "text",
-            success: function(data) {
-              $('.filter_data').html(data);
-            }
-          });
-          
-        } else {
-          $('.filter_data').html('');
-          $.ajax({
-
-            url: "fetch2.php",
-            method: "POST",
-            data {search:txt},
-            dataType: "text",
-            success: function(data) {
-              $('.filter_data').html(data);
-            }
-          });
-        }
-
-      });
-
-    });
-  </script>
+                if(txt != ''){
+                    $('.filter_data').html('');
+                    $.ajax({
+                       
+                        url: "fetch2.php",
+                        method: "POST", 
+                        data: {search: txt},
+                        dataType: "text",
+                        success: function(data) {
+                            $('.filter_data').html(data);
+                        }
+                    });
+                } else {
+                    $('.filter_data').html('');
+                    $.ajax({
+                        
+                        url: "fetch2.php",
+                        method: "POST", 
+                        data: {search: txt},
+                        dataType: "text",
+                        success: function(data) {
+                            $('.filter_data').html(data);
+                        }
+                    });
+                }
+            });
+        });
+    </script>
 
   </body>
 </html>
