@@ -86,7 +86,7 @@
             <p class=" text-center fs-5 mb-1">
               <?php echo $influencer;?>
             </p>
-            <a class="w-100 text-center mb-2" href="<?php echo $link; ?>">
+            <a class="comlink w-100 text-center mb-2" href="<?php echo $link; ?>">
               <?php echo $linktitle; ?>
             </a>
             <p class="mt-4 mb-4 fs-5">

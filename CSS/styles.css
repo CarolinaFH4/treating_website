@@ -68,8 +68,8 @@ a{
 
 /* Header end */
 
-
 /* Index */
+
 .indexbg{
   background-color: #B2CF82;
 }
@@ -106,7 +106,9 @@ a{
 }
 
 /* Index end */
+
 /* Alimentos */
+
 .searchal{
   background-color: #E3CED7;
   border-radius: 30px;
@@ -115,7 +117,18 @@ a{
   box-shadow: none;
 }
 
+/* Alimentos end */
+
+/* Comunidade */
+
+.comlink{
+  color: #3A570A;
+}
+
+/* Comunidade end*/
+
 /* Footer */
+
 .footerbg{
   background-color: #E9AE79
 }
