@@ -34,10 +34,10 @@
 
         <div class="mt-5">
           <h1 class="mb-4">Biblioteca</h1>
-          <p class="mb-5 fs-5">Organiza o teu tempo e alimentação com templates e artigos que selecionámos para ti.</p>
+          <p class="mb-5 pb-2 fs-5 mt-4">Organiza o teu tempo e alimentação com templates e artigos que selecionámos para ti.</p>
         </div>
         
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 mx-4">
+        <div class="row justify-content-center gap-4">
           <?php
             foreach($result as $doc){
               $title = $doc["title"];
@@ -45,17 +45,18 @@
               $image = $doc["thumbnail"];
               $file = $doc["link"];
             ?>
-              <div class="card" style="">
-                  <img src="<?php echo './media/docs/'.$image ;?>" class="card-img-top" alt="<?php echo ' pré-visualização de '.$title?>">
-                  <div class="card-body">
-                    <h2 class="card-title text-center"><?php echo $title ?></h2>
+              <div class="card col-11 col-sm-5 col-md-5 col-lg-3 gap-2 rounded-4" style="">
+                  <img src="<?php echo './media/docs/'.$image ;?>" class="card-img mt-3 rounded-4" alt="<?php echo ' pré-visualização de '.$title?>">
+                  <div class="card-body row justify-content-center align-content-between py-3">
+                    <h2 class="card-title text-center mb-3"><?php echo $title ?></h2>
                     <p class="card-text"><?php echo $desc ?></p>
-                    <a type="submit" class="btn btn-primary">
+                    
+                    <a type="submit" class=" text-decoration-none rounded-pill bg-primary-subtle p-3 m-2 w-75 text-center" download="<?php echo './media/docs/'.$file?>">
                       <img src="./media/icons/download.svg"></img>
                       Descarregar
                     </a>
                   </div>
-                </div>
+                
               </div>
 
           <?php } ?>
