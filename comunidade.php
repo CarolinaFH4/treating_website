@@ -1,5 +1,11 @@
 <?php
+  require("connection.php");
 
+  $query = "SELECT * 
+  FROM comunity";
+  
+  $result = mysqli_query($connection, $query);
+  $comunity = mysqli_fetch_assoc($result);
 
 ?>
 
@@ -47,47 +53,51 @@
 
  <main>
     <div class="container">
-      <div>
-        <h1>Comunidade</h1>
-        <p>Na treating investimos na informação de alimentos menos processados para que possa escolher o teu ponto de partida.</p>
+      <div class="mt-5">
+        <h1 class="mb-4">Comunidade</h1>
+        <p class="mb-5 pb-2 fs-5 mt-4">
+          A alimentação faz parte de um estilo de vida. Escolhe as tuas inspirações!
+        </p>
       </div>
 
-      <div class="row">
-        <div class="p-0 col-6 col-md-4">
-          <a href="detalhealimento.php">
-            <div class="mask1 overflow-hidden">
-              <img src="./media/alimentos/abacate.jpg" alt="Abacate" class="img-fluid">
-            </div>
-            <p class="mt-2 text-center">Abacate</p>
-          </a>
-        </div>
+      <div class="">
 
-        <div class="p-0 col-6 col-md-4">
-          <a href="detalhealimento.php">
-            <div class="mask2 overflow-hidden">
-              <img src="./media/alimentos/alho.jpg" alt="Alho" class="img-fluid">
-            </div>
-            <p class="mt-2 text-center">Alho</p>
-          </a>
-        </div>
+        <?php
+            foreach ($result as $com) {
+              $image1 = $com["image1"];
+              $image2 = $com["image2"];
+              $link = $com["link"];
+              $linktitle = $com["link_title"];
+              $influencer = $com["name"];
+              $quote = $com["quote"];
+        ?>
 
-        <div class="p-0 col-6 col-md-4">
-          <a href="detalhealimento.php">
-            <div class="mask1 overflow-hidden">
-              <img src="./media/alimentos/abacate.jpg" alt="Abacate" class="img-fluid">
-            </div>
-            <p class="mt-2 text-center">Abacate</p>
-          </a>
-        </div>
+        <div class="row justify-content-center py-3">
 
-        <div class="p-0 col-6 col-md-4">
-          <a href="detalhealimento.php">
-            <div class="mask2 overflow-hidden">
-              <img src="./media/alimentos/alho.jpg" alt="Alho" class="img-fluid">
+          <div class="d-flex row row-cols-2">
+            <div class="mask1 p-0">
+              <img src="<?php echo './media/comunidade/'.$image1 ; ?>" alt="Abacate" class="img-fluid heig">
             </div>
-            <p class="mt-2 text-center">Alho</p>
-          </a>
+            <div class="mask2 p-0">
+              <img src="<?php echo './media/comunidade/'.$image2 ; ?>" alt="Alho" class="img-fluid">
+            </div>
+          </div>
+          <div class="row justify-content-center py-4">
+            <p class=" text-center fs-5 mb-1">
+              <?php echo '-'.$influencer;?>
+            </p>
+            <a class="w-100 text-center mb-2" href="<?php echo $link; ?>">
+              <?php echo $linktitle; ?>
+            </a>
+            <p class="mt-4 mb-4 fs-5">
+              <?php echo $quote;?>
+            </p>
+            
+          </div>
+
         </div>
+       
+        <?php }?>
       </div>
       
     </div>

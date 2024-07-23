@@ -22,7 +22,7 @@ $msg = "";
   
     if (mysqli_affected_rows($connection) == 1) {
       $msgType = "success";
-      $msg = "Enviado!";
+      $msg = "Mensagem enviada!";
       $display= "block";
     } else {
       $msgType = "danger";
