@@ -5,7 +5,7 @@
   $query = "SELECT * 
               FROM food
               WHERE name
-              LIKE '%'.$_POST["search"].'$'";
+              LIKE '%".$_POST["search"]. "%' ORDER BY name ASC";
 
   $statement = mysqli_query($connection, $query);
   $result = mysqli_fetch_all($statement);
@@ -14,7 +14,7 @@
 
 
   if($total_row > 0){
-    foreach($statement as $row) {
+    foreach($statement as $food) {
     
       $idfood = $food["idfood"];
             

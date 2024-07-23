@@ -1,7 +1,13 @@
 <?php
   require "connection.php";
+  $query = "SELECT idfood, name, category, image
+  FROM food
+  ORDER BY name ASC";
 
-  $noresults = false;
+  $result = mysqli_query($connection, $query);
+  $food = mysqli_fetch_assoc($result);
+
+  /*$noresults = false;
   $msgType = "";
   
   if (isset($_GET["submit"])) {
@@ -31,7 +37,7 @@
       $food = mysqli_fetch_assoc($result); 
 
 
-  }
+  }*/
 
 ?>
 
@@ -154,7 +160,7 @@
 
             url: "fetch2.php",
             method: "POST",
-            data {search:txt},
+            data: {search:txt},
             dataType: "text",
             success: function(data) {
               $('.filter_data').html(data);
@@ -167,7 +173,7 @@
 
             url: "fetch2.php",
             method: "POST",
-            data {search:txt},
+            data: {search:txt},
             dataType: "text",
             success: function(data) {
               $('.filter_data').html(data);
@@ -181,13 +187,13 @@
       $("#searchString").keyup(function(){
         let txt = $(this).val();
 
-        if(txt = ''){
+        if(txt != ''){
           $('.filter_data').html('');
           $.ajax({
 
             url: "fetch2.php",
             method: "POST",
-            data {search:txt},
+            data: {search:txt},
             dataType: "text",
             success: function(data) {
               $('.filter_data').html(data);
@@ -195,6 +201,7 @@
           });
           
         } else {
+
           $('.filter_data').html('');
           $.ajax({
 
