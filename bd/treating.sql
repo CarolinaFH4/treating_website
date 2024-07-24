@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Tempo de geração: 22-Jul-2024 às 13:32
+-- Tempo de geração: 24-Jul-2024 às 16:02
 -- Versão do servidor: 5.7.24
 -- versão do PHP: 8.0.1
 
@@ -57,16 +57,17 @@ CREATE TABLE `comunity` (
   `link_title` varchar(50) NOT NULL,
   `link` varchar(50) NOT NULL,
   `quote` text NOT NULL,
-  `image` varchar(70) NOT NULL
+  `image1` varchar(70) NOT NULL,
+  `image2` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `comunity`
 --
 
-INSERT INTO `comunity` (`id`, `name`, `link_title`, `link`, `quote`, `image`) VALUES
-(1, 'Maria Melo Falcão', 'https://www.mariamelofalcao.com/', 'https://www.mariamelofalcao.com/', '“Todos os dias são uma nova oportunidade para me mexer mais e melhor, alimentar-me do que me nutre...”', 'mariafalcao.jpg|mariafalcao2.jpg'),
-(2, 'Sofia Paixão', 'https://glutenfree.pt/', 'https://glutenfree.pt/', '“O maior desafio é passar da teoria à prática mas acredito que a melhor forma de o fazer é ir introduzindo novos hábitos, novas texturas e novos sabores.”', 'sofiapaixao.jpg|sofiapaixao2.jpg');
+INSERT INTO `comunity` (`id`, `name`, `link_title`, `link`, `quote`, `image1`, `image2`) VALUES
+(1, 'Maria Melo Falcão', 'https://www.mariamelofalcao.com/', 'https://www.mariamelofalcao.com/', '“Todos os dias são uma nova oportunidade para me mexer mais e melhor, alimentar-me do que me nutre...”', 'mariafalcao.jpg', 'mariafalcao2.jpg'),
+(2, 'Sofia Paixão', 'https://glutenfree.pt/', 'https://glutenfree.pt/', '“O maior desafio é passar da teoria à prática mas acredito que a melhor forma de o fazer é ir introduzindo novos hábitos, novas texturas e novos sabores.”', 'sofiapaixao.jpg', 'sofiapaixao2.jpg');
 
 -- --------------------------------------------------------
 
@@ -189,7 +190,7 @@ CREATE TABLE `library` (
 --
 
 INSERT INTO `library` (`id`, `title`, `description`, `link`, `thumbnail`) VALUES
-(1, 'Porções da roda dos alimentos', 'Plano demonstrativo e intuitivo de quanto deverá ser consumido de cada parte na Roda dos Alimentos..', 'porçoes_roda_dos_alimentos.pdf', 'porçoes_roda_dos_alimentos_img_jpg'),
+(1, 'Porções da roda dos alimentos', 'Plano demonstrativo e intuitivo de quanto deverá ser consumido de cada parte na Roda dos Alimentos..', 'porçoes_roda_dos_alimentos.pdf', 'porçoes_roda_dos_alimentos_img.jpg'),
 (2, 'Guia para alimentação adequada', 'Guia concebido pela Associação Portuguesa dos Nutricionistas para uma alimentação equilibrada. Inclui doses recomendadas e hábitos que potencializam a alimentação num todo.', 'alimentaçao_adequada.pdf', 'alimentaçao_adequada_img.jpg'),
 (3, 'Vegetarian basics', 'Pequeno livro com as bases essenciais para uma alimentação vegetariana equilibrada (em inglês).', 'vegetarian_starter.pdf', 'vegetarian_starter_img.jpg'),
 (4, 'Porções de fruta', 'Porção de fruta diária recomendada especificando o alimento.', 'fruta_porçoes.jpg', 'fruta_porçoes_img.jpg'),
@@ -616,9 +617,16 @@ INSERT INTO `recipes` (`idrecipe`, `idfood`, `title`, `ingredients`, `n_ing`, `s
 
 CREATE TABLE `sugestions` (
   `sid` int(11) NOT NULL,
-  `email` varchar(50) NOT NULL,
-  `text` text NOT NULL
+  `semail` varchar(50) NOT NULL,
+  `stext` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `sugestions`
+--
+
+INSERT INTO `sugestions` (`sid`, `semail`, `stext`) VALUES
+(1, 'gewf@hotm.com', 'Gostaria de ver habit trackers na biblioteca');
 
 --
 -- Índices para tabelas despejadas
@@ -734,7 +742,7 @@ ALTER TABLE `recipes`
 -- AUTO_INCREMENT de tabela `sugestions`
 --
 ALTER TABLE `sugestions`
-  MODIFY `sid` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `sid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

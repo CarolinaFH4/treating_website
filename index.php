@@ -132,13 +132,13 @@ $msg = "";
             </svg>
           </span>
 
-        <div class="mt-4 text-center">
-          <p class=" fs-5  mb-4 mt-5">
+        <div class="m-4 text-center">
+          <p class=" fs-5 mt-5">
             Estamos em constante evolução contigo.
             Partilha connosco as tuas preocupações e temas que queres ver abordados sem deixar a página.
           </p>
           <a class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            <svg class="mt-4 mb-5" width="60" viewBox="0 0 65 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="mt-4 mb-4" width="60" viewBox="0 0 65 51" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M0.671761 15.4108C0.625 17.3195 0.625 19.4865 0.625 21.9584V29.0417C0.625 39.0591 0.625 44.0677 3.73699 47.1797C6.84898 50.2917 11.8577 50.2917 21.875 50.2917H43.125C53.1423 50.2917 58.151 50.2917 61.263 47.1797C64.375 44.0677 64.375 39.0591 64.375 29.0417V21.9584C64.375 19.4865 64.375 17.3195 64.3282 15.4108L35.94 31.1821C33.8006 32.3706 31.1994 32.3706 29.06 31.1821L0.671761 15.4108ZM1.48552 7.89689C1.77904 7.97059 2.06787 8.08341 2.34499 8.23736L32.5 24.9901L62.655 8.23736C62.9321 8.08341 63.221 7.97059 63.5145 7.89689C63.0541 6.21986 62.3476 4.90493 61.263 3.82036C58.151 0.708374 53.1423 0.708374 43.125 0.708374H21.875C11.8577 0.708374 6.84898 0.708374 3.73699 3.82036C2.65243 4.90493 1.94585 6.21986 1.48552 7.89689Z" fill="#060901"/>
               </svg>
             </a>
