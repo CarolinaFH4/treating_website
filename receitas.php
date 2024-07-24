@@ -60,20 +60,20 @@
         <div class=" d-flex justify-content-between align-items-center flex-wrap ">
           <h1 class="mb-4 ">Receitas</h1>
 
-            <div class="dropdown">
-              <button class="badge rounded-pill dropdown-toggle p-3 fs-6" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <div class="dropdown ">
+              <button class="orderrecipe badge rounded-pill dropdown-toggle border-0 p-3 fs-6" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Ordenar
               </button>
 
-              <ul class="dropdown-menu">
+              <ul class="dropdown-menu p-2 orderrecipe border-0">
                 <li>
-                  <input type="radio" class="az common_selector" name="filter"> A-Z 
+                  <input type="radio" class="m-2 az common_selector" name="filter"> A-Z 
                 </li>
                 <li>
-                  <input type="radio" class="fastest common_selector" name="filter"> Mais rápido
+                  <input type="radio" class="m-2 fastest common_selector" name="filter"> Mais rápido
                 </li>
                 <li>
-                  <input type="radio" class="ingredients common_selector" name="filter">Menos ingredientes
+                  <input type="radio" class="m-2 ingredients common_selector" name="filter">Menos ingredientes
                 </li>
               </ul>
             </div>

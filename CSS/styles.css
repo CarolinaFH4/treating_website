@@ -74,23 +74,6 @@ a{
   background-color: #B2CF82;
 }
 
-/*.indexbg::before {
-    content: "";
-    position: absolute;
-    top: 90px;
-    left: -20;
-    right: -20;
-    bottom: 0;
-    background-image: url("../media/elements/indexbg.jpg") ;
-    background-repeat: repeat;
-    z-index: -1;
-    width: 500%;
-    height: 200vw;
-    margin-left: -200%;
-  }*/
-
-
-
 .introimg{
  /* height: 200px;*/
   width: 140vw;
@@ -118,6 +101,15 @@ a{
 }
 
 /* Alimentos end */
+
+/* Receitas */
+
+.orderrecipe{
+  background-color: #E3CED7;
+  color: #060901;
+}
+
+/* Receitas end*/
 
 /* Comunidade */
 
