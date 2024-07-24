@@ -51,7 +51,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@1,700&family=Heebo&family=Spinnaker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
     <link rel="stylesheet" href="./CSS/styles.css">
   </head>
 
@@ -78,7 +80,7 @@
         <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
           <ol class="breadcrumb">
             <li class="breadcrumb-item">
-              <a href="alimentos.php">Alimentos</a>
+              <a href="./alimentos.php">Alimentos</a>
             </li>
             <li class="breadcrumb-item active" aria-current="page"><?php echo $name?></li>
           </ol>
@@ -108,145 +110,179 @@
 
       <section class="info">
         <div>
-          <p class="my-4 pt-3 fs-5">
-            *clica em <i class="bi bi-info-circle"></i> para saber mais!
+          <p class="mb-4 pt-3 ">
+            *clica em <i class="bi bi-info-circle"></i> para saber os significados.
           </p>
-          <h2 class="text-uppercase ">
+          <h2 class="text-uppercase mb-4">
             Nutrientes:
           </h2>
-          <table class="table table-striped fs-5">
-            <tbody>
-              <?php foreach($result as $food){
 
-                //variables
-                $ncategory =  $food["ncat"];
-                $param =      $food["parameter"];
-                $value =      $food["value"];
-                $unity =      $food["unity"];
-                $description = $food["description"];
-              
-                if ($ncategory == "Nutrientes") {
+          <div class="rounded-4 overflow-hidden mb-5">
+            <table class="table table-striped mb-0">
+              <tbody>
+                <?php foreach($result as $food){
+
+                  //variables
+                  $ncategory =  $food["ncat"];
+                  $param =      $food["parameter"];
+                  $value =      $food["value"];
+                  $unity =      $food["unity"];
+                  $description = $food["description"];
                 
-                ?>
-              <tr>
-                <td>
-                  <span><?php echo $param; ?><span>
-                  <?php if ($description != "") { ?>
-                    <a data-bs-toggle="tooltip" data-bs-title="<?php echo $description; ?>" class="muted"> 
-                    <i class="bi bi-info-circle"></i>
-                    </a>
-                  <?php } ?>
-                  </td>
-                <td class="text-end"><?php echo $value; ?></td>
-                <td class="text-center"><?php echo $unity; ?></td>
-              </tr>
-              <?php 
-                }
-            }?>
-            </tbody>
-          </table>
+                  if ($ncategory == "Nutrientes") {
+                  
+                  ?>
+                <tr>
+                  <td>
+                    <span><?php echo $param; ?><span>
+                    <?php if ($description != "") { ?>
+                      <a data-bs-toggle="tooltip" data-bs-title="<?php echo $description; ?>" class="muted"> 
+                      <i class="bi bi-info-circle"></i>
+                      </a>
+                    <?php } ?>
+                    </td>
+                  <td class="text-end"><?php echo $value; ?></td>
+                  <td class="text-center"><?php echo $unity; ?></td>
+                </tr>
+                <?php 
+                  }
+              }?>
+              </tbody>
+            </table>
+          </div>
         </div>
         
         <div>
-          <h2 class="text-uppercase"> Vitaminas:</h2>
-          <table class="table table-striped">
-          <tbody>
-              <?php foreach($result as $food){
+          <h2 class="text-uppercase mb-4">
+            Vitaminas:
+          </h2>
+          <div class="rounded-4 overflow-hidden mb-5">
+            <table class="table table-striped mb-0">
+            <tbody>
+                <?php foreach($result as $food){
 
-                //variables
-                $ncategory =  $food["ncat"];
-                $param =      $food["parameter"];
-                $value =      $food["value"];
-                $unity =      $food["unity"];
-                $description = $food["description"];
-              
-                if ($ncategory == "Vitaminas") {
+                  //variables
+                  $ncategory =  $food["ncat"];
+                  $param =      $food["parameter"];
+                  $value =      $food["value"];
+                  $unity =      $food["unity"];
+                  $description = $food["description"];
                 
-                ?>
-              <tr>
-                <td>
-                  <span><?php echo $param; ?><span>
-                  <?php if ($description != "") { ?>
-                    <a data-bs-toggle="tooltip" data-bs-title="<?php echo $description; ?>" class="muted"> 
-                    <i class="bi bi-info-circle"></i>
-                    </a>
-                  <?php } ?>
-                  </td>
-                <td class="text-end"><?php echo $value; ?></td>
-                <td class="text-center"><?php echo $unity; ?></td>
-              </tr>
-              <?php 
-                }
-            }?>
-            </tbody>
-          </table>
+                  if ($ncategory == "Vitaminas") {
+                  
+                  ?>
+                <tr>
+                  <td>
+                    <span><?php echo $param; ?><span>
+                    <?php if ($description != "") { ?>
+                      <a data-bs-toggle="tooltip" data-bs-title="<?php echo $description; ?>" class="muted"> 
+                      <i class="bi bi-info-circle"></i>
+                      </a>
+                    <?php } ?>
+                    </td>
+                  <td class="text-end"><?php echo $value; ?></td>
+                  <td class="text-center"><?php echo $unity; ?></td>
+                </tr>
+                <?php 
+                  }
+              }?>
+              </tbody>
+            </table>
+          </div>
         </div>
 
         <div>
-          <h2 class="text-uppercase"> Minerais:</h2>
-          <table class="table table-striped">
-          <tbody>
-              <?php foreach($result as $food){
+          <h2 class="text-uppercase mb-4">
+            Minerais:
+          </h2>
 
-                //variables
-                $ncategory =  $food["ncat"];
-                $param =      $food["parameter"];
-                $value =      $food["value"];
-                $unity =      $food["unity"];
-                $description = $food["description"];
-              
-                if ($ncategory == "Minerais") {
+          <div class="rounded-4 overflow-hidden mb-5">
+            <table class="table table-striped mb-0">
+            <tbody>
+                <?php foreach($result as $food){
+
+                  //variables
+                  $ncategory =  $food["ncat"];
+                  $param =      $food["parameter"];
+                  $value =      $food["value"];
+                  $unity =      $food["unity"];
+                  $description = $food["description"];
                 
-                ?>
-              <tr>
-                <td>
-                  <span><?php echo $param; ?><span>
-                  <?php if ($description != "") { ?>
-                    <a data-bs-toggle="tooltip" data-bs-title="<?php echo $description; ?>" class="muted"> 
-                    <i class="bi bi-info-circle"></i>
-                    </a>
-                  <?php } ?>
-                  </td>
-                <td class="text-end"><?php echo $value; ?></td>
-                <td class="text-center"><?php echo $unity; ?></td>
-              </tr>
-              <?php 
-                }
-            }?>
-            </tbody>
-          </table>
+                  if ($ncategory == "Minerais") {
+                  
+                  ?>
+                <tr>
+                  <td>
+                    <span><?php echo $param; ?><span>
+                    <?php if ($description != "") { ?>
+                      <a data-bs-toggle="tooltip" data-bs-title="<?php echo $description; ?>" class="muted"> 
+                      <i class="bi bi-info-circle"></i>
+                      </a>
+                    <?php } ?>
+                    </td>
+                  <td class="text-end"><?php echo $value; ?></td>
+                  <td class="text-center"><?php echo $unity; ?></td>
+                </tr>
+                <?php 
+                  }
+              }?>
+              </tbody>
+            </table>
+          </div>
         </div>
       </section>
 
-      <section> 
-        <div id="carouselExampleCaptions" class="carousel slide">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-          </div>
+      <section class="p-3"> 
+      <?php 
+        $total_row = mysqli_num_rows($rresult);
 
-          <div class="carousel-inner">
-            <?php foreach($rresult as $row) { ?>
-              <div class="carousel-item active">
-                <img src="./media/recipes/<?php echo $row["images"]?>" class="d-block w-100" alt="<?php echo $row["title"] ?>">
-                <div class="carousel-caption d-md-block">
-                  <h5><?php echo $row["title"] ?></h5>
-                  <p></p>
-                </div>
-              </div>
-            <?php } ?>
-          </div>
-
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
+        if($total_row > 0){
+          echo
+        '<div>
+          <h3 class="text-center mb-4">Experimenta receitas com este alimento!</h3>
         </div>
+        <div class="rounded-4 overflow-hidden mb-5">
+          <div id="carouselExampleCaptions" class="carousel slide">
+            
+
+                <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner">';
+
+                  foreach($rresult as $row) { ?>
+                    <div class="carousel-item active">
+                      <img src="./media/recipes/<?php echo $row["images"]?>" class="d-block w-100" alt="<?php echo $row["title"] ?>">
+                      <div class="carousel-caption d-md-block">
+                        <h5><?php echo $row["title"] ?></h5>
+                        <p></p>
+                      </div>
+                    </div>
+                  <?php };
+                  echo
+                '</div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Seguinte</span>
+            </button>
+          </div>
+          </div>';
+
+        } else {
+          echo
+          '<div>
+          <h3 class="text-center m-3">
+          Estamos a desenvolver receitas para todos os teus alimentos preferidos mas entretanto explora as alternativas 
+            <a href="./receitas.php" class="link-underline link-underline-opacity-100 text-uppercase">
+              aqui!
+            </a>
+          </h3>
+          </div>';
+
+        }  ?>
       </section>
     </div>
   </main>
