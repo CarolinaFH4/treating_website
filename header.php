@@ -49,7 +49,7 @@
     </style>
 
 <header>
-      <div class="container-fluid position-relative">
+      <div class="headermobile container-fluid position-relative d-md-none">
         <section>
         
           <div class= "row justify-content-center ">
@@ -91,6 +91,33 @@
           </span>
 
         </section>
+      </div>
+
+
+      <div class="header container-fluid d-none d-md-block p-0">
+      
+        <div class= "row justify-content-center ">
+            <div class= "col-auto mt-4 ">
+                <a href="index.php" class="col">
+                  <img src="./media/icons/logo.svg" alt="Treating logo" height="80" >
+                </a>
+            </div>
+        </div>
+
+        <nav class="navbar navheader bg-body-tertiary mt-4 mb-5 p-2">
+          <div class="container d-flex justify-content-center gap-5 p-2 menulinks">
+            <div><a class="dropdown-item" href="alimentos.php">
+              <h1>Alimentos</h1>
+            </a></div>
+            <div><a class="dropdown-item" href="comunidade.php">
+              <h1>Comunidade</h1>
+            </a></div>
+            <div><a class="dropdown-item" href="receitas.php">
+              <h1>Receitas</h1>
+            </a></div>
+          </div>
+        </nav>
+      
       </div>
     </header>
 
