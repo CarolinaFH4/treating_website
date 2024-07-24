@@ -7,37 +7,6 @@
   $result = mysqli_query($connection, $query);
   $food = mysqli_fetch_assoc($result);
 
-  /*$noresults = false;
-  $msgType = "";
-  
-  if (isset($_GET["submit"])) {
-
-    $searchString = $_GET["searchString"];
-
-    $query = "SELECT idfood, name, category, image
-    FROM food
-    WHERE name like '%$searchString%'
-    ORDER BY name ASC";
-
-    $result = mysqli_query($connection, $query);
-    $food = mysqli_fetch_assoc($result);
-
-    if (mysqli_num_rows($result) == 0) {
-      // no results
-      $noresults = true;
-      $msgType = "info";
-    }
-
-  } else {
-      $query = "SELECT idfood, name, category, image
-            FROM food
-            ORDER BY name ASC";
-
-      $result = mysqli_query($connection, $query);
-      $food = mysqli_fetch_assoc($result); 
-
-
-  }*/
 
 ?>
 
@@ -107,12 +76,6 @@
         </div>
       </div>
 
-      <!-- <div class="m-0 alert alert-<?php echo $msgType; ?>">
-        < ?php
-        if ($noresults)
-          echo "Sem resultados";
-        ?>
-      </div>-->
 
       <div class="row filter_data">
         <?php
@@ -207,7 +170,7 @@
 
             url: "fetch2.php",
             method: "POST",
-            data {search:txt},
+            data: {search:txt},
             dataType: "text",
             success: function(data) {
               $('.filter_data').html(data);
